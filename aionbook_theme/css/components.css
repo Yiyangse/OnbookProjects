@@ -1,0 +1,20 @@
+.chip {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    color: #3f3f3f;
+    background-color: #F5EBFF;
+  }
+  .chip.chip--green {
+    background-color: #D8FFFD;
+    color: #148B85;
+  }
+  .chip.chip--navy {
+    background-color: #E1E4FF;
+    color: #2230AE;
+  }
+  /*# sourceMappingURL=../maps/components.css.map */
+  

@@ -1,11 +1,511 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <link rel="stylesheet" href="./aionbook_theme/css/common.css">
+    <link rel="stylesheet" href="./aionbook_theme/css/components.css">
+    <link rel="stylesheet" href="./aionbook_theme/css/pages.css">
+    <title>OnBook AI</title>
+        <meta name="description" content="OnBook AI">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="OnBook AI">
+    <meta property="og:description" content="OnBook AI">
+    <meta property="og:image" content="http://onbook.codingx.ai/upload/logo/onbook-logo.svg">
+    <meta property="og:url" content="http://onbook.codingx.ai">
+        <link rel="shortcut icon" type="image/x-icon" href="/assets/aionbook_theme/favicon.ico">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> -->
+</head> 
+
 <body>
+
+
+    <div class="desktop-header">
+      <header class="desktop-header__inner">
+        <a href="/" class="desktop-header__logo">
+          OnBook AI
+        </a>
+        <nav class="gnb">
+          <div class="gnb__menu">
+            <div class="gnb__item">
+              <a href="/course_intro" class="gnb__link">학습</a>
+            </div>
+      
+            <!--
+            <div class="gnb__item">
+              <a href="#" class="gnb__link">회원가입</a>
+            </div>
+            -->
+            <div class="gnb__item">
+              <a href="/login" class="gnb__link">로그인</a>
+            </div>
+      
+            <div class="gnb__item gnb__item--border-btn">
+              <a href="javascript:alert('준비중 입니다.');" class="gnb__link">플립러닝</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </div>
     
+    
+    <div class="mobile-header">
+      <header class="mobile-header__inner">
+        <div class="mobile-header__top">
+          <button class="gnb-btn">
+            <div class="hidden">
+              메뉴버튼
+            </div>
+          </button>
+          <a href="/" class="mobile-header__logo">
+            OnBook AI
+          </a>
+        </div>
+        <div class="mobile-gnb">
+          <div class="mobile-gnb__menu">
+            <div class="mobile-gnb__item">
+              <a href="/course_intro" class="mobile-gnb__link">학습</a>
+            </div>
+      
+            <!--
+            <div class="mobile-gnb__item">
+              <a href="#" class="mobile-gnb__link">회원가입</a>
+            </div>
+            -->
+            <div class="mobile-gnb__item">
+              <a href="/login" class="mobile-gnb__link">로그인</a>
+            </div>
+      
+            <div class="mobile-gnb__item">
+              <a href="javascript:alert('준비중 입니다.');" class="mobile-gnb__link">플립러닝</a>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    
+    
+    <script>
+      let gnbBtn = document.querySelector('.gnb-btn');
+      let mobileGnb = document.querySelector('.mobile-gnb');
+      gnbBtn.addEventListener('click', function() {
+        gnbBtn.classList.toggle('active');
+        mobileGnb.classList.toggle('active');
+      });
+    </script>   
+
+
+    <div class="desktop__inner">
+
+
+      <section class="main">
+        <div class="main__inner">
+          <div class="main__text">
+            <h2 class="main__title">
+              모두의 AI<br />
+              OnBook AI
+            </h2>
+            <p>최적화된 온라인 AI 교육 플랫폼</p>
+            <div class="main__button-wrap">
+              <button type="button" class="hero-btn" onclick="location.href='#experience';">
+                체험하기
+              </button>
+              <button type="button" class="hero-btn hero-btn--black-bg" onclick="location.href='#inquiry';">
+                도입문의
+              </button>
+            </div>
+          </div>
+          <img src="aionbook_theme/images/home/hero.png.png" alt="">
+        </div>
+      </section>
+
+
+      <section class="learning-system">
+        <div class="learning-system__inner">
+          <h3 class="learning-system__title">
+            한 번에 끝내는 AI 학습체계
+          </h3>
+          <ul class="learning-system__list">
+            <li class="learning-system__item">
+              <span class="chip chip--green">이론</span>
+              <div class="learning-system__text">
+                <p>
+                  사전 테스트
+                </p>
+                <span>
+                학습 전 수준 평가
+              </span>
+              </div>
+            </li>
+            <li class="learning-system__item">
+              <span class="chip chip--navy">학습</span>
+              <div class="learning-system__text">
+                <p>
+                  끊김없는 학습활동
+                </p>
+                <span>
+                모든 학습활동을 OnBook AI에서 진행할 수 있습니다.
+              </span>
+              </div>
+            </li>
+            <li class="learning-system__item">
+              <span class="chip">평가</span>
+              <div class="learning-system__text">
+                <p>
+                  사후 테스트
+                </p>
+                <span>
+                학습 후 성취도 평가
+              </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <section class="learning-course" id="experience">
+        <div class="learning-course__inner">
+          <h3 class="learning-course__title">
+            한 번에 끝내는 AI 학습코스
+          </h3>
+          <ul class="learning-course__list">
+            <li class="learning-course__item">
+              <div class="learning-course__text">
+                <p class="learning-course__name">데이터분석 Basic</p>
+                <span class="learning-course__desc">
+                    파이썬 언어와 기초적인 머신러닝 알고리즘을 학습하고 실습 할 수 있어요.                </span>
+              </div>
+              <button class="learning-course__btn">
+                                <a href="course_intro/open_onbook/1">체험하기</a>
+                
+              </button>
+              <img src="/upload/course/587de37c80f3bf4b342ab63c2c466cb2.png" alt="데이터분석 Basic">
+            </li>
+            <li class="learning-course__item">
+              <div class="learning-course__text">
+                <p class="learning-course__name">데이터분석 Advanced</p>
+                <span class="learning-course__desc">
+                    기초 통계와 데이터분석에 사용되는 주요 알고리즘과 라이브러리를 학습하고 실습할 수 있어요.                </span>
+              </div>
+              <button class="learning-course__btn">
+                                <a href="javascript:alert('콘텐츠 준비중입니다.');"><font color="#aaa">체험하기</font></a>
+                
+              </button>
+              <img src="/upload/course/f5d66ab1cd211b79210be3dd4243f193.png" alt="데이터분석 Advanced">
+            </li>
+            <li class="learning-course__item">
+              <div class="learning-course__text">
+                <p class="learning-course__name">머신러닝</p>
+                <span class="learning-course__desc">
+                    머신러닝에 필요한 선형대수,통계부터 다양한 모델의 실습을 통해 모델 훈련과 최적화를 경험할 수 있어요.                </span>
+              </div>
+              <button class="learning-course__btn">
+                                <a href="javascript:alert('콘텐츠 준비중입니다.');"><font color="#aaa">체험하기</font></a>
+                
+              </button>
+              <img src="/upload/course/53f679401e0010987748e0fa71137cd4.png" alt="머신러닝">
+            </li>
+            <li class="learning-course__item">
+              <div class="learning-course__text">
+                <p class="learning-course__name">딥러닝</p>
+                <span class="learning-course__desc">
+                    ChatGPT의 근간이 되는 딥러닝을 기본부터 배울 수 있는 코스예요.                </span>
+              </div>
+              <button class="learning-course__btn">
+                                <a href="javascript:alert('콘텐츠 준비중입니다.');"><font color="#aaa">체험하기</font></a>
+                
+              </button>
+              <img src="/upload/course/f4a0106929db53bc64ac3e20cf19ec24.png" alt="딥러닝">
+            </li>
+            <li class="learning-course__item">
+              <div class="learning-course__text">
+                <p class="learning-course__name">AI교육 프로젝트</p>
+                <span class="learning-course__desc">
+                    머신러닝과 딥러닝 미니 프로젝트를 직접 수행해볼 수 있어요.                </span>
+              </div>
+              <button class="learning-course__btn">
+                                <a href="javascript:alert('콘텐츠 준비중입니다.');"><font color="#aaa">체험하기</font></a>
+                
+              </button>
+              <img src="/upload/course/45f78686834b2f1dfe2ee455e2347b36.png" alt="AI교육 프로젝트">
+            </li>
+            <li class="learning-course__item">
+              <div class="learning-course__text">
+                <p class="learning-course__name">DT 역량진단</p>
+                <span class="learning-course__desc">
+                    역량진단 간략 설명이 들어갑니다. 역량진단 간략 설명이 들어갑니다.                </span>
+              </div>
+              <button class="learning-course__btn">
+                                <a href="javascript:alert('콘텐츠 준비중입니다.');"><font color="#aaa">체험하기</font></a>
+                
+              </button>
+              <img src="/upload/course/d8d83e3be70426b626575d1f21b272d3.png" alt="DT 역량진단">
+            </li>
+            <li class="learning-course__item">
+              <div class="learning-course__text">
+                <p class="learning-course__name">(임시) AI 101</p>
+                <span class="learning-course__desc">
+                    AI 101                </span>
+              </div>
+              <button class="learning-course__btn">
+                                <a href="course_intro/open_onbook/7">체험하기</a>
+                
+              </button>
+              <img src="/assets/aionbook_theme/images/no_img/T_no_img.jpg" alt="(임시) AI 101">
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <section class="banner">
+        <div class="banner__inner">
+          <div class="banner__text">
+            <span>다른 콘텐츠가 필요하신가요?</span>
+            <p>맞춤 콘텐츠 제작으로<br />
+              원하는 교육을 진행해보세요.</p>
+          </div>
+          <button class="banner__btn" onclick="location.href='#inquiry';">
+            문의하기
+          </button>
+        </div>
+      </section>
+  
+      
+      <section class="partner-company">
+        <div class="partner-company__inner">
+          <h4 class="partner-company__title">함께하는 교육기관 및 기업</h4>
+          <div class="partner-company__list">
+            <p class="partner-company__item">TMD교육그룹</p>
+            <p class="partner-company__item">현대엔지비</p>
+            <p class="partner-company__item">경남대학교</p>
+            <p class="partner-company__item">성결대학교</p>
+            <p class="partner-company__item">아주대학교</p>
+            <p class="partner-company__item">창원대학교</p>
+            <p class="partner-company__item">한양대학교</p>
+            <p class="partner-company__item">능동고등학교</p>
+            <p class="partner-company__item">동두천고등학교</p>
+            <p class="partner-company__item">분당경영고등학교</p>
+            <p class="partner-company__item">양운고등학교</p>
+          </div>
+        </div>
+      </section>
+   
+      
+      <section class="inquiry" id="inquiry">
+        <div class="inquiry__inner">
+          <div class="inquiry__text">
+            <span class="inquiry__type">
+            도입문의
+          </span>
+            <p class="inquiry__description">
+              지금 신청하고<br />
+              무료로 체험해보세요
+            </p>
+            <span class="inquiry__sub-description">
+            1개월 무제한 콘텐츠, 기능을 체험할 수 있어요.
+          </span>
+          </div>
+          <div class="inquiry__form">
+            <form>
+              <div class="inquiry__input">
+                <label for="user-name">담당자 성함</label>
+                <input type="text" id="inquiry_name" name="inquiry_name" />
+              </div>
+              <div class="inquiry__input">
+                <label for="email">이메일</label>
+                <input type="text" id="inquiry_email" name="inquiry_email" />
+              </div>
+              <div class="inquiry__input">
+                <label for="phone">연락처</label>
+                <input type="number" id="inquiry_phone" name="inquiry_phone" />
+              </div>
+              <div class="inquiry__input">
+                <label for="people-number">교육 인원</label>
+                <input type="number" id="inquiry_number" name="inquiry_number" />
+              </div>
+              <div class="inquiry__input">
+                <label for="inquiry-content">문의 내용</label>
+                <textarea id="inquiry_content" name="inquiry_content"></textarea>
+              </div>
+              <input type="submit" value="문의하기" class="inquiry__btn">
+            </form>
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+    <div>
+
+      <footer>
+
+        <div class="desktop-footer">
+          <div class="desktop-footer__inner">
+            <div class="desktop-footer__top">
+              <p class="desktop-footer__logo">OnBook AI</p>
+              <ul class="footer-nav">
+                <li class="footer-nav__item">
+                  <a href="https://coding-x.com" target="_blank">코딩엑스AI</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="https://kdc.codingx.ai" target="_blank">K-디지털 기초역량훈련</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="https://www.edupar.net" target="_blank">기업교육</a>
+                </li>
+              </ul>
+            </div>
+            <div class="desktop-footer__bottom">
+              <ul class="footer-nav footer-nav--bottom">
+                <li class="footer-nav__item">
+                  <a href="javascript:popup_member_term('access');">이용약관</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="javascript:popup_member_term('personal');">개인정보처리방침</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#">고객센터</a>
+                </li>
+              </ul>
+              <p class="desktop-footer__company-name">
+                더에이아이랩 주식회사
+              </p>
+              <div class="desktop-footer__info">
+                <p>
+                  대표: 최영준 | 사업자 등록번호: 439-87-00757 | 통신판매신고번호: 제 2020-서울강남-02380<br />
+                  주소: 서울특별시 강남구 선릉로 108길 9 5층 | 이메일: contact@theailab.co | 전화: 02-2039-9355
+                </p>
+                <p>THE AI Lab. All rights reserved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile-footer">
+          <div class="mobile-footer__inner">
+            <div class="mobile-footer__top">
+              <p class="mobile-footer__logo">OnBook AI</p>
+              <ul class="footer-nav">
+                <li class="footer-nav__item">
+                  <a href="#">코딩엑스AI</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#">K-디지털 기초역량훈련</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#">기업교육</a>
+                </li>
+              </ul>
+            </div>
+            <div class="mobile-footer__bottom">
+              <ul class="footer-nav footer-nav--bottom">
+                <li class="footer-nav__item">
+                  <a href="javascript:popup_member_term('access');">이용약관</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="javascript:popup_member_term('personal');">개인정보처리방침</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#">고객센터</a>
+                </li>
+              </ul>
+              <p class="mobile-footer__company-name">
+                더에이아이랩 주식회사
+              </p>
+              <div class="mobile-footer__info">
+                <p>
+                  대표: 최영준<br />
+                  사업자 등록번호: 439-87-00757<br />
+                  통신판매신고번호: 제 2020-서울강남-02380<br />
+                </p>
+                <p>
+                  주소: 서울특별시 강남구 선릉로 108길 9 5층<br />
+                  이메일: contact@theailab.co<br />
+                  전화: 02-2039-9355<br />
+                </p>
+                <p>THE AI Lab. All rights reserved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </footer>
+
+    </div>
+
+
+<script src="/aionbook_theme/js/jquery.bpopup.mib.js"></script>
+
+<style>
+#popup { 
+    background-color:#fff;
+    border-radius:15px;
+    color:#000;
+    display:none; 
+    padding:20px;
+    min-width: 70vw;
+    min-height: 70vh;
+}
+.b-close {
+    border-radius:7px 7px 7px 7px;
+    box-shadow:none;font:bold 151% sans-serif;
+    padding:0 6px 2px;
+    position:absolute;
+    right:-12px;
+    top:-18px;
+    background-color:#2b91af;
+    color:#fff;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;   
+}
+.popupContent {
+    border: 0px solid #000;
+    width: 100%;
+    height: 70vh;
+}
+</style>
+
+<script>
+function popup_member_term(term_type)
+{
+    if (term_type=='personal') {
+        var src = "/member/personal_data";
+    } else {
+        var src = "/member/access_terms";
+    }
+    $("#popup").bPopup({
+            content:'iframe',
+            iframeAttr:'frameborder="0" width="100%" height="100%" scrolling="auto"',
+            contentContainer:'.popupContent',
+            loadUrl: src,
+            modalClose: false,
+            opacity: 0.75,
+            speed: 450,
+            transition: 'slideDown'
+    });
+}
+</script>
+
+<div id="popup">
+    <span class='b-close' onClick="javascript:$('#popup').bPopup().close();"><span>X</span></span>        
+    <div class="popupContent"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
