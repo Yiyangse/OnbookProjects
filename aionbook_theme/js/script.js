@@ -6,23 +6,46 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
 
     function updateCarousel() {
-        const offset = -currentIndex * 320;
+        const cardWidth = cards[0].offsetWidth;
+        const offset = -currentIndex * (cardWidth + 40); // 40 is the total horizontal margin
         carousel.style.transform = `translateX(${offset}px)`;
-        
-        cards.forEach((card, index) => {
-            card.classList.toggle('active', index === currentIndex);
-        });
+    }
+
+    function showCard(index) {
+        currentIndex = Math.max(0, Math.min(index, cards.length - 1));
+        updateCarousel();
     }
 
     arrowLeft.addEventListener('click', () => {
-        currentIndex = Math.max(currentIndex - 1, 0);
-        updateCarousel();
+        showCard(currentIndex - 1);
     });
 
     arrowRight.addEventListener('click', () => {
-        currentIndex = Math.min(currentIndex + 1, cards.length - 1);
-        updateCarousel();
+        showCard(currentIndex + 1);
     });
 
+    // Initialize carousel
     updateCarousel();
+
+    // Add touch support
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, false);
+
+    carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, false);
+
+    function handleSwipe() {
+        if (touchEndX < touchStartX) {
+            showCard(currentIndex + 1);
+        }
+        if (touchEndX > touchStartX) {
+            showCard(currentIndex - 1);
+        }
+    }
 });
