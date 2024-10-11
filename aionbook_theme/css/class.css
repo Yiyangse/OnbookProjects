@@ -1,0 +1,221 @@
+/* class.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.basic-class {
+    background:#E6EAFF;
+    padding: 20px;
+}
+
+.basic-class h1 {
+    font-size: 64px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.basic-class p {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.course-info {
+    display: flex;
+    width: 1060px;
+    height: 244px;
+    align-items: center;
+    justify-content: space-around;
+    background: #4D46D5;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.info-item {
+    position: relative;
+    text-align: center;
+    /* padding: 0 20px; 양쪽 패딩 추가 */
+}
+
+/* 구분선 추가 */
+/* .info-item + .info-item {
+    border-left: 3px solid white;
+    padding-left: 10px; 
+    padding-right: 10px;
+} */
+
+.info-item p{
+    font-size: 30px;
+    color: #F6F6F6;
+}
+
+.info-item img {
+    width: 96px;
+    height: 96px;
+}
+
+.about, .bookmark, .chapter-grid {
+    margin-top: 40px;
+}
+
+.about img{
+    width: 28px;
+    height: 28px;
+}
+
+.about h2{
+    color: #151515;
+    font-size: 37px;
+    font-weight: 700;
+    line-height: 35px;
+}
+
+.bookmark h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.bookmark img{
+    width: 16px;
+    height: 20px;
+    font-weight: 700;
+}
+
+.bookmark button {
+    width: 376px;
+    height: 82px;
+    background: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.chapter {
+    width: 376px;
+    height: 622px;
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.chapter:hover {
+    transform: scale(1.05);
+}
+
+.chapter img {
+    width: 376px;
+    height: 241px;
+    object-fit: cover;
+}
+
+.chapter-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    padding: 20px;
+}
+
+.chapter h3 {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #777777;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.chapter h4 {
+    margin-bottom: 20px; /* h4와 ul 사이의 여백 */
+    padding: 10px;
+    font-size: 30px;
+    line-height: 4px;
+    font-weight: 800;
+    color: #323232;
+}
+
+.chapter ul {
+    margin-top: 0; /* ul의 상단 여백 제거 */
+    padding: 0; /* 패딩 제거 */
+}
+
+.chapter ul li {
+    margin-bottom: 5px;
+    text-align: left;
+    font-weight: 800;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.chapter li :hover{
+    transition: all 0.3s ease;
+    background-color: #777777;
+}
+
+
+.chapter .button {
+    display: inline-block;
+    align-items: center;
+    width: 270px;
+    height: 50px;
+    padding: 12px 20px;
+    background-color: white;
+    color: #4D46D5;
+    text-decoration: none;
+    border-radius: 14px;
+    border: 1px solid #4D46D5;
+    transition: all 0.3s ease;
+    text-align: center;
+    margin-top: auto;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.chapter .button:hover {
+    background-color: #6200ea;
+    color: white;
+}
+
+.locked::after {
+    content: '🔒';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    color: white;
+}
