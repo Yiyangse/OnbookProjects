@@ -1,30 +1,31 @@
-.course-carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.course-grid {
     padding: 100px 100px;
     background-color: #f0f0f0;
-}
-
-.carousel {
-    position: relative;
-    width: 100%;
+  }
+  
+  .course-grid__title {
+    text-align: center;
+    font-size: 40px;
+    line-height: 60px;
+    font-weight: 800;
+    margin-bottom: 40px;
+  }
+  
+  .course-grid__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
     max-width: 1200px;
-    height: 500px;
-    /* overflow: hidden; */
-}
-
-.carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease;
-}
+    margin: 0 auto;
+  }
 
 .card {
     flex: 0 0 360px;
-    height: 500px;
+    width: 384px;
+    height: 420px;
     margin: 0 20px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 14px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
     cursor: pointer;
@@ -48,33 +49,35 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    align-items: center;
 }
 
 .card-image {
     width: 100%;
-    height: 304px;
+    height: 217px;
     overflow: hidden;
-}
-
-.card-image img {
+  }
+  
+  .card-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+  }
 
 
 .card h2 {
-    margin-top: 15px;
+    text-align: center;
+    margin-top: 50px;
     font-size: 24px;
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 800;
     color: #242E64;
 }
 
 .card p {
-    margin-top: 10px;
+    text-align: center;
     padding: 10px;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
     font-weight: 500;
     color: #323232;
@@ -83,16 +86,20 @@
 
 .card .button {
     display: inline-block;
+    align-items: center;
+    width: 270px;
+    height: 50px;
     padding:  12px 20px;
     background-color: white;
-    color: #6200ea;
+    color: #4D46D5;
     text-decoration: none;
-    border-radius: 100px;
-    border: 1px solid #D3D3D3;
+    border-radius: 14px;
+    border: 1px solid #4D46D5;
     transition: all 0.3s ease;
     text-align: center;
     margin-top: auto;
     font-weight: 600;
+    margin-bottom: 14px;
 }
 
 .card .button:hover {
@@ -114,8 +121,8 @@
     font-size: 48px;
     color: white;
 }
-
-.arrow {
+/* 화살표 보류 */
+/* .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -140,4 +147,4 @@
 
 .arrow-right {
     right: 1px;
-}
+} */
