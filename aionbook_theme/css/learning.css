@@ -76,6 +76,7 @@
     -ms-flex-direction: column;
     flex-direction: column;
     padding: 160px 0;
+    gap: 20px;
   }
   .learning-course__title {
     text-align: center;
