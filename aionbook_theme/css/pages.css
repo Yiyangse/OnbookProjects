@@ -11,6 +11,7 @@
     font-size: 18px;
     line-height: 28px;
     color: #222;
+    align-items: center;
   }
   .hero-btn:hover {
     background-color: #F1F1F1;
@@ -26,24 +27,12 @@
   
   .main {
     background-color: #78CEFF;
-    padding-top: 60px;
   }
   .main__inner {
     width: 1200px;
-    margin: 0 auto;
-    padding: 10px 0;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding: 105px 40px 165px;
   }
   .main__inner img {
-    width: 510px;
+    width: 1200px;
   }
   .main__text {
     text-align: left;
@@ -119,7 +108,7 @@
   .banner__btn:hover {
     background: #f1f1f1;
   }
-  
+  /*  */
   .partner-company__inner {
     width: 550px;
     margin: 0 auto;

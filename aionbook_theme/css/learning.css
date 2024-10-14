@@ -77,6 +77,12 @@
     flex-direction: column;
     padding: 160px 0;
   }
+
+  .learning-course__list {
+    grid-template-columns: repeat(1, 1200px);
+    align-content: center;
+    justify-content: center;
+  }
   .learning-course__title {
     text-align: center;
     font-size: 40px;
@@ -85,12 +91,11 @@
   }
   .learning-course__item {
     padding: 0;
-    background-color: #4D46D5;
-    gap: 10px;
+    background-color: #FFFFFF;
     width: 1250px;
     height: 294px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.25);
     overflow: hidden;
   }
   
@@ -139,6 +144,7 @@
   
   .learning-course__btn {
     background-color: #fff;
+    color: #4D46D5;
     border: 1px solid #4D46D5;
     padding: 7px 23px;
     border-radius: 6px;
@@ -148,6 +154,7 @@
   }
   
   .learning-course__btn:hover {
-    background-color: #F1F1F1;
+    background-color:#4D46D5;
+    color: #FFFFFF;
   }
   /*  */
