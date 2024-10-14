@@ -1,6 +1,13 @@
 /* class.css */
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'NanumSquareRound';
     line-height: 1.6;
     color: #333;
     max-width: 1200px;
@@ -9,7 +16,7 @@ body {
 }
 
 .basic-class {
-    background:#E6EAFF;
+    /* background:#E6EAFF; */
     padding: 20px;
 }
 
