@@ -85,8 +85,9 @@
   }
   .learning-course__item {
     padding: 0;
-    background-color: #F8FCFF;
-    width: 1202px;
+    background-color: #4D46D5;
+    gap: 10px;
+    width: 1250px;
     height: 294px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

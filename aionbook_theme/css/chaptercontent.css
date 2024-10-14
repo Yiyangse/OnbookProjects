@@ -1,4 +1,4 @@
-/* class.css */
+/* chaptercontent.css */
 @font-face {
     font-family: 'NanumSquareRound';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
@@ -8,11 +8,11 @@
 
 body {
     font-family: 'NanumSquareRound';
-    line-height: 1.6;
+    /* line-height: 1.6;
     color: #333;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px; */
 }
 
 .basic-class {
