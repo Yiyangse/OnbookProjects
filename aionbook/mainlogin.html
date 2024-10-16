@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://onbook.codingx.ai/assets/aionbook_theme/css/common.css">
+    <link rel="stylesheet" href="https://onbook.codingx.ai/assets/aionbook_theme/css/components.css">
+    <link rel="stylesheet" href="https://onbook.codingx.ai/assets/aionbook_theme/css/pages.css">
+
+    <!-- 과정 카드 css추가 -->
+    <link rel="stylesheet" href="../aionbook_theme/css/coursegrid.css">
+    <link rel="stylesheet" href="../aionbook_theme/css/learning.css">
+    <link rel="stylesheet" href="../aionbook_theme/css/circle.css">
+    <link rel="stylesheet" href="../aionbook_theme/css/chaptercontent.css">
+
+    <!-- 로그인화면 CSS -->
+    <link rel="stylesheet" href="../aionbook_theme/css/mainlogin.css">
+
+    <title>OnBook AI</title>
+        <meta name="description" content="OnBook AI">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="OnBook AI">
+    <meta property="og:description" content="OnBook AI">
+    <meta property="og:image" content="http://onbook.codingx.ai/upload/logo/onbook-logo.svg">
+    <meta property="og:url" content="http://onbook.codingx.ai">
+        <link rel="shortcut icon" type="image/x-icon" href="/assets/aionbook_theme/favicon.ico">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> -->
+    <script src="../aionbook_theme/js/script.js" defer></script>
+</head> 
+
+<body>
+    <div>
+        <div class="desktop-header">
+            <header class="desktop-header__inner">
+              <a href="/" class="desktop-header__logo">
+                OnBook AI
+              </a>
+              <nav class="gnb">
+                <div class="gnb__menu">
+                  <div class="gnb__item">
+                    <a href="/course_intro" class="gnb__link">학습</a>
+                  </div>
+            
+                  <!--
+                  <div class="gnb__item">
+                    <a href="#" class="gnb__link">회원가입</a>
+                  </div>
+                  -->
+                  <div class="gnb__item">
+                    <a href="/login.html" class="gnb__link">로그인</a>
+                  </div>
+            
+                  <div class="gnb__item gnb__item--border-btn">
+                    <a href="javascript:alert('준비중 입니다.');" class="gnb__link">플립러닝</a>
+                  </div>
+                </div>
+              </nav>
+            </header>
+          </div>
+          
+          
+          <div class="mobile-header">
+            <header class="mobile-header__inner">
+              <div class="mobile-header__top">
+                <button class="gnb-btn">
+                  <div class="hidden">
+                    메뉴버튼
+                  </div>
+                </button>
+                <a href="/" class="mobile-header__logo">
+                  OnBook AI
+                </a>
+              </div>
+              <div class="mobile-gnb">
+                <div class="mobile-gnb__menu">
+                  <div class="mobile-gnb__item">
+                    <a href="/course_intro" class="mobile-gnb__link">학습</a>
+                  </div>
+            
+                  <!--
+                  <div class="mobile-gnb__item">
+                    <a href="#" class="mobile-gnb__link">회원가입</a>
+                  </div>
+                  -->
+                  <div class="mobile-gnb__item">
+                    <a href="/login.html" class="mobile-gnb__link">로그인</a>
+                  </div>
+            
+                  <div class="mobile-gnb__item">
+                    <a href="javascript:alert('준비중 입니다.');" class="mobile-gnb__link">플립러닝</a>
+                  </div>
+                </div>
+              </div>
+            </header>
+          </div>
+
+          <div class="mainlogin">
+            <section class="mainlogin_1">
+              <div class="mainlogin_title">로그인</div>
+              <div class="mainlogin_input">
+                <input type="text" placeholder="아이디" class="login_id">
+                <input type="password" placeholder="비밀번호" class="login_pw">
+              </div>
+              <button class="mainlogin_btn">로그인</button>
+              <div class="mainlogin_group">
+                <label>
+                  <input type="checkbox"> 자동로그인
+                </label>
+                <div class="sub_options">
+                  <a href="#">아이디 찾기</a> |
+                  <a href="#">비밀번호 찾기</a> |
+                  <a href="#">회원가입</a>
+                </div>
+              </div>
+            </section>
+          </div>
+
+        <footer>
+          <div class="desktop-footer">
+            <div class="desktop-footer__inner">
+              <div class="desktop-footer__top">
+                <p class="desktop-footer__logo">OnBook AI</p>
+                <ul class="footer-nav">
+                  <li class="footer-nav__item">
+                    <a href="https://coding-x.com" target="_blank">코딩엑스AI</a>
+                  </li>
+                  <li class="footer-nav__item">
+                    <a href="https://kdc.codingx.ai" target="_blank">K-디지털 기초역량훈련</a>
+                  </li>
+                  <li class="footer-nav__item">
+                    <a href="https://www.edupar.net" target="_blank">기업교육</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="desktop-footer__bottom">
+                <ul class="footer-nav footer-nav--bottom">
+                  <li class="footer-nav__item">
+                    <a href="javascript:popup_member_term('access');">이용약관</a>
+                  </li>
+                  <li class="footer-nav__item">
+                    <a href="javascript:popup_member_term('personal');">개인정보처리방침</a>
+                  </li>
+                  <li class="footer-nav__item">
+                    <a href="#">고객센터</a>
+                  </li>
+                </ul>
+                <p class="desktop-footer__company-name">
+                  더에이아이랩 주식회사
+                </p>
+                <div class="desktop-footer__info">
+                  <p>
+                    대표: 최영준 | 사업자 등록번호: 439-87-00757 | 통신판매신고번호: 제 2020-서울강남-02380<br />
+                    주소: 서울특별시 강남구 선릉로 108길 9 5층 | 이메일: contact@theailab.co | 전화: 02-2039-9355
+                  </p>
+                  <p>THE AI Lab. All rights reserved.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="mobile-footer">
+            <div class="mobile-footer__inner">
+              <div class="mobile-footer__top">
+                <p class="mobile-footer__logo">OnBook AI</p>
+                <ul class="footer-nav">
+                  <li class="footer-nav__item">
+                    <a href="#">코딩엑스AI</a>
+                  </li>
+                  <li class="footer-nav__item">
+                    <a href="#">K-디지털 기초역량훈련</a>
+                  </li>
+                  <li class="footer-nav__item">
+                    <a href="#">기업교육</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="mobile-footer__bottom">
+                <ul class="footer-nav footer-nav--bottom">
+                  <li class="footer-nav__item">
+                    <a href="javascript:popup_member_term('access');">이용약관</a>
+                  </li>
+                  <li class="footer-nav__item">
+                    <a href="javascript:popup_member_term('personal');">개인정보처리방침</a>
+                  </li>
+                  <li class="footer-nav__item">
+                    <a href="#">고객센터</a>
+                  </li>
+                </ul>
+                <p class="mobile-footer__company-name">
+                  더에이아이랩 주식회사
+                </p>
+                <div class="mobile-footer__info">
+                  <p>
+                    대표: 최영준<br />
+                    사업자 등록번호: 439-87-00757<br />
+                    통신판매신고번호: 제 2020-서울강남-02380<br />
+                  </p>
+                  <p>
+                    주소: 서울특별시 강남구 선릉로 108길 9 5층<br />
+                    이메일: contact@theailab.co<br />
+                    전화: 02-2039-9355<br />
+                  </p>
+                  <p>THE AI Lab. All rights reserved.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </footer>
+  
+      </div>
+  
+  
+  <script src="/aionbook_theme/js/jquery.bpopup.mib.js"></script>
+  
+  <style>
+  #popup { 
+      background-color:#fff;
+      border-radius:15px;
+      color:#000;
+      display:none; 
+      padding:20px;
+      min-width: 70vw;
+      min-height: 70vh;
+  }
+  .b-close {
+      border-radius:7px 7px 7px 7px;
+      box-shadow:none;font:bold 151% sans-serif;
+      padding:0 6px 2px;
+      position:absolute;
+      right:-12px;
+      top:-18px;
+      background-color:#2b91af;
+      color:#fff;
+      cursor: pointer;
+      display: inline-block;
+      text-align: center;   
+  }
+  .popupContent {
+      border: 0px solid #000;
+      width: 100%;
+      height: 70vh;
+  }
+  </style>
+  
+  <script>
+  function popup_member_term(term_type)
+  {
+      if (term_type=='personal') {
+          var src = "/member/personal_data";
+      } else {
+          var src = "/member/access_terms";
+      }
+      $("#popup").bPopup({
+              content:'iframe',
+              iframeAttr:'frameborder="0" width="100%" height="100%" scrolling="auto"',
+              contentContainer:'.popupContent',
+              loadUrl: src,
+              modalClose: false,
+              opacity: 0.75,
+              speed: 450,
+              transition: 'slideDown'
+      });
+  }
+  </script>
+  
+  <div id="popup">
+      <span class='b-close' onClick="javascript:$('#popup').bPopup().close();"><span>X</span></span>        
+      <div class="popupContent"></div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </body>
+  </html>
