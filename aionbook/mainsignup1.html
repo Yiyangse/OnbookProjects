@@ -18,6 +18,8 @@
 
     <!-- 로그인화면 CSS -->
     <link rel="stylesheet" href="../aionbook_theme/css/mainlogin.css">
+    <!-- 회원가입화면 1 약관동의 CSS -->
+    <link rel="stylesheet" href="../aionbook_theme/css/mainsignup1.css">
 
     <title>OnBook AI</title>
         <meta name="description" content="OnBook AI">
@@ -50,7 +52,7 @@
                   </div>
                   -->
                   <div class="gnb__item">
-                    <a href="login.html" class="gnb__link">로그인</a>
+                    <a href="/login.html" class="gnb__link">로그인</a>
                   </div>
             
                   <div class="gnb__item gnb__item--border-btn">
@@ -97,26 +99,42 @@
             </header>
           </div>
 
-          <div class="mainlogin">
-            <section class="mainlogin_1">
-              <div class="mainlogin_title">로그인</div>
-              <div class="mainlogin_input">
-                <input type="text" placeholder="아이디" class="login_id">
-                <input type="password" placeholder="비밀번호" class="login_pw">
+          <div class="mainsignup1">
+            <section class="mainsignup1_inner">
+              <div class="mainsignup1_title">회원가입</div>
+              <div class="step-indicator">
+                <div class="mainsignup1_title_number active">1</div>
+                <div>약관동의</div>
+                <div class="mainsignup1_title_number">2</div>
+                <div>정보입력</div>
               </div>
-              <button class="mainlogin_btn">로그인</button>
-              <div class="mainlogin_group">
-                <label>
-                  <input type="checkbox"> 자동로그인
-                </label>
-                <div class="sub_options">
-                  <a href="#">아이디 찾기</a> |
-                  <a href="#">비밀번호 찾기</a> |
-                  <a href="mainsignup1.html">회원가입</a>
+          
+              <div class="mainsignup1_text1">
+                <input type="checkbox" id="agree_all">
+                <label for="agree_all"> 전체동의</label>
+                <h3 class="mainsignup1_text2">OnBook AI의 이용약관, 개인정보처리방침에 모두 동의합니다.</h3>
+              </div>
+              
+              <div class="mainsignup1_text1">
+                <input type="checkbox" id="agree_terms">
+                <label for="agree_terms"> 회원 이용약관 (필수)</label>
+                <div class="mainsignup1_term box"> 
+                  <div class="term-content">제 1장</div>
                 </div>
               </div>
+          
+              <div class="mainsignup1_text1">
+                <input type="checkbox" id="agree_privacy">
+                <label for="agree_privacy"> 개인정보처리방침 (필수)</label>
+                <div class="mainsignup1_term box"> 
+                  <div class="term-content">제 1장</div>
+                </div>
+              </div>
+          
+              <button class="mainsignup1_btn">다음</button>
             </section>
           </div>
+          
 
         <footer>
           <div class="desktop-footer">
@@ -270,17 +288,7 @@
   <div id="popup">
       <span class='b-close' onClick="javascript:$('#popup').bPopup().close();"><span>X</span></span>        
       <div class="popupContent"></div>
-  </div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  </div>  
   
   
   </body>

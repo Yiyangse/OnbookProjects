@@ -1,6 +1,5 @@
 body {
     font-family: 'Pretendard', sans-serif;
-
   }
   
   .mainlogin {
@@ -54,7 +53,11 @@ body {
     font-weight: 700;
     color: #bbb;
     margin-top: 20px;
-    cursor: pointer;
+  }
+
+  .mainlogin_btn :hover{
+    background-color: #5069FF;
+    color: #f0f0f0;
   }
   
   .mainlogin_group {
