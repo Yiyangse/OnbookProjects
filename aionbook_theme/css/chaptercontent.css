@@ -18,13 +18,22 @@ body {
 .basic-class {
     /* background:#E6EAFF; */
     padding: 20px;
+    background-color: #E6EAFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
 .basic-class h1 {
     font-size: 64px;
     color: #333;
     margin-bottom: 10px;
+    margin-top: 100px;
     text-align: center;
+    font-weight: 800;
+    line-height: 60px;
+    letter-spacing: -0.04em;
 }
 
 .basic-class p {
@@ -37,14 +46,15 @@ body {
 .course-info {
     display: flex;
     width: 1060px;
-    height: 244px;
+    height: 255px;
     align-items: center;
     justify-content: space-around;
     background: #4D46D5;
     color: white;
-    padding: 40px;
+    padding: 0;
     border-radius: 10px;
     margin-top: 40px;
+    top: 200px;
 }
 
 .info-item {
@@ -71,7 +81,8 @@ body {
 }
 
 .about, .bookmark, .chapter-grid {
-    margin-top: 40px;
+    max-width: 1200px;
+    margin: 10px auto;
 }
 
 .about img{
@@ -84,6 +95,17 @@ body {
     font-size: 37px;
     font-weight: 700;
     line-height: 35px;
+}
+
+.about P{
+    width: 1165px;
+    height: 111px;
+    font-family: Pretendard;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 37px;
+    letter-spacing: -0.03em;
+    text-align: left;
 }
 
 .bookmark h3 {
@@ -106,6 +128,10 @@ body {
     padding: 10px 20px;
     border-radius: 14px;
     cursor: pointer;
+    color: #151515;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 35px;
 }
 
 .chapter-grid {
@@ -135,11 +161,19 @@ body {
     transform: scale(1.05);
 }
 
-.chapter img {
-    width: 376px;
-    height: 241px;
+.chapter-img {
+    width: 100%;
+    height: 241px; /* 카드의 상단 이미지 영역 높이를 설정 */
+    overflow: hidden;
+}
+
+.chapter-img img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
+
+
 
 .chapter-content {
     display: flex;
@@ -175,42 +209,43 @@ body {
     padding: 0; /* 패딩 제거 */
 }
 
-.chapter ul li {
-    margin-bottom: 5px;
-    text-align: left;
-    font-weight: 800;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-}
-
-.chapter li :hover{
-    transition: all 0.3s ease;
-    background-color: #777777;
-}
-
-
-.chapter .button {
-    display: inline-block;
+.chapter li {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    width: 270px;
-    height: 50px;
-    padding: 12px 20px;
-    background-color: white;
-    color: #4D46D5;
-    text-decoration: none;
-    border-radius: 14px;
-    border: 1px solid #4D46D5;
-    transition: all 0.3s ease;
-    text-align: center;
-    margin-top: auto;
-    font-weight: 600;
-    margin-bottom: 14px;
+    padding: 10px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-.chapter .button:hover {
-    background-color: #6200ea;
+.chapter li:hover {
+    background-color: #f0f0f0;
+}
+
+.check-button {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #F4F4F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.check-button.checked {
+    background: #4D46D5;
+}
+
+.check-button.checked::after {
+    content: '✓';
     color: white;
+    font-size: 16px;
+}
+
+.locked {
+    position: relative;
 }
 
 .locked::after {
@@ -226,4 +261,5 @@ body {
     align-items: center;
     font-size: 48px;
     color: white;
+    border-radius: 14px;
 }

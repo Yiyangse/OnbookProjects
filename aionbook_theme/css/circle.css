@@ -1,4 +1,4 @@
-  /*  */
+  /* circle.css */
   /* learning circle 한 번에 끝내는 AI 학습체계 */
   /*  */
 @font-face {
@@ -82,3 +82,4 @@
     0% { transform: rotate(0deg) translateX(400px) rotate(0deg); }
     100% { transform: rotate(360deg) translateX(400px) rotate(-360deg); }
 }
+/*  */

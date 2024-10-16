@@ -49,3 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+// class 체크버튼 기능
+document.querySelectorAll('.check-button').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.stopPropagation();  // 이벤트 버블링 방지
+        this.classList.toggle('checked');
+    });
+});
