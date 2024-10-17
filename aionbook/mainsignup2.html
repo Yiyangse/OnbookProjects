@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link rel="stylesheet" href="https://onbook.codingx.ai/assets/aionbook_theme/css/common.css">
+        <link rel="stylesheet" href="https://onbook.codingx.ai/assets/aionbook_theme/css/components.css">
+        <link rel="stylesheet" href="https://onbook.codingx.ai/assets/aionbook_theme/css/pages.css">
+        <!-- 회원가입화면 1 약관동의 CSS -->
+        <link rel="stylesheet" href="../aionbook_theme/css/mainsignup1.css">
+
+        <!-- 회원가입화면 2 정보기입 CSS -->
+        <link rel="stylesheet" href="../aionbook_theme/css/mainsignup2.css">
+        <title>OnBook AI</title>
+            <meta name="description" content="OnBook AI">
+        <meta property="og:type" content="website"> 
+        <meta property="og:title" content="OnBook AI">
+        <meta property="og:description" content="OnBook AI">
+        <meta property="og:image" content="http://onbook.codingx.ai/upload/logo/onbook-logo.svg">
+        <meta property="og:url" content="http://onbook.codingx.ai">
+            <link rel="shortcut icon" type="image/x-icon" href="/assets/aionbook_theme/favicon.ico">
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> -->
+        <script src="../aionbook_theme/js/script.js" defer></script>
+    </head> 
+<body>
+    <div class="mainsignup2">
+        <section class="mainsignup2_inner">
+            <div class="signup-header">
+                <h1>회원가입</h1>
+                <div class="step-indicator">
+                    <div class="step-number">1</div>
+                    <div class="step-text">약관동의</div>
+                    <div class="step-number active">2</div>
+                    <div class="step-text active">정보입력</div>
+                </div>
+            </div>
+
+            <form class="signup-form">
+                <div class="form-group">
+                    <label class="form-label">이름</label>
+                    <input type="text" class="form-input" placeholder="이름을 입력해주세요">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">아이디</label>
+                    <input type="text" class="form-input" placeholder="아이디를 입력해주세요">
+                    <button type="button" class="verify-button">중복확인</button>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">비밀번호</label>
+                    <input type="password" class="form-input" placeholder="비밀번호를 입력해주세요">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">비밀번호 확인</label>
+                    <input type="password" class="form-input" placeholder="비밀번호를 입력하세요">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">생년월일</label>
+                    <div class="date-group">
+                        <input type="text" class="form-input date-input" placeholder="YYYY">
+                        <input type="text" class="form-input date-input" placeholder="MM">
+                        <input type="text" class="form-input date-input" placeholder="DD">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">성별</label>
+                    <div class="gender-group">
+                        <div class="gender-option">남성</div>
+                        <div class="gender-option">여성</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">이메일</label>
+                    <div class="email-group">
+                        <input type="text" class="form-input email-input">
+                        <select class="form-input email-domain">
+                            <option value="naver.com">naver.com</option>
+                            <option value="gmail.com">gmail.com</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">휴대폰 번호</label>
+                    <div class="phone-group">
+                        <input type="text" class="form-input phone-input" placeholder="010">
+                        <input type="text" class="form-input phone-input">
+                        <input type="text" class="form-input phone-input">
+                        <button type="button" class="verify-button">인증번호 받기</button>
+                    </div>
+                </div>
+
+                <div class="consent-group">
+                    <div class="consent-item">
+                        <input type="checkbox" id="emailConsent">
+                        <label for="emailConsent">이메일 수신 동의</label>
+                    </div>
+                    <div class="consent-item">
+                        <input type="checkbox" id="smsConsent">
+                        <label for="smsConsent">SMS(문자메시지) 수신 동의</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="signup-button">회원가입</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
