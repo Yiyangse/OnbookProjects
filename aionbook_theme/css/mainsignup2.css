@@ -204,7 +204,7 @@ body { font-family: 'NanumSquareRound';
     width: 200px;
 }
 
-.consent-group {
+.-group {
     margin-top: 32px;
     padding: 24px;
     background-color: #F5F7FF;
@@ -213,37 +213,51 @@ body { font-family: 'NanumSquareRound';
 
 .bottom-button{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between; /* 버튼 나란히 배치 */
+    
 }
-.backto-button{
-    width: 588px;
+
+.backto-button, .signup-button {
+    width: 45%; /* 버튼 크기 조정 */
+    height: 64px;
     border-radius: 23px;
-    border: #777777;
-    background-color: #fff;
-    color : #777777;
     font-size: 20px;
 }
 
+.backto-button {
+    background-color: #fff;
+    color: #777;
+    border: 1px solid #777;
+}
+
 .signup-button {
-    width: 588px;
-    height: 64px;
     background-color: #5069FF;
     color: white;
-    font-size: 20px;
     border: none;
-    border-radius: 23px;
-    cursor: pointer;
-    margin-top: 32px;
 }
 
 @media screen and (max-width: 767px) {
     .mainsignup2_inner {
         width: 100%;
+        padding: 20px;
+        margin: 20px;
     }
+    
     .form-group {
-        width: 100%;
+        flex-direction: column; /* 세로 배치로 변경 */
+        align-items: flex-start;
     }
-    .form-input {
-        width:100%;
+    
+    .form-label, .form-input {
+        width: 100%; /* 입력 필드 너비 100% */
+    }
+
+    .bottom-button {
+        flex-direction: column; /* 버튼 세로로 배치 */
+        gap: 10px;
+    }
+
+    .backto-button, .signup-button {
+        width: 100%; /* 버튼 너비 100%로 조정 */
     }
 }
