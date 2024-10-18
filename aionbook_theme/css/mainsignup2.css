@@ -16,7 +16,63 @@ body { font-family: 'NanumSquareRound';
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
     width: 100%;
-    margin: 100px auto;
+    margin: 100px;
+}
+
+.mainsignup2_title {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333; /* 텍스트 색상 추가 */
+}
+
+.step-indicator {
+    font-family: 'Pretendard';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 37px;
+    letter-spacing: -0.03em;
+    text-align: left;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.mainsignup2_title_number {
+    background-color: #f0f0f0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 20px; /* 숫자 크기 조정 */
+    font-weight: 700;
+    color: #333;
+}
+
+.mainsignup2_title_number.active {
+    background-color: #5069FF;
+    color: white;
+}
+
+.mainsignup1_text1 {
+    font-family: 'Pretendard';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 37px;
+    letter-spacing: -0.03em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.mainsignup2_text1.active{
+    color: #5069FF;
 }
 
 .form-group {
