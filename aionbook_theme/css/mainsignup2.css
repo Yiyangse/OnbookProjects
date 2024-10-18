@@ -23,7 +23,7 @@ body { font-family: 'NanumSquareRound';
     font-weight: 700;
     text-align: center;
     margin-bottom: 30px;
-    color: #333; /* 텍스트 색상 추가 */
+    color: #333;
 }
 
 .step-indicator {
