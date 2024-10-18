@@ -1,5 +1,5 @@
 /*  */
-/* 미래를 비추는 AI onBook */
+/* coursegrid.css ::미래를 비추는 AI onBook */
 /*  */
 .course-grid {
     padding: 160px 0;
@@ -123,6 +123,22 @@
     font-size: 48px;
     color: white;
 }
+@media screen and (max-width: 767px) {
+    .course-grid__container {
+        width: 100%;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .card {
+        width: 100%;
+      height: auto;
+    }
+    .card-image img {
+      height: auto;
+    }
+  }
+  
+
 /* 화살표 보류 */
 /* .arrow {
     position: absolute;

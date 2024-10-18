@@ -1,5 +1,5 @@
   /*  */
-  /* AI 온북 플랫폼의 특징 */
+  /* learning.css ::AI 온북 플랫폼의 특징 */
   /*  */
 .learning-system {
     background: #F6F6F6;
@@ -56,6 +56,29 @@
     line-height: 30px;
     font-weight: 500;
     color: #323232;
+  }
+
+  @media screen and (max-width: 767px) {
+    .learning-system__inner {
+      width: 100%;
+      padding: 80px 16px;
+    }
+    .learning-system__list {
+      flex-direction: column;
+      gap: 16px;
+    }
+    .learning-system__item {
+      width: 100%;
+      height: auto;
+      padding: 24px;
+    }
+    .learning-system__title {
+      text-align: center;
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: 700;
+      color: #000;
+    }
   }
   /*  */
   /* learning course 한 번에 끝내는 AI 학습코스 */
@@ -157,4 +180,55 @@
     background-color:#4D46D5;
     color: #FFFFFF;
   }
+  
+/* 모바일 (최대 767px) */
+@media screen and (max-width: 767px) {
+  /* 학습 코스 섹션 내부 */
+  .learning-course__inner {
+    width: 300px;
+    padding: 40px 16px;
+  }
+  .learning-course__content {
+    width: 100%;
+  }
+
+  /* 코스 리스트 아이템들 */
+  .learning-course__item {
+    width: 100%;
+    height: auto;
+    margin-bottom: 24px; 
+    box-shadow: none;
+  }
+
+  /* 학습 코스 텍스트 */
+  .learning-course__text {
+      text-align: center;
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: 700;
+      color: #000;
+    }
+
+  /* 코스 이미지 */
+  .learning-course__image {
+    width: 100%;
+    height: auto;
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* 이미지 크기 조정 */
+  .learning-course__item img {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* 코스 버튼 중앙 정렬 */
+  .learning-course__btn {
+    display: block;
+    margin: 0 auto;
+  }
+}
   /*  */
