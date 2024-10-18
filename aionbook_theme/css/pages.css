@@ -3,7 +3,38 @@
     margin: 0 auto;
   }
   
-  .hero-btn {
+/* 메인 섹션 설정 */
+.main {
+  height: 100vh; /* 페이지의 전체 높이 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* 버튼 배치를 위한 relative 설정 */
+}
+  /* 메인 레이아웃 */
+  .main__inner {
+    width: 1920px;
+    height: 602px;
+    position: absolute; /* 위치 설정을 위해 */
+    top: 90px;
+    left: 50%; /* 중앙 정렬을 위해 */
+    transform: translateX(-50%); /* 중앙 정렬 */
+    opacity: 0.9; /* 투명도 적용 */
+  }
+
+  .main__inner img {
+    width: 100%; /* 1920px 고정 대신 반응형 처리 */
+    height: auto; /* 이미지 비율 유지 */
+  }
+  /* .main__button-wrap {
+    margin-top: 20px;
+    display: flex;
+    gap: 16px;
+    justify-content: center; 
+  } */
+  
+  /* .hero-btn {
     border: 2px solid #222;
     padding: 8px 38px;
     border-radius: 6px;
@@ -24,43 +55,62 @@
   .hero-btn--black-bg:hover {
     background-color: #222;
   }
-  
-  .main {
-    background: url('../aionbook_theme/images/home/herobn.png') no-repeat center center;
-    background-size: cover;
-    height: 100vh; /* 페이지의 전체 높이 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .main__inner {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
-  .main__button-wrap {
-    margin-top: 20px;
-    display: flex;
-    gap: 16px;
-    justify-content: center; /* 버튼을 가운데 정렬 */
-  }
+/* 버튼 공통 스타일 */
+.hero-btn {
+  /* border: 2px solid #222; */
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: #222;
+  padding: 8px 38px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* 체험하기 버튼 */
+.hero-btn--experience {
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  top: 400px; /* 원하는 위치로 조정 */
+  left: calc(50% - 100px); /* 중앙에서 약간 왼쪽으로 */
+  padding: 10px 20px;
+  border-radius: 10px;
+  opacity: 0.85;
+  background-color: #FF5722;
+  color: #fff;
+  border: none;
+}
+
+/* 도입문의 버튼 */
+.hero-btn--inquiry {
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  top: 400px; /* 체험하기 버튼과 같은 높이 */
+  left: calc(50% + 100px); /* 중앙에서 오른쪽으로 */
+  padding: 10px 20px;
+  border-radius: 10px;
+  opacity: 0.85;
+  background-color: #2196F3;
+  color: #fff;
+  border: none;
+}
+
+/* 버튼 hover 효과 */
+.hero-btn:hover {
+  background-color: #F1F1F1;
+}
+.hero-btn--experience:hover {
+  background-color: #E64A19;
+}
+.hero-btn--inquiry:hover {
+  background-color: #1976D2;
+}
+
   
-  .hero-btn {
-    border: 2px solid #222;
-    padding: 8px 38px;
-    border-radius: 6px;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 28px;
-    color: #222;
-  }
-  
-  .hero-btn--white-bg {
+  /* .hero-btn--white-bg {
     background-color: #fff;
     color: #000;
     border-color: #fff;
@@ -109,7 +159,7 @@
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-  }
+  } */
     
   .banner {
     background: #0B0E24;
@@ -133,7 +183,7 @@
     font-weight: 700;
     color: #Fff;
   }
-  /* 체험하기 도입문의 버튼 */
+
   .banner__btn {
     margin-top: 200px;
     padding: 100px 100px;
@@ -147,7 +197,7 @@
   .banner__btn:hover {
     background: #f1f1f1;
   }
-  /*  */
+  
   .partner-company__inner {
     width: 550px;
     margin: 0 auto;
@@ -404,7 +454,7 @@
   }
   
   @media screen and (max-width: 1200px) {
-    .desktop__inner {
+    /* .desktop__inner {
       min-width: inherit;
     }
     .main__inner {
@@ -454,7 +504,7 @@
       -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center;
-    }
+    } */
     .learning-system__inner {
       width: 712px;
     }
@@ -635,7 +685,7 @@
     }
   }
   @media screen and (max-width: 767px) {
-    .main__inner {
+    /* .main__inner {
       width: inherit;
       -webkit-box-align: center;
       -webkit-align-items: center;
@@ -672,7 +722,7 @@
     }
     .main.main--center .main__inner {
       padding: 258px 24px;
-    }
+    } */
     .learning-system__inner {
       width: inherit;
       padding: 80px 24px;
@@ -708,7 +758,7 @@
       line-height: 24px;
       font-weight: 500;
     }
-    .learning-course__inner {
+    /* .learning-course__inner {
       width: inherit;
       padding: 80px 24px;
     }
@@ -737,7 +787,7 @@
     }
     .learning-course__text span {
       margin-top: 8px;
-    }
+    } */
     .banner__inner {
       padding: 160px 24px;
       width: inherit;

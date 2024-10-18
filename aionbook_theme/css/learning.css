@@ -183,52 +183,70 @@
   
 /* 모바일 (최대 767px) */
 @media screen and (max-width: 767px) {
-  /* 학습 코스 섹션 내부 */
+  /* 학습 코스 섹션 */
   .learning-course__inner {
-    width: 300px;
-    padding: 40px 16px;
+    width: 100%;
+    padding: 80px 24px;
+  }
+  .learning-course__title {
+    text-align: center;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 600;
   }
   .learning-course__content {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-
-  /* 코스 리스트 아이템들 */
+  .learning-course__desc {
+   margin: 0; 
+  }
+  .learning-course__text{
+    width: 100%;
+    height: 300px;
+    padding: 0;
+  }
+  .learning-course__list {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column; 
+    gap: 24px;
+  }
   .learning-course__item {
     width: 100%;
-    height: auto;
-    margin-bottom: 24px; 
-    box-shadow: none;
-  }
-
-  /* 학습 코스 텍스트 */
-  .learning-course__text {
-      text-align: center;
-      font-size: 24px;
-      line-height: 30px;
-      font-weight: 700;
-      color: #000;
-    }
-
-  /* 코스 이미지 */
-  .learning-course__image {
-    width: 100%;
-    height: auto;
-    margin-top: 16px;
     display: flex;
-    justify-content: center;
-  }
-
-  /* 이미지 크기 조정 */
-  .learning-course__item img {
-    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 24px;
     height: auto;
-    object-fit: contain;
   }
-
-  /* 코스 버튼 중앙 정렬 */
+  .learning-course__image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+  }
+  .learning-course__image img{
+    width: 120px;
+    height: 120px;
+    margin-top: 0;
+  }
+  .learning-course__text p {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+  }
+  .learning-course__text span {
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
   .learning-course__btn {
-    display: block;
-    margin: 0 auto;
+    font-size: 16px;
+    padding: 7px 16px;
+    margin-top: 16px;
   }
 }
   /*  */
