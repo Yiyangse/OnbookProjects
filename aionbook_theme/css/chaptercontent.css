@@ -263,3 +263,105 @@ body {
     color: white;
     border-radius: 14px;
 }
+
+@media screen and (max-width: 767px) {
+  
+    /* body 패딩과 기본 폰트 크기 조정 */
+    body {
+      padding: 10px;
+      font-size: 16px;
+    }
+  
+    /* basic-class 레이아웃 변경 */
+    .basic-class {
+      padding: 10px;
+    }
+  
+    .basic-class h1 {
+      font-size: 40px;
+      margin-top: 50px;
+      line-height: 48px;
+    }
+  
+    .basic-class p {
+      font-size: 20px;
+    }
+  
+    /* course-info 레이아웃 수정 */
+    .course-info {
+      flex-direction: grid; /* 세로로 정렬 */
+      width: 100%;
+      height: auto;
+      padding: 20px;
+    }
+  
+    .info-item {
+      margin-bottom: 0px;
+    }
+  
+    .info-item img {
+      width: 24px;
+      height: 24px;
+    }
+  
+    .info-item p {
+      font-size: 14px;
+    }
+  
+    /* about 섹션 조정 */
+    .about h2 {
+      font-size: 30px;
+      line-height: 32px;
+    }
+  
+    .about p {
+      font-size: 18px;
+      line-height: 30px;
+      width: 100%;
+      margin-bottom: 100px;
+    }
+  
+    /* bookmark 버튼 크기 조정 */
+    .bookmark button {
+      width: 100%;
+      height: auto;
+      font-size: 18px;
+      padding: 15px;
+    }
+  
+    /* chapter-grid 1열로 조정 */
+    .chapter-grid {
+      grid-template-columns: 1fr; /* 1열 레이아웃 */
+      gap: 20px;
+    }
+  
+    .chapter {
+      width: 100%;
+      height: auto;
+    }
+  
+    .chapter-img {
+      height: 180px; /* 이미지 높이 축소 */
+    }
+  
+    .chapter h3 {
+      font-size: 16px;
+      margin-top: 10px;
+      padding-bottom: 3px;
+    }
+  
+    .chapter h4 {
+      font-size: 24px;
+      padding: 5px;
+    }
+  
+    .chapter ul li {
+      font-size: 16px;
+    }
+  
+    .check-button {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  

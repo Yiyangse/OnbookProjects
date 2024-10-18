@@ -119,8 +119,9 @@
                 <div class="form-group">
                     <label class="form-label">비밀번호</label>
                     <input type="password" class="form-input" placeholder="비밀번호를 입력해주세요">
-                    <p>*영문,숫자,특수문자 조합 8-20자를 입력해주세요.</p>
                 </div>
+                    <div class="form-notify">                
+                    <p>*영문,숫자,특수문자 조합 8-20자를 입력해주세요.</p></div>
 
                 <div class="form-group">
                     <label class="form-label">비밀번호 확인</label>
@@ -164,9 +165,15 @@
                         <button type="button" class="verify-button">인증번호 받기</button>
                     </div>
                 </div>
+                    <label class="form-label"></label>
+                        <input type="text" class="form-input phoneverify-input">
+                        <button type="button" class="verify-button">인증번호 확인</button>
+
+
 
                 <div class="consent-group">
                     <div class="consent-item">
+                        <label class="form-label">수신동의[선택사항]</label>
                         <input type="checkbox" id="emailConsent">
                         <label for="emailConsent">이메일 수신 동의</label>
                     </div>
@@ -175,8 +182,10 @@
                         <label for="smsConsent">SMS(문자메시지) 수신 동의</label>
                     </div>
                 </div>
-
+                <div class="bottom-button">
+                <button type="linkto" class="backto-button">이전</button>
                 <button type="submit" class="signup-button">회원가입</button>
+            </div>
             </form>
         </section>
     </div>

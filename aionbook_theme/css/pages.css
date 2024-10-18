@@ -62,7 +62,7 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;
-  color: #222;
+  color: #5069FF;
   padding: 8px 38px;
   border-radius: 6px;
   cursor: pointer;
@@ -788,9 +788,11 @@
     .learning-course__text span {
       margin-top: 8px;
     } */
+    .main__inner img {
+      width: 327px;
+    }
     .banner__inner {
-      padding: 160px 24px;
-      width: inherit;
+      width: 100%;
     }
     .banner__text span {
       font-size: 14px;

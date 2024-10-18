@@ -75,13 +75,17 @@ body { font-family: 'NanumSquareRound';
 
 .form-group {
     margin-bottom: 24px;
+    display: flex;
 }
 
-.form-label {
+.form-label {font-family: Pretendard;
+    letter-spacing: -0.03em;
+    text-align: left; 
     display: block;
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 8px;
+    width: 180px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 10px;
 }
 
 .form-input {
@@ -89,7 +93,7 @@ body { font-family: 'NanumSquareRound';
     border: 1px solid #ddd;
     padding: 0 16px;
     font-size: 16px;
-    width: 996px;
+    width: 792px;
     height: 64px;
     left: 564px;
     gap: 0px;
@@ -99,7 +103,15 @@ body { font-family: 'NanumSquareRound';
 
 }
 
-
+.form-notify{
+    font-family: 'Pretendard';
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 37px;
+    letter-spacing: -0.03em;
+    margin-left: 160px;
+    margin-bottom: 10px;
+}
 .form-input.error {
     border-color: #FF4D4F;
 }
@@ -142,7 +154,13 @@ body { font-family: 'NanumSquareRound';
 }
 
 .email-input {
+    width: 500px;
     flex: 1;
+}
+
+.email-input ::placeholder{
+    text-align: center;
+    margin-left: 100px;
 }
 
 .email-domain {
@@ -164,12 +182,26 @@ body { font-family: 'NanumSquareRound';
 }
 
 .verify-button {
-    width: 120px;
-    background-color: #5069FF;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+    margin-left: 10px;
+    width: 160px;
+    height: 64px;
+    top: 565px;
+    left: 1380px;
+    gap: 0px;
+    border-radius: 23px;
+    opacity: 0px;
+    color: #777777;
+    background-color: #F4F4F4;
+    font-family: 'Pretendard';
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 37px;
+    letter-spacing: -0.03em;
+}
+
+.phoneverify-input{
+    margin-left: 160px;
+    width: 200px;
 }
 
 .consent-group {
@@ -179,8 +211,21 @@ body { font-family: 'NanumSquareRound';
     border-radius: 8px;
 }
 
+.bottom-button{
+    display: flex;
+    flex-direction: column;
+}
+.backto-button{
+    width: 588px;
+    border-radius: 23px;
+    border: #777777;
+    background-color: #fff;
+    color : #777777;
+    font-size: 20px;
+}
+
 .signup-button {
-    width: 100%;
+    width: 588px;
     height: 64px;
     background-color: #5069FF;
     color: white;
