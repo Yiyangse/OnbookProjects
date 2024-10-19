@@ -141,11 +141,14 @@ body { font-family: 'NanumSquareRound';
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .gender-option.selected {
+    background-color: #5069FF;
+    color: white;
     border-color: #5069FF;
-    background-color: #F5F7FF;
 }
 
 .email-group {
@@ -169,6 +172,7 @@ body { font-family: 'NanumSquareRound';
 
 .phone-group {
     display: flex;
+    align-items: center;
     gap: 16px;
 }
 
@@ -176,9 +180,32 @@ body { font-family: 'NanumSquareRound';
     width: 100px;
 }
 
+.verification-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.verification-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 10px 10px;
+}
+
 .verification-group {
     display: flex;
     gap: 16px;
+}
+
+.verification-input-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: 180px; /* Matches the label width */
+}
+
+.verification-input {
+    flex: 1;
 }
 
 .verify-button {
@@ -197,6 +224,41 @@ body { font-family: 'NanumSquareRound';
     font-weight: 700;
     line-height: 37px;
     letter-spacing: -0.03em;
+}
+
+/* Consent section styling */
+.consent-wrapper {
+    margin-top: 24px;
+}
+
+.consent-container {
+    margin: 10px 10px;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.consent-item {
+    margin-bottom: 16px;
+}
+
+.consent-item:last-child {
+    margin-bottom: 0;
+}
+
+.consent-checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.consent-checkbox-wrapper input[type="checkbox"] {
+    margin: 0;
+}
+
+.consent-checkbox-wrapper label {
+    margin: 0;
+    font-size: 16px;
 }
 
 .phoneverify-input{
