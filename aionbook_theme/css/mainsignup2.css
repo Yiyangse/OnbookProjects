@@ -76,9 +76,11 @@ body { font-family: 'NanumSquareRound';
 .form-group {
     margin-bottom: 24px;
     display: flex;
+    align-items: flex-start;
 }
 
-.form-label {font-family: Pretendard;
+.form-label {
+    font-family: Pretendard;
     letter-spacing: -0.03em;
     text-align: left; 
     display: block;
@@ -86,6 +88,7 @@ body { font-family: 'NanumSquareRound';
     font-size: 24px;
     font-weight: 700;
     margin-top: 10px;
+    flex-shrink: 0; /* 라벨 너비 고정 */
 }
 
 .form-input {
@@ -154,6 +157,7 @@ body { font-family: 'NanumSquareRound';
 .email-group {
     display: flex;
     gap: 16px;
+    flex: 1;
 }
 
 .email-input {
@@ -168,6 +172,7 @@ body { font-family: 'NanumSquareRound';
 
 .email-domain {
     width: 200px;
+    flex-shrink: 0;
 }
 
 .phone-group {
@@ -177,19 +182,29 @@ body { font-family: 'NanumSquareRound';
 }
 
 .phone-input {
-    width: 100px;
+    width: 120px;
+    height: 48px;
+    border: 1px solid #E6E6E6;
+    border-radius: 23px;
+    padding: 0 16px;
+    font-size: 16px;
+    color: #333;
+    flex-shrink: 0; /* 입력 필드 크기 고정 */
 }
 
 .verification-container {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
+    margin-bottom: 40px;
 }
 
 .verification-wrapper {
+    flex: 1;
+    width: 800px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    margin: 10px 10px;
+    gap: 12px;
+    /* margin: 10px 10px; */
 }
 
 .verification-group {
@@ -201,34 +216,33 @@ body { font-family: 'NanumSquareRound';
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-left: 180px; /* Matches the label width */
 }
 
 .verification-input {
     flex: 1;
+    height: 48px;
+    border: 1px solid #E6E6E6;
+    border-radius: 23px;
+    padding: 0 16px;
+    font-size: 16px;
 }
 
 .verify-button {
-    margin-left: 10px;
-    width: 160px;
-    height: 64px;
-    top: 565px;
-    left: 1380px;
-    gap: 0px;
+    height: 48px;
+    padding: 0 24px;
+    border: none;
     border-radius: 23px;
-    opacity: 0px;
-    color: #777777;
-    background-color: #F4F4F4;
-    font-family: 'Pretendard';
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 37px;
-    letter-spacing: -0.03em;
+    background-color: #454B60;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
 }
 
 /* Consent section styling */
 .consent-wrapper {
-    margin-top: 24px;
+    margin-bottom: 40px;
 }
 
 .consent-container {
@@ -247,18 +261,39 @@ body { font-family: 'NanumSquareRound';
 }
 
 .consent-checkbox-wrapper {
+    margin-top: 13px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 20px;
 }
 
 .consent-checkbox-wrapper input[type="checkbox"] {
-    margin: 0;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ddd;
+    border-radius: 23px;
+    cursor: pointer;
+    position: relative;
+}
+
+.consent-checkbox-wrapper input[type="checkbox"]:checked {
+    background-color: #4C6FFF;
+}
+
+.consent-checkbox-wrapper input[type="checkbox"]:checked::after {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
 }
 
 .consent-checkbox-wrapper label {
-    margin: 0;
-    font-size: 16px;
+    font-size: 20px;
+    margin-bottom: 5px;
 }
 
 .phoneverify-input{
@@ -275,12 +310,12 @@ body { font-family: 'NanumSquareRound';
 
 .bottom-button{
     display: flex;
-    justify-content: space-between; /* 버튼 나란히 배치 */
-    
+    /* justify-content: space-between; */
+    gap: 16px;
 }
 
 .backto-button, .signup-button {
-    width: 45%; /* 버튼 크기 조정 */
+    width: 50%; /* 버튼 크기 조정 */
     height: 64px;
     border-radius: 23px;
     font-size: 20px;
@@ -298,28 +333,93 @@ body { font-family: 'NanumSquareRound';
     border: none;
 }
 
+/* 모바일 반응형 개선 */
+/* 모바일 반응형 개선 */
 @media screen and (max-width: 767px) {
     .mainsignup2_inner {
+        margin-top: 20px;
         width: 100%;
         padding: 20px;
         margin: 20px;
+        box-shadow: none;
+        border-radius: 10px; /* 모서리 반경 축소 */
     }
-    
+
+    .mainsignup2_title {
+        font-size: 28px; /* 제목 크기 축소 */
+        margin-bottom: 20px;
+    }
+
     .form-group {
-        flex-direction: column; /* 세로 배치로 변경 */
-        align-items: flex-start;
+        width: 100%;
+        flex-direction: column;
+        gap: 12px; /* 간격을 넓혀 가독성 향상 */
     }
-    
-    .form-label, .form-input {
-        width: 100%; /* 입력 필드 너비 100% */
+
+    .form-label {
+        width: 100%;
+        margin-bottom: 8px;
+        font-size: 18px; /* 라벨 크기 축소 */
+    }
+
+    .form-input {
+        width: 100%; /* 입력 필드 너비를 100%로 확장 */
+    }
+
+    .verification-wrapper {
+        width: 100%;
+    }
+
+    .phone-group {
+        flex-wrap: wrap;
+        gap: 12px; /* 필드 간격을 조금 더 넓게 조정 */
+    }
+
+    .phone-input {
+        flex: 1;
+        min-width: 100px; /* 입력 필드 최소 너비 조정 */
+        height: 40px; /* 높이 축소 */
+    }
+
+    .verify-button {
+        width: 100%;
+        margin-top: 8px;
+        height: 48px; /* 버튼 크기 최적화 */
+    }
+
+    .verification-input-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px; /* 필드 간격 확장 */
+    }
+
+    .email-group {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .email-input {
+        width: 100%;
+    }
+
+    .email-domain {
+        width: 100%;
     }
 
     .bottom-button {
-        flex-direction: column; /* 버튼 세로로 배치 */
-        gap: 10px;
+        flex-direction: column;
+        gap: 16px; /* 버튼 간격 조정 */
     }
 
-    .backto-button, .signup-button {
-        width: 100%; /* 버튼 너비 100%로 조정 */
+    .backto-button,
+    .signup-button {
+        width: 100%;
+        height: 56px; /* 버튼 크기 통일 */
+    }
+
+    .consent-container {
+        margin-left: 0;
+        padding: 16px;
+        border-radius: 12px; /* 반경을 줄여 작은 화면에서 자연스럽게 표현 */
     }
 }
