@@ -334,10 +334,10 @@ body { font-family: 'NanumSquareRound';
 }
 
 /* 모바일 반응형 개선 */
-/* 모바일 반응형 개선 */
 @media screen and (max-width: 767px) {
+    /* inner 컨테이너를 좀 더 아래로 내리기 위한 설정 */
     .mainsignup2_inner {
-        margin-top: 20px;
+        margin-top: 80px; /* 헤더 높이를 고려하여 더 넉넉한 마진 추가 */
         width: 100%;
         padding: 20px;
         margin: 20px;
@@ -345,6 +345,7 @@ body { font-family: 'NanumSquareRound';
         border-radius: 10px; /* 모서리 반경 축소 */
     }
 
+    /* title의 크기 및 간격 조정 */
     .mainsignup2_title {
         font-size: 28px; /* 제목 크기 축소 */
         margin-bottom: 20px;
@@ -364,6 +365,7 @@ body { font-family: 'NanumSquareRound';
 
     .form-input {
         width: 100%; /* 입력 필드 너비를 100%로 확장 */
+        flex-shrink: 0; /* 축소 방지 */
     }
 
     .verification-wrapper {
@@ -391,6 +393,7 @@ body { font-family: 'NanumSquareRound';
         flex-direction: column;
         width: 100%;
         gap: 12px; /* 필드 간격 확장 */
+        flex-shrink: 0; /* 축소 방지 */
     }
 
     .email-group {
@@ -399,11 +402,24 @@ body { font-family: 'NanumSquareRound';
     }
 
     .email-input {
-        width: 100%;
+        width: 100%; /* 축소 방지 */
+        flex-shrink: 0;
     }
 
     .email-domain {
         width: 100%;
+    }
+
+    /* form-notify 텍스트 정렬 수정 */
+    .form-notify {
+        margin-left: 0; /* 왼쪽 마진을 제거하여 정렬 */
+        text-align: left; /* 작은 화면에서 텍스트 정렬을 input과 맞춤 */
+    }
+
+    /* form-input, verification-input 축소 방지 */
+    .form-input, .verification-input {
+        width: 100%;
+        flex-shrink: 0; /* 축소되지 않도록 설정 */
     }
 
     .bottom-button {
