@@ -1,9 +1,8 @@
 /*  */
-/* coursegrid.css ::미래를 비추는 AI onBook */
+/* coursegrid.css ::AI데이터 분석입문*/
 /*  */
 .course-grid {
-    padding: 160px 0;
-    background-color: #f0f0f0;
+    padding: 30px;
   }
   
   .course-grid__title {

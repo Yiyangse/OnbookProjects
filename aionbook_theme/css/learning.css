@@ -19,7 +19,7 @@
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 160px 0;
+    padding: 30px;
   }
   .learning-system__title {
     text-align: center;
@@ -64,12 +64,16 @@
 }
 
 .learning-system__text {
+  font-family: 'Pretendard';
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: -0.02em;
   text-align: center;
   width: 100%;
 }
 
   .learning-system__text p {
-    font-size: 24px;
+    font-size: 30px;
     line-height: 36px;
     font-weight: 700;
     padding-top: 21px;
