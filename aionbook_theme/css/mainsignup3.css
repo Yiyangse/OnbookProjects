@@ -42,3 +42,17 @@ body { font-family: 'NanumSquareRound';
     cursor: pointer;
     margin-top: 32px;
 }
+
+/* 모바일 반응형 개선 */
+@media screen and (max-width: 767px) {
+    .mainsignup3 {
+        width: 100%;
+    }
+    .mainsignup3_inner {
+        width: 100%;
+    }
+    .mainsignup3_btn{
+        width: 270px;
+        align-items: center;
+    }
+}

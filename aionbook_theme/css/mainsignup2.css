@@ -97,7 +97,7 @@ body { font-family: 'NanumSquareRound';
     padding: 0 16px;
     font-size: 16px;
     width: 792px;
-    height: 64px;
+    height: 48px;
     left: 564px;
     gap: 0px;
     border-radius: 23px;
@@ -133,7 +133,12 @@ body { font-family: 'NanumSquareRound';
 .date-input {
     width: 180px;
 }
-
+.month-input {
+    width: 180px;
+}
+.day-input {
+    width: 180px;
+}
 .gender-group {
     display: flex;
     gap: 16px;
@@ -156,29 +161,38 @@ body { font-family: 'NanumSquareRound';
 
 .email-group {
     display: flex;
-    gap: 16px;
+    gap: 5px;
     flex: 1;
 }
 
 .email-input {
     width: 500px;
-    flex: 1;
+    flex-shrink: 0;
 }
 
 .email-input ::placeholder{
     text-align: center;
     margin-left: 100px;
+    flex-shrink: 0;
 }
 
 .email-domain {
-    width: 200px;
+    width: 150px;
     flex-shrink: 0;
+}
+
+.domain-input{
+    width:150px;
+}
+
+.email-snail{
+    padding:  10px;
 }
 
 .phone-group {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 5px;
 }
 
 .phone-input {
@@ -200,7 +214,7 @@ body { font-family: 'NanumSquareRound';
 
 .verification-wrapper {
     flex: 1;
-    width: 800px;
+    width: 700px;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -219,7 +233,8 @@ body { font-family: 'NanumSquareRound';
 }
 
 .verification-input {
-    flex: 1;
+    width: 396px;
+    flex-shrink: 0;
     height: 48px;
     border: 1px solid #E6E6E6;
     border-radius: 23px;
@@ -336,6 +351,10 @@ body { font-family: 'NanumSquareRound';
 /* 모바일 반응형 개선 */
 @media screen and (max-width: 767px) {
     /* inner 컨테이너를 좀 더 아래로 내리기 위한 설정 */
+    .mainsignup2 {
+        width: 100%;
+        padding: 30px 3px;
+    }
     .mainsignup2_inner {
         margin-top: 80px; /* 헤더 높이를 고려하여 더 넉넉한 마진 추가 */
         width: 100%;
@@ -367,9 +386,14 @@ body { font-family: 'NanumSquareRound';
         width: 100%; /* 입력 필드 너비를 100%로 확장 */
         flex-shrink: 0; /* 축소 방지 */
     }
+    
 
     .verification-wrapper {
         width: 100%;
+    }
+
+    .date-group {
+        width: 100px;
     }
 
     .phone-group {
@@ -397,18 +421,16 @@ body { font-family: 'NanumSquareRound';
     }
 
     .email-group {
-        width: 100%;
-        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 12px; /* 필드 간격을 조금 더 넓게 조정 */
+
     }
 
-    .email-input {
-        width: 100%; /* 축소 방지 */
-        flex-shrink: 0;
-    }
-
-    .email-domain {
-        width: 100%;
-    }
+    .email-input, .domain-input {
+        width: 30%; /* 각 입력 칸의 너비 조정 */
+        padding: 8px;
+        margin-right: 5px; /* 각 칸 사이에 여백 */
+      }
 
     /* form-notify 텍스트 정렬 수정 */
     .form-notify {

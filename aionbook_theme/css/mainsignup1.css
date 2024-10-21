@@ -172,5 +172,6 @@ body { font-family: 'NanumSquareRound';
 @media screen and (max-width: 767px) {
     .mainsignup1_inner{
         width: 100%;
+        padding: 30px 3px;
     }
 }

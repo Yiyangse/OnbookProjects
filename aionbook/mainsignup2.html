@@ -131,9 +131,16 @@
                 <div class="form-group">
                     <label class="form-label">생년월일</label>
                     <div class="date-group">
-                        <input type="text" class="form-input date-input" placeholder="YYYY">
-                        <input type="text" class="form-input date-input" placeholder="MM">
-                        <input type="text" class="form-input date-input" placeholder="DD">
+                        <input type="text" class="form-input date-input" placeholder="년">
+                        
+                        <select class="form-input month-input" placeholder="월">
+                          <option value="1월">1월</option>
+                          <option value="12월">12월</option>
+                      </select>
+                      <select class="form-input day-input" placeholder="일">
+                        <option value="1일">1일</option>
+                        <option value="31일">31일</option>
+                    </select>
                     </div>
                 </div>
 
@@ -149,9 +156,14 @@
                     <label class="form-label">이메일</label>
                     <div class="email-group">
                         <input type="text" class="form-input email-input" placeholder="example">
+                        <H3 class="email-snail">@</H3>
+                        <input type="text" class="form-input domain-input" placeholder="직접 입력해주세요">
                         <select class="form-input email-domain">
+                            <option value="user-writing">직접입력</option>
                             <option value="naver.com">naver.com</option>
                             <option value="gmail.com">gmail.com</option>
+                            <option value="daum.net">daum.net</option>
+                            <option value="nate.com">nate.com</option>
                         </select>
                     </div>
                 </div>
@@ -160,9 +172,18 @@
                   <label class="form-label">휴대폰 번호</label>
                   <div class="verification-wrapper">
                       <div class="phone-group">
-                          <input type="text" class="form-input phone-input" placeholder="010">
-                          <input type="text" class="form-input phone-input">
-                          <input type="text" class="form-input phone-input">
+                        <select class="form-input phone-input">
+                          <option value="010">010</option>
+                          <option value="011">011</option>
+                          <option value="016">016</option>
+                          <option value="017">017</option>
+                          <option value="018">018</option>
+                          <option value="019">019</option>
+                        </select>
+                        <p>-</p>
+                        <input type="text" class="form-input phone-input">
+                        <p>-</p>
+                        <input type="text" class="form-input phone-input">
                           <button type="button" class="verify-button">인증번호 받기</button>
                       </div>
                       <div class="verification-input-group">
