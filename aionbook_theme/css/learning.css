@@ -37,49 +37,117 @@
     gap: 24px;
   }
   .learning-system__item {
-    padding: 40px;
-    width: calc((100% - 48px) / 3);
+    width: calc((100% - 72px) / 4); /* 4개 아이템을 위한 너비 조정 */
     background-color: #fff;
-    height: 320px;
+    height: 330px; /* 이미지 크기에 맞춰 높이 조정 */
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 내부 요소 중앙 정렬 */
+    text-align: center; /* 텍스트 중앙 정렬 */
   }
+
+  /* 이미지 컨테이너 스타일 */
+.plat1, .plat2, .plat3, .plat4 {
+  width: 228px;
+  height: 177px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 이미지 스타일 */
+.plat1 img, .plat2 img, .plat3 img, .plat4 img {
+  width: 228px;
+  height: 177px;
+  object-fit: contain; /* 이미지 비율 유지 */
+}
+
+.learning-system__text {
+  text-align: center;
+  width: 100%;
+}
+
   .learning-system__text p {
     font-size: 24px;
     line-height: 36px;
     font-weight: 700;
     padding-top: 21px;
+    text-align: center;
   }
   .learning-system__text span {
     display: inline-block;
-    padding-top: 24px;
-    font-size: 20px;
+    padding-top: 12px;
+    font-size: 18px;
     line-height: 30px;
     font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.03em;
     color: #323232;
   }
 
   @media screen and (max-width: 767px) {
     .learning-system__inner {
       width: 100%;
-      padding: 80px 16px;
+      padding: 60px 16px;
     }
     .learning-system__list {
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2열 그리드 */
       gap: 16px;
+      margin-top: 40px;
     }
+  
     .learning-system__item {
       width: 100%;
       height: auto;
-      padding: 24px;
+      min-height: 320px; /* 최소 높이 설정 */
     }
+  
+    /* 모바일에서 이미지 크기 조정 */
+    .plat1, .plat2, .plat3, .plat4 {
+      width: 160px;
+      height: 124px;
+    }
+  
+    .plat1 img, .plat2 img, .plat3 img, .plat4 img {
+      width: 160px;
+      height: 124px;
+    }
+  
     .learning-system__title {
-      text-align: center;
       font-size: 24px;
       line-height: 30px;
-      font-weight: 700;
-      color: #000;
+    }
+  
+    .learning-system__text p {
+      font-size: 20px;
+      line-height: 30px;
+      padding-top: 16px;
+    }
+  
+    .learning-system__text span {
+      font-size: 14px;
+      line-height: 24px;
+      padding-top: 16px;
     }
   }
+
+  /* 태블릿 크기 대응 */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .learning-system__inner {
+    width: 100%;
+    padding: 80px 24px;
+  }
+
+  .learning-system__list {
+    gap: 20px;
+  }
+
+  .learning-system__item {
+    width: calc((100% - 20px) / 2);
+  }
+}
   /*  */
   /* learning course 한 번에 끝내는 AI 학습코스 */
   /*  */
