@@ -5,64 +5,79 @@
   
 /* 메인 섹션 설정 */
 .main {
-  height: 100vh; /* 페이지의 전체 높이 */
   display: flex;
   flex-direction: column;
+  align-items: center;
+  position: relative; /* 다른 섹션과 겹치지 않도록 상대 위치 지정 */
+  z-index: 10; /* 다른 요소들과 겹치지 않도록 z-index 설정 */
+}
+/* 메인 내부 */
+.main__inner {
+  width: 100%;
+  height: 532px;
+  position: relative;
+  top: 90px;
+  opacity: 0.9;
+  display: flex;
+  background-color: #465ff1; /* 배경 색상 */
   justify-content: center;
   align-items: center;
-  position: relative; /* 버튼 배치를 위한 relative 설정 */
+  gap: 400px;
 }
-  /* 메인 레이아웃 */
-  .main__inner {
-    width: 1920px;
-    height: 602px;
-    position: absolute; /* 위치 설정을 위해 */
-    top: 90px;
-    left: 50%; /* 중앙 정렬을 위해 */
-    transform: translateX(-50%); /* 중앙 정렬 */
-    opacity: 0.9; /* 투명도 적용 */
-  }
 
-  .main__inner img {
-    width: 100%; /* 1920px 고정 대신 반응형 처리 */
-    height: auto; /* 이미지 비율 유지 */
-  }
-  /* .main__button-wrap {
-    margin-top: 20px;
-    display: flex;
-    gap: 16px;
-    justify-content: center; 
+.main__inner_title_group{
+  display: grid;
+  margin-bottom: 40px;
+}
+
+/* 메인 제목 */
+.main__inner_title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 5px;
+  letter-spacing: -0.02em;
+}
+
+/* 메인 강조 제목 */
+.main__inner_title_bold {
+  font-size: 80px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 5px;
+  letter-spacing: -0.02em;
+}
+
+/* 메인 설명 텍스트 */
+.main__inner_title_text {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+/* 버튼 랩퍼 */
+.main__button-wrap {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+  /* .main__inner img {
+    width: 565px;
+    height: 306px;
+    top: 201px;
+    left: 1800px;
+    gap: 0px;
+    opacity: 0px;    
   } */
-  
-  /* .hero-btn {
-    border: 2px solid #222;
-    padding: 8px 38px;
-    border-radius: 6px;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 28px;
-    color: #222;
-    align-items: center;
-  }
-  .hero-btn:hover {
-    background-color: #F1F1F1;
-  }
-  .hero-btn--black-bg {
-    background-color: #000;
-    color: #fff;
-    border-color: #000;
-  }
-  .hero-btn--black-bg:hover {
-    background-color: #222;
-  }
+
 
 /* 버튼 공통 스타일 */
 .hero-btn {
-  /* border: 2px solid #222; */
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;
-  color: #5069FF;
+  color: #ffffff;
   padding: 8px 38px;
   border-radius: 6px;
   cursor: pointer;
@@ -72,95 +87,67 @@
 .hero-btn--experience {
   width: 150px;
   height: 50px;
-  position: absolute;
-  top: 400px; /* 원하는 위치로 조정 */
-  left: calc(50% - 100px); /* 중앙에서 약간 왼쪽으로 */
+  border: 1px solid #FFFFFF; /* 테두리 */
+  background-color: #465FF1; /* 배경색 */
+  color: #FFFFFF; /* 텍스트 색상 */
   padding: 10px 20px;
   border-radius: 10px;
   opacity: 0.85;
-  background-color: #FF5722;
-  color: #fff;
-  border: none;
+}
+
+.hero-btn--experience:hover {
+  background-color: #FFFFFF; /* 호버 시 배경색 */
+  color: #465FF1; /* 텍스트 색상 반전 */
 }
 
 /* 도입문의 버튼 */
 .hero-btn--inquiry {
   width: 150px;
   height: 50px;
-  position: absolute;
-  top: 400px; /* 체험하기 버튼과 같은 높이 */
-  left: calc(50% + 100px); /* 중앙에서 오른쪽으로 */
+  border: 1px solid #465FF1; /* 테두리 */
+  background-color: #FFFFFF; /* 배경색 */
+  color: #465FF1; /* 텍스트 색상 */
   padding: 10px 20px;
   border-radius: 10px;
   opacity: 0.85;
-  background-color: #2196F3;
-  color: #fff;
-  border: none;
 }
 
-/* 버튼 hover 효과 */
-.hero-btn:hover {
-  background-color: #F1F1F1;
-}
-.hero-btn--experience:hover {
-  background-color: #E64A19;
-}
 .hero-btn--inquiry:hover {
-  background-color: #1976D2;
+  background-color: #465FF1; /* 호버 시 배경색 */
+  color: #FFFFFF; /* 텍스트 색상 반전 */
 }
 
-  
-  /* .hero-btn--white-bg {
-    background-color: #fff;
-    color: #000;
-    border-color: #fff;
-  }
-  
-  .hero-btn--white-bg:hover {
-    background-color: #f1f1f1;
-  }
+/* book-wrapper: bookimg와 bookbgimg를 감싸는 div */
+.book-wrapper {
+  position: relative; /* 두 이미지를 겹치기 위한 상대 위치 */
+  width: 565px; /* wrapper의 크기 */
+  height: 458px;
+}
 
-  .main__inner img {
-    width: 1200px;
-  }
-  .main__text {
-    text-align: left;
-  }
-  .main__text h2.main__title {
-    padding-top: 83px;
-    font-size: 64px;
-    line-height: 80px;
-    font-weight: 700;
-  }
-  .main__text p {
-    font-size: 24px;
-    font-weight: 500;
-  }
+/* bookimg 앞쪽 이미지 */
+.bookimg {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 565px;
+  height: 306px;
+  z-index: 15; /* bookbgimg보다 앞에 배치 */
+}
 
-  .main__button-wrap {
-    margin-top: 100px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 0 16px;
-  }
-  .main.main--center .main__inner {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-  .main.main--center .main__text {
-    text-align: center;
-  }
-  .main.main--center .main__button-wrap {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  } */
-    
+/* bookbgimg 배경 이미지 */
+.bookbgimg {
+  position: absolute; /* 배경 이미지를 고정 배치 */
+  width: 457px;
+  height: 458px;
+  top: 128px;
+  left: 500px;
+  z-index: 2; /* bookimg보다 뒤에 배치 */
+  opacity: 0; /* 필요 시 opacity 적용 */
+}
+
+/*  */
+/* 문의하기 맞춤콘텐츠  */
+/*  */
   .banner {
     background: #0B0E24;
   }

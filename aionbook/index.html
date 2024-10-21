@@ -8,7 +8,10 @@
 
     <link rel="stylesheet" href="https://onbook.codingx.ai/assets/aionbook_theme/css/common.css">
     <link rel="stylesheet" href="https://onbook.codingx.ai/assets/aionbook_theme/css/components.css">
-    <link rel="stylesheet" href="https://onbook.codingx.ai/assets/aionbook_theme/css/pages.css">
+    <link rel="stylesheet" href="../aionbook_theme/css/pages.css">
+    <!-- 메인 수정중이어서, 잠시 page 경로 수정 -->
+    <!-- <link rel="stylesheet" href="https://onbook.codingx.ai/assets/aionbook_theme/css/pages.css"> -->
+    
 
     <!-- 과정 카드 css추가 -->
     <link rel="stylesheet" href="../aionbook_theme/css/coursegrid.css">
@@ -34,7 +37,7 @@
     <div class="desktop-header">
       <header class="desktop-header__inner">
         <a href="/" class="desktop-header__logo">
-          OnBook AI
+          <img src="../aionbook_theme/images/home/onbooklogo.png"/>
         </a>
         <nav class="gnb">
           <div class="gnb__menu">
@@ -69,7 +72,7 @@
             </div>
           </button>
           <a href="/" class="mobile-header__logo">
-            OnBook AI
+            <img src="../aionbook_theme/images/home/onbooklogo.png"/>
           </a>
         </div>
         <div class="mobile-gnb">
@@ -107,22 +110,29 @@
 
 
     <div class="desktop__inner">
-
+      <!-- 메인 배너  -->
         <section class="main">
           <div class="main__inner">
-            <img src="../aionbook_theme/images/home/herobn.png" alt="OnBook AI 이미지">
-
-          <div class="main__button-wrap">
-            <button type="button" class="hero-btn hero-btn--experience" id="experienceBtn" onclick="location.href='#experience';">
-              체험하기
-            </button>
-            <button type="button" class="hero-btn hero-btn--inquiry" id="inquiryBtn" onclick="location.href='#inquiry';">
-              도입문의
-            </button>
+            <div class="main__inner_title_group">
+               <div class="main__inner_title">AI 실습 플랫폼</div>
+               <div class="main__inner_title_bold">AI OnBook</div>
+               <div class="main__inner_title_text">최적화된 온라인 AI 교육 플랫폼</div>
+               <div class="main__button-wrap">
+                   <button type="button" class="hero-btn hero-btn--experience" id="experienceBtn" onclick="location.href='#experience';">
+                  체험하기</button>
+                  <button type="button" class="hero-btn hero-btn--inquiry" id="inquiryBtn" onclick="location.href='#inquiry';">
+                  도입문의</button>
+               </div>
+          </div>
+          <!-- 로봇아이콘 -->
+          <div class="book-wrapper">
+            <img class="bookimg" src="../aionbook_theme/images/home/onbookbn.png" alt="온북AI 이미지">
+            <img class="bookbgimg" src="../aionbook_theme/images/home/onbookbnBG.png" alt="온북AI 배경 이미지">
           </div>
         </div>
-        </section>
-      
+      </section>
+
+        
 
       <!-- AI 온북 플랫폼의 특징 (ver. Card) -->
       <section class="learning-system">
@@ -368,7 +378,9 @@
           </div>
         </div>
       </section>
-   
+      <section class="price" id="price">
+        
+      </section>
       
       <section class="inquiry" id="inquiry">
         <div class="inquiry__inner">
