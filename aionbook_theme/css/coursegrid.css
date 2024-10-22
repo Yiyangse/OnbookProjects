@@ -99,13 +99,14 @@
     transition: all 0.3s ease;
     text-align: center;
     margin-top: 60px;
-    font-weight: 600;
+    font-weight: 800;
     margin-bottom: 50px;
 }
 
 .card .button:hover {
     background-color: #6200ea;
     color: white;
+    font-weight: 800;
 }
 
 .locked::after {
