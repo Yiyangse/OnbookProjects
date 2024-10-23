@@ -34,9 +34,9 @@
   -ms-flex-align: center;
   align-items: center;
 }
-.desktop-header__logo {
-  font-weight: 700;
-  font-size: 20px;
+.desktop-header__logo .img {
+  width: 84.88px;
+  height: 27.08px;
 }
 .desktop-header .gnb {
   display: -webkit-box;
@@ -165,9 +165,16 @@
     border-bottom: 1px solid #D9D9D9;
   }
   .mobile-footer__logo {
-    font-weight: 700;
+    width: 84.88px;
+height: 27.08px;
+top: 16px;
+left: 360px;
+gap: 0px;
+opacity: 0px;
+
+    /* font-weight: 700;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 24px; */
   }
   .mobile-footer .footer-nav {
     margin-top: 11px;
