@@ -8,19 +8,15 @@
     width: 1200px;
     margin: 0 auto;
     padding: 160px 0;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: column;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
+    display: grid;
     justify-content: space-between;
+    align-items: flex-start; /* 레이아웃 정렬 수정 */
   }
   .inquiry__text {
     color: #fff;
   }
   .inquiry__type {
+    font-family: 'Pretendard';
     display: inline-block;
     font-size: 28px;
     line-height: 28px;
@@ -29,21 +25,24 @@
     letter-spacing: -0.03em;
   }
   .inquiry__description {
-    margin-top: 12px;
-    font-size: 40px;
+    font-family: 'NanumRoundEB';
+    font-size: 34px;
     line-height: 60px;
-    font-weight: 700;
+    font-weight: 800;
+    color: #151515;
   }
   .inquiry__sub-description {
+    font-family: 'Pretendard';
     display: inline-block;
     margin-top: 12px;
     font-size: 20px;
     line-height: 30px;
     font-weight: 300;
-    color: #EDEDED;
+    color: #151515;
+    margin-bottom: 30px;
   }
   .inquiry__form {
-    width: 384px;
+    width: 1200px;
   }
   .inquiry__input {
     width: 100%;
@@ -213,4 +212,3 @@
             margin-top: 32px;
           }
         }
-          @media screen and (max-width: 767px) {}

@@ -39,6 +39,11 @@
     flex-direction: column;
     box-shadow: 0px 4px 32.5px -7px #A3A3A340;
   }
+
+  .table_column:hover {
+    border: 1px solid #C4CDFF;
+    box-shadow: 0px 4px 32.5px -7px #6979DB4D;
+  }
   
   .table_column.header {
     width: 204px;
@@ -92,6 +97,7 @@
   }
   
   .pricetable_text {
+    font-family: 'Pretendard';
     text-align: center;
     color: #6B7280;
     font-size: 14px;
