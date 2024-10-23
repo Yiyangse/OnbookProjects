@@ -1,13 +1,13 @@
 @font-face {
   font-family: "NanumEB";
-  font-weight: normal;
+  font-weight: 800;
   font-style: normal;
   src: url(../fonts/NanumSquareEB.woff) format("woff");
 }
 
 @font-face {
   font-family: "NanumRoundEB";
-  font-weight: normal;
+  font-weight: 800;
   font-style: normal;
   src: url(../fonts/NanumSquareRoundEB.woff) format("woff");
 }
@@ -254,9 +254,11 @@
   .partner-company__item:nth-child(2) {
     text-align: left;
   }
-  
+  /*  */
+  /* 도입문의 */
+  /*  */
   .inquiry {
-    background-color: #0C3634;
+    background-color: #E1E5F4;
   }
   .inquiry__inner {
     width: 1200px;
@@ -265,7 +267,7 @@
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;
+    display: column;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -276,10 +278,11 @@
   }
   .inquiry__type {
     display: inline-block;
-    font-size: 18px;
+    font-size: 28px;
     line-height: 28px;
-    color: #C7C7C7;
-    font-weight: 300;
+    color: #151515;
+    font-weight: 500;
+    letter-spacing: -0.03em;
   }
   .inquiry__description {
     margin-top: 12px;
@@ -346,10 +349,10 @@
     line-height: 28px;
     border: none;
     color: #fff;
-    background-color: #000;
+    background-color:#6979DB;
   }
   .inquiry__btn:hover {
-    background-color: #222;
+    background-color: #ABB2D4;
   }
   
   .education__inner {
