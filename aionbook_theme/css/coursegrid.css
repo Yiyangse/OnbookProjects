@@ -70,12 +70,13 @@
 
 
 .card h2 {
+   font-family: 'NanumRoundEB';
     text-align: center;
     margin-top: 28px;
     font-size: 24px;
     line-height: 1.2;
     font-weight: 800;
-    color: #242E64;
+    color: #151515;
 }
 
 .card p {
@@ -89,6 +90,7 @@
 }
 
 .card .button {
+    font-family: 'NanumRoundEB';
     display: inline-block;
     align-items: center;
     width: 270px;

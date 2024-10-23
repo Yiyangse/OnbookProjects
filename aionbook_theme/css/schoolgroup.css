@@ -1,0 +1,59 @@
+  /*  */
+  /* schoolgroup.css ::AI 온북 그룹들 */
+  /*  */
+.schoolgroup{
+
+}
+.schoolgroup_inner {
+    width: 1200px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .schoolgroup_title {
+    font-family: 'NanumRoundEB';
+    margin-top: 10px;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 60px;
+    letter-spacing: -0.04em;
+    text-align: center;    
+    border: 1px solid var(--, #151515)
+  }
+  .schoolgroup_list {
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 24px;
+  }
+
+  /* 모바일 (최대 767px) */
+  @media screen and (max-width: 767px) {
+    .learning-system__inner {
+      width: 100%;
+      padding: 60px 16px;
+    }
+    .learning-system__item {
+        width: 100%;
+        height: auto;
+        min-height: 320px; /* 최소 높이 설정 */
+      }
+}
+
+  /* 태블릿 크기 대응 */
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+
+  }
