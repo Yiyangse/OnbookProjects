@@ -135,63 +135,101 @@
         </div>
       </section>
 <!-- AI 온북 플랫폼의 특징 (ver. Card) -->
-      <section class="learning-system">
-        <div class="learning-system__inner">
-          <h3 class="learning-system__title">
-            AI 온북 플랫폼
-          </h3>
-          <ul class="learning-system__list">
+<!-- .learning-system.css  -->
+<section class="learning-system">
+  <div class="learning-system__inner">
+    <h3 class="learning-system__title">AI 온북 플랫폼</h3>
+    <ul class="learning-system__list">
       <!-- 01 무설치 -->
-            <li class="learning-system__item">
-              <div class="plat1">
-                <img src="../aionbook_theme/images/home/onboolplat01.png" alt="온북 플랫폼 이미지01">
-              </div>
-              <div class="learning-system__text">
-                <p>무설치</p>
-                <span>별도의 설치없이<br>
-                  웹에서 바로 교육
-              </span>
-              </div>
-            </li>
-       <!-- 02 실습형 -->
-            <li class="learning-system__item">
-              <div class="plat2">
-                <img src="../aionbook_theme/images/home/onboolplat02.png" alt="온북 플랫폼 이미지02">
-              </div>
-              <div class="learning-system__text">
-                <p>실습형</p>
-                <span>코드를 직접 입력하고<br>
-                  실행결과 바로 확인
-              </span>
-              </div>
-            </li>
-        <!-- 03 콘텐츠 탑재 -->
-        <li class="learning-system__item">
-          <div class="plat3">
-            <img src="../aionbook_theme/images/home/onboolplat03.png" alt="온북 플랫폼 이미지03">
-          </div>
-          <div class="learning-system__text">
-            <p>콘텐츠 탑재</p>
-            <span>각 클래스 별<br>
-              실력확인 문제까지 제공
-          </span>
-          </div>
-        </li>
-         <!-- 04 LMS 제공 -->
-         <li class="learning-system__item">
-          <div class="plat4">
-            <img src="../aionbook_theme/images/home/onboolplat04.png" alt="온북 플랫폼 이미지04">
-          </div>
-          <div class="learning-system__text">
-            <p>LMS 제공</p>
-            <span>교사의 학생 초대 및<br>
-              수강관리 기능 제공
-          </span>
-          </div>
-        </li>
-          </ul>
+      <li class="learning-system__item" id="plat1-item" data-video="../aionbook_theme/videos/video01.mp4">
+        <div class="plat1">
+          <img src="../aionbook_theme/images/home/onboolplat01.png" alt="온북 플랫폼 이미지01">
         </div>
-      </section>
+        <div class="learning-system__text">
+          <p>무설치</p>
+          <span>별도의 설치없이<br>웹에서 바로 교육</span>
+        </div>
+      </li>
+      <!-- 02 실습형 -->
+      <li class="learning-system__item" data-video="../aionbook_theme/videos/video02.mov">
+        <div class="plat2">
+          <img src="../aionbook_theme/images/home/onboolplat02.png" alt="온북 플랫폼 이미지02">
+        </div>
+        <div class="learning-system__text">
+          <p>실습형</p>
+          <span>코드를 직접 입력하고<br>실행결과 바로 확인</span>
+        </div>
+      </li>
+      <!-- 03 콘텐츠 탑재 -->
+      <li class="learning-system__item" data-video="../aionbook_theme/videos/video03.mov">
+        <div class="plat3">
+          <img src="../aionbook_theme/images/home/onboolplat03.png" alt="온북 플랫폼 이미지03">
+        </div>
+        <div class="learning-system__text">
+          <p>콘텐츠 탑재</p>
+          <span>각 클래스 별<br>실력확인 문제까지 제공</span>
+        </div>
+      </li>
+      <!-- 04 LMS 제공 -->
+      <li class="learning-system__item" data-video="../aionbook_theme/videos/video04.mov">
+        <div class="plat4">
+          <img src="../aionbook_theme/images/home/onboolplat04.png" alt="온북 플랫폼 이미지04">
+        </div>
+        <div class="learning-system__text">
+          <p>LMS 제공</p>
+          <span>교사의 학생 초대 및<br>수강관리 기능 제공</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 팝업창 구조 -->
+<div id="video-popup" class="popup" style="display: none;">
+  <div class="popup-content">
+    <button class="close-btn">닫기</button>
+    <video id="popup-video" controls></video>
+  </div>
+</div>
+
+<!-- 팝업창 레이아웃 -->
+<div id="video-popup" class="popup" style="display: none;">
+  <div class="popup-content">
+    <button class="close-btn">닫기</button>
+    <video id="popup-video" src="../aionbook_theme/videos/video01.mp4" controls></video>
+  </div>
+</div>
+
+<!-- 팝업창 스크립트 -->
+<script>
+// 모든 learning-system__item에 대해 클릭 이벤트 추가
+document.querySelectorAll('.learning-system__item').forEach(item => {
+  item.addEventListener('click', function() {
+    var popup = document.getElementById("video-popup");
+    var video = document.getElementById("popup-video");
+    
+    // 클릭한 아이템의 data-video 속성에서 비디오 소스 가져오기
+    var videoSource = this.getAttribute('data-video');
+    
+    // 팝업창 열기
+    popup.style.display = "block";
+    video.src = videoSource;  // 비디오 소스 변경
+    video.play();  // 비디오 자동 재생
+  });
+});
+
+// 닫기 버튼 클릭 시 팝업창 닫기
+document.querySelector(".close-btn").addEventListener("click", function() {
+  var popup = document.getElementById("video-popup");
+  var video = document.getElementById("popup-video");
+
+  // 팝업창 닫기
+  popup.style.display = "none";
+  video.pause();  // 비디오 정지
+  video.currentTime = 0;  // 비디오 처음으로 돌아가기
+});
+
+</script>
 <!-- 코스시작 카드 섹션 -->
       <section class="course-grid">
         <h3 class="course-grid__title">

@@ -49,8 +49,65 @@
     align-items: center; /* 내부 요소 중앙 정렬 */
     text-align: center; /* 텍스트 중앙 정렬 */
     box-shadow: 0px 4px 32.5px -7px #A3A3A340;
-
+    cursor: pointer;
+    overflow:hidden;
+    position: relative; /* 비디오와 이미지 위치 조정 */
   }
+
+  /* 아이템 호버:: 비디오 재생 */
+.learning-system__item video {
+  display: none;  /* 기본 숨김 */
+  width: 100%;
+  height: auto;
+}
+
+.learning-system__item:hover video {
+  display: block;
+}
+
+.learning-system__item:hover img {
+  display: none;
+}
+
+
+/* 팝업창 스타일 */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  position: relative;
+  background-color: white;
+  padding: 20px 20px;
+  border-radius: 10px;
+}
+
+.popup-content video {
+  width: 100%;
+  height: auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #fff;
+  border: none;
+  padding: 12px 20px 9px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 
   /* 이미지 컨테이너 스타일 */
 .plat1, .plat2, .plat3, .plat4 {
