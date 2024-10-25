@@ -11,7 +11,7 @@ body { font-family: 'NanumSquareRound';
 
 .mainsignup2_inner {
     background-color: #fff;
-    border-radius: 20px;
+    border-radius: 14px;
     padding: 40px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 1200px; /* 최대 너비 설정 */
@@ -80,7 +80,7 @@ body { font-family: 'NanumSquareRound';
 }
 
 .form-label {
-    font-family: Pretendard;
+    font-family: 'Pretendard';
     letter-spacing: -0.03em;
     text-align: left; 
     display: block;
@@ -97,22 +97,32 @@ body { font-family: 'NanumSquareRound';
     padding: 0 16px;
     font-size: 16px;
     width: 792px;
-    height: 48px;
+    height: 64px;
     left: 564px;
     gap: 0px;
-    border-radius: 23px;
+    border-radius: 14px;
     border: 1px 0px 0px 0px;
     opacity: 0px;
+}
 
+/* 아이디 입력 그룹 스타일 */
+.id-input-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.id-input {
+    width: 680px !important;
 }
 
 .form-notify{
     font-family: 'Pretendard';
     font-size: 14px;
     font-weight: 200;
-    line-height: 37px;
+    line-height: 20px;
     letter-spacing: -0.03em;
-    margin-left: 160px;
+    margin-left: 200px;
     margin-bottom: 10px;
 }
 .form-input.error {
@@ -131,13 +141,13 @@ body { font-family: 'NanumSquareRound';
 }
 
 .date-input {
-    width: 180px;
+    width: 126px;
 }
 .month-input {
-    width: 180px;
+    width: 126px;
 }
 .day-input {
-    width: 180px;
+    width: 126px;
 }
 .gender-group {
     display: flex;
@@ -145,7 +155,7 @@ body { font-family: 'NanumSquareRound';
 }
 
 .gender-option {
-    width: 180px;
+    width: 126px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -159,14 +169,21 @@ body { font-family: 'NanumSquareRound';
     border-color: #5069FF;
 }
 
+/* 이메일 관련 스타일 수정 */
+.email-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 .email-group {
     display: flex;
     gap: 5px;
     flex: 1;
+    align-items: center;
 }
 
 .email-input {
-    width: 500px;
+    width: 393px;
     flex-shrink: 0;
 }
 
@@ -177,7 +194,7 @@ body { font-family: 'NanumSquareRound';
 }
 
 .email-domain {
-    width: 150px;
+    width: 598px;
     flex-shrink: 0;
 }
 
@@ -186,7 +203,7 @@ body { font-family: 'NanumSquareRound';
 }
 
 .email-snail{
-    padding:  10px;
+    padding:  15px;
 }
 
 .phone-group {
@@ -199,7 +216,7 @@ body { font-family: 'NanumSquareRound';
     width: 120px;
     height: 48px;
     border: 1px solid #E6E6E6;
-    border-radius: 23px;
+    border-radius: 14px;
     padding: 0 16px;
     font-size: 16px;
     color: #333;
@@ -229,30 +246,32 @@ body { font-family: 'NanumSquareRound';
 .verification-input-group {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 6px;
 }
 
 .verification-input {
-    width: 396px;
+    width: 390px;
     flex-shrink: 0;
     height: 48px;
     border: 1px solid #E6E6E6;
-    border-radius: 23px;
+    border-radius: 14px;
     padding: 0 16px;
     font-size: 16px;
 }
 
 .verify-button {
-    height: 48px;
+    font-family: 'Pretendard';
+    height: 60px;
     padding: 0 24px;
     border: none;
-    border-radius: 23px;
-    background-color: #454B60;
-    color: white;
-    font-size: 16px;
+    border-radius: 60px;
+    background-color: #F4F4F4;
+    color: #777777;
+    font-size: 18px;
     font-weight: 500;
     white-space: nowrap;
     cursor: pointer;
+    letter-spacing: -0.03em;
 }
 
 /* Consent section styling */
@@ -263,7 +282,7 @@ body { font-family: 'NanumSquareRound';
 .consent-container {
     margin: 10px 10px;
     border: 1px solid #ddd;
-    border-radius: 16px;
+    border-radius: 14px;
     padding: 20px;
 }
 
@@ -287,7 +306,7 @@ body { font-family: 'NanumSquareRound';
     width: 24px;
     height: 24px;
     border: 2px solid #ddd;
-    border-radius: 23px;
+    border-radius: 14px;
     cursor: pointer;
     position: relative;
 }
@@ -325,14 +344,14 @@ body { font-family: 'NanumSquareRound';
 
 .bottom-button{
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: center;
     gap: 16px;
 }
 
 .backto-button, .signup-button {
     width: 50%; /* 버튼 크기 조정 */
     height: 64px;
-    border-radius: 23px;
+    border-radius: 14px;
     font-size: 20px;
 }
 
@@ -343,9 +362,14 @@ body { font-family: 'NanumSquareRound';
 }
 
 .signup-button {
-    background-color: #5069FF;
+    background-color: #777777;
     color: white;
     border: none;
+}
+
+.signup-button:hover {
+    background-color: #5069FF;
+    color: white;
 }
 
 /* 모바일 반응형 개선 */
