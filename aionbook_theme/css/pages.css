@@ -47,36 +47,44 @@
 
 /* 메인 제목 */
 .main__inner_title {
-  font-size: 34px;
+  font-size: 30px;
   font-weight: 800;
   color: #ffffff;
-  margin-bottom: 5px;
   letter-spacing: -0.02em;
   border: 1px solid var(--, #151515);
+  /* 텍스트 정렬 수정 */
+  margin-left: 6px; 
+  line-height: 35px;
+
 }
 
 /* 메인 강조 제목 */
 .main__inner_title_bold {
-  font-size: 80px;
+  font-size: 60px;
   font-weight: 800;
   color: #ffffff;
   margin-bottom: 5px;
   letter-spacing: -0.04em;
+  /* 텍스트 정렬 수정 */
+  line-height: 68px;
+
 }
 
 /* 메인 설명 텍스트 */
 .main__inner_title_text {
-  font-size: 28px;
-  font-weight: 50;
+  font-family: 'Pretendard';
+  font-size: 24px;
+  font-weight: 500;
   color: #ffffff;
-  margin-bottom: 5px;
+  margin-top: 10px;
   letter-spacing: -0.03em;
+  line-height: 28px;
 }
 
 /* 버튼 랩퍼 */
 .main__button-wrap {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   /* justify-content: center; */
   margin-top: 30px;
   margin-right: 30px;

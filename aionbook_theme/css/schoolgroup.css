@@ -32,7 +32,7 @@
   .schoolgroup_list {
     margin: 30px 0;
     display: flex;
-    width: 300%;  /* 이미지들이 3배 크기로 복제되어 연속적으로 보이게 함 */
+    width: 270%;  /* 이미지들이 3배 크기로 복제되어 연속적으로 보이게 함 */
     animation: slide 100s linear infinite;  /* 100초동안 천천히 무한 반복 */
   }
   
