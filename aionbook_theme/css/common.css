@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "NanumEB";
+  font-weight: 800;
+  font-style: normal;
+  src: url(../fonts/NanumSquareEB.woff) format("woff");
+}
+
+@font-face {
+  font-family: "NanumRoundEB";
+  font-weight: 800;
+  font-style: normal;
+  src: url(../fonts/NanumSquareRoundEB.woff) format("woff");
+}
+
 .blind,
 .hidden {
   position: absolute;
@@ -86,7 +100,7 @@
   display: none;
 }
 
-.desktop-footer__inner {
+/* .desktop-footer__inner {
   max-width: 1200px;
   padding: 75px 40px 80px;
   margin: 0 auto;
@@ -96,20 +110,16 @@
   border-bottom: 1px solid #DEDEDE;
 }
 .desktop-footer__logo {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 21px;
+
 }
 .desktop-footer .footer-nav {
-  margin-top: 19px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0 24px;
+
 }
 .desktop-footer .footer-nav__item {
-  padding: 5px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-bottom: 10px;
+  gap: 20px;
 }
 .desktop-footer .footer-nav__item a {
   display: block;
@@ -147,9 +157,162 @@
 
 .mobile-footer {
   display: none;
+} */
+
+/* Desktop Footer */
+.desktop-footer {
+  font-family: 'Pretendard';
 }
 
-@media (max-width: 1200px) {
+.desktop-footer__inner {
+
+  border-top: 1px solid #DEDEDE;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 30px;
+  margin-top: 30px;
+}
+
+.desktop-footer__top {
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-bottom: 40px;
+  padding-right: 750px;
+  border-bottom: 1px solid #DEDEDE;
+  gap: 20px;
+}
+
+.desktop-footer__logo {
+
+  width: 81px;
+  height: 24px;
+  margin-bottom: 40px;
+}
+
+.desktop-footer__section-title {
+  
+  width: 100px;
+  font-family: 'NanumEB';
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 37px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  margin-bottom: 8px;
+  color: #4C4F5F;
+
+}
+
+.desktop-footer__nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.desktop-footer__nav-item {
+  font-family: 'Pretendard';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: -0.03em;
+  text-align: left;
+}
+
+.desktop-footer__nav-item a {
+  color: #4C4F5F;
+  text-decoration: none;
+}
+
+.desktop-footer__bottom {
+
+  margin-top: 24px;
+}
+
+.desktop-footer__company-info {
+  font-family: 'Pretendard';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 31px;
+  letter-spacing: -0.03em;
+  color: #4C4F5F;
+}
+
+/* Mobile Footer */
+.mobile-footer {
+  display: none;
+  font-family: 'Pretendard', sans-serif;
+  padding: 40px 24px;
+}
+
+.mobile-footer__logo {
+  width: 81px;
+  height: 24px;
+  margin-bottom: 32px;
+}
+
+.mobile-footer__section {
+  margin-bottom: 32px;
+}
+
+.mobile-footer__section-title {
+  font-family: 'Pretendard';
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 37px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+.mobile-footer__nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-footer__nav-item {
+  font-family: 'Pretendard';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 37px;
+  letter-spacing: -0.03em;
+  text-align: left;
+}
+
+.mobile-footer__nav-item a {
+  color: #333;
+  text-decoration: none;
+}
+
+.mobile-footer__company-info {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #666;
+  margin-top: 32px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .desktop-footer {
+    display: none;
+  }
+  
+  .mobile-footer {
+    display: block;
+  }
+  
+  .mobile-footer__section {
+    border-bottom: 1px solid #DEDEDE;
+    padding-bottom: 24px;
+  }
+  
+  .mobile-footer__section:last-child {
+    border-bottom: none;
+  }
+}
+
+/* @media (max-width: 1200px) {
   .desktop-header__inner {
     max-width: inherit;
     padding: 10px 80px;
@@ -166,15 +329,9 @@
   }
   .mobile-footer__logo {
     width: 84.88px;
-height: 27.08px;
-top: 16px;
-left: 360px;
-gap: 0px;
-opacity: 0px;
-
-    /* font-weight: 700;
-    font-size: 16px;
-    line-height: 24px; */
+    height: 27.08px;
+    top: 16px;
+    left: 360px;
   }
   .mobile-footer .footer-nav {
     margin-top: 11px;
@@ -282,7 +439,7 @@ opacity: 0px;
     line-height: 24px;
     width: 100%;
   }
-}
+} */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
