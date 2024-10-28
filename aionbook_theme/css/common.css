@@ -309,24 +309,40 @@
 }
 
 /* 반응형 작업 */
-@media (max-width: 768px) {
-  .desktop-footer {
-    display: none;
+@media (max-width: 1200px) {
+  .desktop-footer__top, .mobile-footer__top {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-right: 50px;
   }
-  
-  .mobile-footer {
-    display: block;
-  }
-  
+
   .mobile-footer__section {
     border-bottom: 1px solid #DEDEDE;
     padding-bottom: 24px;
   }
-  
+
   .mobile-footer__section:last-child {
     border-bottom: none;
   }
 }
+
+@media (max-width: 768px) {
+  .desktop-footer__top, .mobile-footer__top {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding-right: 0;
+  }
+
+  .mobile-footer__section {
+    border-bottom: 1px solid #DEDEDE;
+    padding-bottom: 24px;
+  }
+
+  .mobile-footer__section:last-child {
+    border-bottom: none;
+  }
+}
+
 
 /* @media (max-width: 1200px) {
   .desktop-header__inner {
