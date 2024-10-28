@@ -545,6 +545,343 @@
     width: 100%;
     height: 70vh;
 }
+.partner-company__inner {
+    width: 550px;
+    margin: 0 auto;
+    padding: 160px 0;
+  }
+  .partner-company__title {
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
+    font-weight: 700;
+  }
+  .partner-company__list {
+    margin-top: 40px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 40px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 20%;
+    -ms-flex: 1 1 20%;
+    flex: 1 1 20%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .partner-company__item {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .partner-company__item:nth-child(1), .partner-company__item:nth-child(2) {
+    width: calc(50% - 40px);
+  }
+  .partner-company__item:nth-child(1) {
+    text-align: right;
+  }
+  .partner-company__item:nth-child(2) {
+    text-align: left;
+  }
+  .partner-company__inner {
+      max-width: 360px;
+      margin: 0 auto;
+      padding: 120px 0px;
+    }
+    .partner-company__title {
+      font-size: 24px;
+      line-height: 36px;
+      font-weight: 600;
+    }
+    .partner-company__list {
+      -webkit-box-pack: inherit;
+      -webkit-justify-content: inherit;
+      -ms-flex-pack: inherit;
+      justify-content: inherit;
+      gap: 40px 0;
+    }
+    .partner-company__item {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 1 33.3333333333%;
+      -ms-flex: 0 1 33.3333333333%;
+      flex: 0 1 33.3333333333%;
+      text-align: center;
+      word-break: keep-all;
+    }
+    .partner-company__item:nth-child(1), .partner-company__item:nth-child(2) {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 1 33.3333333333%;
+      -ms-flex: 0 1 33.3333333333%;
+      flex: 0 1 33.3333333333%;
+    }
+    .partner-company__item:nth-child(1) {
+      text-align: center;
+    }
+    .partner-company__item:nth-child(2) {
+      text-align: center;
+    }
+    .details-wrap {
+    position: relative;
+    width: 100%;
+  }
+  .details-wrap__container {
+    min-width: 1200px;
+    max-width: 100%;
+  }
+  .details-wrap__header {
+    position: fixed;
+    top: 17px;
+    left: 30px;
+    z-index: 5;
+    width: 40px;
+    height: 40px;
+  }
+  .details-wrap__open-btn {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.289);
+    border-radius: 100%;
+  }
+  .details-wrap__open-btn i {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    width: 20px;
+    height: auto;
+  }
+  .details-wrap__open-btn i img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .details-drawer {
+    padding-right: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 5;
+    -webkit-transform: translateX(-340px);
+    -ms-transform: translateX(-340px);
+    transform: translateX(-340px);
+    -webkit-transition: ease-in-out 300ms;
+    transition: ease-in-out 300ms;
+  }
+  .details-drawer__inner {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    width: 320px;
+    height: 100%;
+    overflow-y: hidden;
+    background-color: #fff;
+    box-shadow: 0px 9px 11px 3px rgba(0, 0, 0, 0.2);
+  }
+  .details-drawer__top {
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    padding: 32px 24px 24px;
+    background-color: #6077ed;
+    color: #fff;
+  }
+  .details-drawer__title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.875rem;
+  }
+  .details-drawer__step {
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5rem;
+  }
+  .details-drawer__study {
+    margin-top: 2px;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.0rem;
+    color: #eee;	
+  }
+  .details-drawer__close-btn {
+    position: absolute;
+    right: 0px;
+    top: 27px;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #fff url("../images/icon/arrow-left.png") no-repeat center;
+    background-size: 6px 11px;
+    background-color: #fff;
+    border-radius: 100%;
+  }
+  .details-drawer.open {
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+
+  @media screen and (max-width: 767px) {
+    body {
+      min-height: 100vh;
+    }
+    body .details-wrap {
+      position: relative;
+      min-height: inherit;
+    }
+    body .details-wrap__container {
+      min-width: 100%;
+      padding: 0 16px;
+    }
+    body .details-wrap__header {
+      padding: 0 16px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 60px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+    body .details-drawer {
+      padding-right: 0;
+      left: 0;
+      right: 0;
+      -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+    body .details-drawer__inner {
+      width: 100%;
+      box-shadow: initial;
+    }
+    body .details-drawer__top {
+      padding: 24px;
+    }
+    body .details-drawer__step {
+      font-size: 14px;
+      line-height: 1.25rem;
+    }
+    body .details-drawer__title {
+      font-size: 18px;
+      line-height: 1.5rem;
+    }
+    body .details-drawer__buttons {
+      display: none;
+    }
+    body .details-drawer__close-btn {
+      top: 24px;
+      right: 10px;
+      width: 24px;
+      height: 24px;
+      background-color: transparent;
+      background-image: url("../images/icon/close.png");
+      background-size: 14px 14px;
+    }
+    body .details-drawer.open {
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+      transform: translateX(0);
+    }
+    body .introduction {
+      padding: 140px 0 120px;
+      margin: 0;
+      width: 100%;
+    }
+    body .introduction__visual {
+      max-width: 500px;
+    }
+    body .introduction__title {
+      margin-top: 24px;
+      font-size: 24px;
+      line-height: 2.25rem;
+    }
+    body .introduction__subtitle {
+      font-size: 18px;
+      line-height: 1.75rem;
+    }
+    body .introduction__subtitle:not(:first-of-type) {
+      margin-top: 40px;
+    }
+    body .introduction__contents {
+      margin-top: 16px;
+      font-size: 16px;
+      line-height: 1.75rem;
+    }
+    body .introduction .chip {
+      margin-top: 12px;
+    }
+    body .introduction hr {
+      margin: 24px 0 40px;
+    }
+    body .point-box__label {
+      font-size: 18px;
+      line-height: 1.75rem;
+    }
+    body .guide-box__label {
+      font-size: 18px;
+      line-height: 1.75rem;
+    }
+    body .hint-box__label {
+      font-size: 18px;
+      line-height: 1.75rem;
+    }
+    body .navi-box {
+      margin-top: 40px;
+      height: 252px;
+    }
+    body .navi-box__buttons {
+      margin-top: 48px;
+    }
+  }
 </style>
 
 <script>
