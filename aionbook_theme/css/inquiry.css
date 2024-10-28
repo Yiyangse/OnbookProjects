@@ -74,7 +74,7 @@
     margin-left: 15px;
     margin-top: 25px;
     font-size: 20px;
-    text-align: center;
+    text-align: left;
     color: #151515;
     border-right: 1px solid #E1E5F3; /* 구분선 border */
   }
@@ -102,13 +102,15 @@
   }
   .inquiry__input_lg label {
     font-family: 'Pretendard';
+    margin-top: 10px;
     margin-left: 15px;
+    margin-bottom: 10px;
     width: 1200px; /* 라벨 너비 설정 */
     position: absolute;
     top: 15px;
     font-size: 20px;
     color: #151515;
-    border-bottom: 1px solid #E1E5F3;/* 구분선 border */
+    border-bottom: 0.5px solid #E1E5F3;/* 구분선 border */
   }
 
   .inquiry__input_lg textarea {

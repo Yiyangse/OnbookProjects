@@ -258,6 +258,15 @@
   margin-bottom: 32px;
 }
 
+.mobile-footer__top {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* padding-bottom: 40px; */
+  /* padding-right: 750px; */
+  gap: 10px;
+}
+
 .mobile-footer__section {
   margin-bottom: 32px;
 }
@@ -299,7 +308,7 @@
   margin-top: 32px;
 }
 
-/* Media Queries */
+/* 반응형 작업 */
 @media (max-width: 768px) {
   .desktop-footer {
     display: none;
