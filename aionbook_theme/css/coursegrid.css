@@ -113,9 +113,9 @@
     color: white;
     font-weight: 800;
 }
-
+/* 잠금화면 배경 */
 .locked::after {
-    content: '🔒';
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -128,11 +128,22 @@
     font-size: 48px;
     color: white;
 }
+/* 잠금화면 png */
+.locked::after {
+  background-image: url('../images/home/lock.png');
+  background-size: 64px 64px;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: '';
+}
+
+/* 태블릿 미디어 쿼리 (max-width 768px) */
 @media screen and (max-width: 767px) {
     .course-grid__container {
         width: 100%;
-      grid-template-columns: 1fr;
-      gap: 16px;
+        flex-direction: column;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
     .card {
         width: 100%;
@@ -143,7 +154,12 @@
       height: auto;
     }
   }
-  
+/* 모바일 미디어 쿼리 (max-width 375px) */
+@media screen and (max-width: 375px) {
+  .course-grid__container {
+    width: 100%;
+    grid-template-columns: 1fr;
+}}
 
 /* 화살표 보류 */
 /* .arrow {

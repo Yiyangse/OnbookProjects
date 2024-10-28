@@ -157,6 +157,9 @@ body {
     gap: 10px;
 }
 
+
+
+
 .chapter:hover {
     transform: scale(1.05);
 }
@@ -248,27 +251,34 @@ body {
     position: relative;
 }
 
+/* 잠금화면 배경 */
 .locked::after {
-    content: '🔒';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 48px;
-    color: white;
-    border-radius: 14px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  color: white;
+}
+/* 잠금화면 png */
+.locked::after {
+background-image: url('../images/home/lock.png');
+background-size: 64px 64px;
+background-repeat: no-repeat;
+background-position: center;
+content: '';
 }
 
 @media screen and (max-width: 767px) {
   
     /* body 패딩과 기본 폰트 크기 조정 */
     body {
-      padding: 10px;
       font-size: 16px;
     }
   

@@ -344,7 +344,7 @@
 }
 
 
-/* @media (max-width: 1200px) {
+@media (max-width: 1200px) {
   .desktop-header__inner {
     max-width: inherit;
     padding: 10px 80px;
@@ -471,7 +471,7 @@
     line-height: 24px;
     width: 100%;
   }
-} */
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -606,7 +606,7 @@ html {
 }
 
 body, button, input, textarea {
-  font-family: "pretendard", sans-serif;
+  font-family: 'pretendard', sans-serif;
 }
 
 body {
