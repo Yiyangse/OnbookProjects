@@ -42,43 +42,46 @@
 
 .main__inner_title_group{
   display: grid;
-
+  align-items: left;
 }
 
-/* 메인 제목 */
+/* 메인 제목::AI실습 플랫폼 */
 .main__inner_title {
-  font-size: 30px;
+  width: 172px;
+  height: 28px;
+  font-size: 28px;
   font-weight: 800;
   color: #ffffff;
-  letter-spacing: -0.02em;
   border: 1px solid var(--, #151515);
-  /* 텍스트 정렬 수정 */
-  margin-left: 6px; 
-  line-height: 35px;
-
+  margin-left: 10px; /* 시작위치 10px밀기 */
+  margin-bottom: 12px;
+  line-height: 31px;
+  letter-spacing: -0.02em;
 }
 
-/* 메인 강조 제목 */
+/* 메인 강조::AI OnBook */
 .main__inner_title_bold {
+  width: 283px;
+  height: 43px;
   font-size: 60px;
   font-weight: 800;
   color: #ffffff;
-  margin-bottom: 5px;
   letter-spacing: -0.04em;
-  /* 텍스트 정렬 수정 */
   line-height: 68px;
-
+  margin-bottom: 10px;
 }
 
-/* 메인 설명 텍스트 */
+/* 메인 설명::최적화된 */
 .main__inner_title_text {
+  width: 283px;
+  height: 21px;
   font-family: 'Pretendard';
   font-size: 24px;
   font-weight: 500;
   color: #ffffff;
-  margin-top: 10px;
   letter-spacing: -0.03em;
-  line-height: 28px;
+  line-height: 21px;
+  margin-top: 20px;
 }
 
 /* 버튼 랩퍼 */
