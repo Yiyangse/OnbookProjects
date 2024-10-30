@@ -107,65 +107,6 @@
   display: none;
 }
 
-/* .desktop-footer__inner {
-  max-width: 1200px;
-  padding: 75px 40px 80px;
-  margin: 0 auto;
-}
-.desktop-footer__top {
-  padding-bottom: 19px;
-  border-bottom: 1px solid #DEDEDE;
-}
-.desktop-footer__logo {
-
-}
-.desktop-footer .footer-nav {
-
-}
-.desktop-footer .footer-nav__item {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding-bottom: 10px;
-  gap: 20px;
-}
-.desktop-footer .footer-nav__item a {
-  display: block;
-  font-size: 14px;
-  line-height: 17px;
-  font-weight: 500;
-}
-.desktop-footer .footer-nav.footer-nav--bottom .footer-nav__item a {
-  line-height: 14px;
-  font-size: 12px;
-  color: #222;
-}
-.desktop-footer__company-name {
-  margin-top: 27px;
-  line-height: 17px;
-  font-size: 14px;
-  font-weight: 700;
-  color: #000;
-}
-.desktop-footer__info {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin-top: 16px;
-  font-size: 12px;
-  font-weight: 300;
-  line-height: 14px;
-  color: #525252;
-}
-
-.mobile-footer {
-  display: none;
-} */
-
 /* Desktop Footer */
 .desktop-footer {
   font-family: 'Pretendard';
@@ -268,7 +209,6 @@
 }
 
 .mobile-footer__section {
-
   margin-bottom: 32px;
 }
 
@@ -299,15 +239,17 @@
 }
 
 .mobile-footer__nav-item a {
-  color: #333;
+  color: #4C4F5F;
   text-decoration: none;
 }
 
 .mobile-footer__company-info {
+  font-family: 'Pretendard';
   font-size: 12px;
-  line-height: 1.5;
-  color: #666;
-  margin-top: 32px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: -0.03em;
+  color: #4C4F5F;
 }
 
 /* 반응형 작업 */
@@ -315,7 +257,7 @@
   .desktop-footer__top, .mobile-footer__top {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding-right: 50px;
+    padding-right: 0;
   }
 
   .mobile-footer__section {
@@ -336,8 +278,8 @@
   }
 
   .mobile-footer__section {
-    border-bottom: 1px solid #DEDEDE;
-    padding-bottom: 24px;
+    /* border-bottom: 1px solid #DEDEDE;
+    padding-bottom: 24px; */
   }
 
   .mobile-footer__section:last-child {
@@ -614,35 +556,3 @@ body, button, input, textarea {
 body {
   box-sizing: border-box;
 }
-/* 
-@font-face {
-  font-family: "pretendard";
-  font-style: regular;
-  font-weight: 300;
-  src: url(../fonts/Pretendard-Regular.woff) format("woff");
-}
-@font-face {
-  font-family: "pretendard";
-  font-style: medium;
-  font-weight: 500;
-  src: url(../fonts/Pretendard-Medium.woff) format("woff");
-}
-@font-face {
-  font-family: "pretendard";
-  font-style: semibold;
-  font-weight: 600;
-  src: url(../fonts/Pretendard-SemiBold.woff) format("woff");
-}
-@font-face {
-  font-family: "pretendard";
-  font-style: bold;
-  font-weight: 700;
-  src: url(../fonts/Pretendard-Bold.woff) format("woff");
-}
-@font-face {
-  font-family: "pretendard";
-  font-style: extrabold;
-  font-weight: 800;
-  src: url(../fonts/Pretendard-ExtraBold.woff) format("woff");
-} */
-/*# sourceMappingURL=../maps/common.css.map */
