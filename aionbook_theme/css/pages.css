@@ -25,14 +25,14 @@
   align-items: center;
   position: relative; /* 다른 섹션과 겹치지 않도록 상대 위치 지정 */
   z-index: 10; /* 다른 요소들과 겹치지 않도록 z-index 설정 */
-  margin-bottom: 80px; /* learning-system 섹션과의 간격 */
+  margin-bottom: 58px;/* learning-system 섹션과의 간격 */
+  top: 60px; 
 }
 /* 메인 내부 */
 .main__inner {
   width: 100%;
   height: 430px;
   position: relative;
-  top: 60px;
   display: flex;
   background-color: #465ff1; /* 배경 색상 */
   justify-content: center;
