@@ -2,7 +2,7 @@
 /* coursegrid.css ::AI데이터 분석입문*/
 /*  */
 .course-grid {
-    padding: 30px;
+    padding: 130px 30px;
   }
   
   .course-grid__title {
@@ -72,25 +72,29 @@
 .card h2 {
    font-family: 'NanumRoundEB';
     text-align: center;
-    margin-top: 28px;
-    font-size: 24px;
-    line-height: 1.2;
+    margin-top: 30px;
     font-weight: 800;
+    border: 0.2px solid var(--, #151515);
     color: #151515;
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: -0.04em;
 }
 
 .card p {
+    font-family: 'Pretendard';
     text-align: center;
-    padding: 10px;
+    padding: 8px;
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
     color: #323232;
     flex-grow: 1;
+    letter-spacing: -0.04em;
 }
 
 .card .button {
-    font-family: 'NanumRoundEB';
+    font-family: 'Pretendard';
     display: inline-block;
     align-items: center;
     width: 270px;
@@ -104,8 +108,10 @@
     transition: all 0.3s ease;
     text-align: center;
     margin-top: 60px;
+    font-size: 18px;
     font-weight: 800;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    letter-spacing: -0.04em;
 }
 
 .card .button:hover {
@@ -161,6 +167,26 @@
     grid-template-columns: 1fr;
 }}
 
+@font-face {
+  font-family: "NanumEB";
+  font-weight: 800;
+  font-style: normal;
+  src: url(../fonts/NanumSquareEB.woff) format("woff");
+}
+
+@font-face {
+  font-family: "NanumRoundEB";
+  font-weight: 800;
+  font-style: normal;
+  src: url(../fonts/NanumSquareRoundEB.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
 /* 화살표 보류 */
 /* .arrow {
     position: absolute;
