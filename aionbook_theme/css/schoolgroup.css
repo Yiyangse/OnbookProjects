@@ -11,7 +11,7 @@
 
 .schoolgroup_inner {
     width: 3171px;
-    height: 400px;
+    height: 352px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@
   
   .schoolgroup_title {
     font-family: 'NanumRoundEB';
-    margin-top: 10px;
+    /* margin-top: 10px; */
     text-align: center;
     font-size: 34px;
     font-weight: 800;
@@ -30,7 +30,7 @@
     text-align: center;
   }
   .schoolgroup_list {
-    margin: 30px 0;
+    /* margin: 30px 0; */
     display: flex;
     width: 270%;  /* 이미지들이 3배 크기로 복제되어 연속적으로 보이게 함 */
     animation: slide 10s linear infinite; 
@@ -42,7 +42,7 @@
   }
   
   .schoolgroup_item img {
-    width: auto;
+    display: flex;
     height: 250px;
     object-fit: contain;
   }
