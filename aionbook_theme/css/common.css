@@ -1,558 +1,513 @@
-@font-face {
-  font-family: "NanumEB";
-  font-weight: 800;
-  font-style: normal;
-  src: url(../fonts/NanumSquareEB.woff) format("woff");
-}
-
-@font-face {
-  font-family: "NanumRoundEB";
-  font-weight: 800;
-  font-style: normal;
-  src: url(../fonts/NanumSquareRoundEB.woff) format("woff");
-}
-
-@font-face {
-  font-family: 'Pretendard';
-  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-
-.blind,
-.hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-.desktop-header {
-  position: fixed;
-  background-color: #fff;
-  left: 0;
-  right: 0;
-  z-index: 9999999;
-}
-.desktop-header__inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-.desktop-header__logo .img {
-  width: 84.88px;
-  height: 27.08px;
-}
-.desktop-header .gnb {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-.desktop-header .gnb__menu {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-.desktop-header .gnb__item a {
-  display: block;
-  padding: 8px 24px;
-  font-weight: 500;
-}
-.desktop-header .gnb__item--border-btn a {
-  margin-left: 40px;
-  display: inline-block;
-  border: 1px solid #000;
-  padding: 7px 23px;
-  border-radius: 6px;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
-}
-.desktop-header-btn {
-  border: 1px solid #000;
-  padding: 7px 23px;
-  border-radius: 6px;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
-}
-
-.mobile-header {
-  display: none;
-}
-
-/* Desktop Footer */
-.desktop-footer {
-  font-family: 'Pretendard';
-}
-
-.desktop-footer__inner {
-
-  border-top: 1px solid #DEDEDE;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-top: 30px;
-  margin-top: 30px;
-}
-
-.desktop-footer__top {
+/* ==========================================================================
+   1. Utility Classes
+   ========================================================================== */
+   @font-face {
+    font-family: "NanumEB";
+    font-weight: 800;
+    font-style: normal;
+    src: url(../fonts/NanumSquareEB.woff) format("woff");
+  }
   
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding-bottom: 40px;
-  padding-right: 750px;
-  border-bottom: 1px solid #DEDEDE;
-  gap: 20px;
-}
-
-.desktop-footer__logo {
-
-  width: 81px;
-  height: 24px;
-  margin-bottom: 40px;
-}
-
-.desktop-footer__section-title {
+  @font-face {
+    font-family: "NanumRoundEB";
+    font-weight: 800;
+    font-style: normal;
+    src: url(../fonts/NanumSquareRoundEB.woff) format("woff");
+  }
   
-  width: 100px;
-  font-family: 'NanumEB';
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 37px;
-  letter-spacing: -0.03em;
-  text-align: left;
-  margin-bottom: 8px;
-  color: #4C4F5F;
-
-}
-
-.desktop-footer__nav-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.desktop-footer__nav-item {
-  font-family: 'Pretendard';
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 30px;
-  letter-spacing: -0.03em;
-  text-align: left;
-}
-
-.desktop-footer__nav-item a {
-  color: #4C4F5F;
-  text-decoration: none;
-}
-
-.desktop-footer__bottom {
-
-  margin-top: 24px;
-}
-
-.desktop-footer__company-info {
-  font-family: 'Pretendard';
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 31px;
-  letter-spacing: -0.03em;
-  color: #4C4F5F;
-}
-
-/* Mobile Footer */
-.mobile-footer {
-  display: none;
-  font-family: 'Pretendard', sans-serif;
-  padding: 40px 24px;
-}
-
-.mobile-footer__logo {
-  width: 81px;
-  height: 24px;
-  margin-bottom: 32px;
-}
-
-.mobile-footer__top {
-  align-items: center;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* padding-bottom: 40px; */
-  /* padding-right: 750px; */
-  gap: 10px;
-}
-
-.mobile-footer__section {
-  margin-bottom: 32px;
-}
-
-.mobile-footer__section-title {
-
-  font-family: 'Pretendard';
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 37px;
-  letter-spacing: -0.03em;
-  text-align: left;
-  margin-bottom: 12px;
-}
-
-.mobile-footer__nav-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.mobile-footer__nav-item {
-  font-family: 'Pretendard';
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 37px;
-  letter-spacing: -0.03em;
-  text-align: left;
-}
-
-.mobile-footer__nav-item a {
-  color: #4C4F5F;
-  text-decoration: none;
-}
-
-.mobile-footer__company-info {
-  font-family: 'Pretendard';
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 19px;
-  letter-spacing: -0.03em;
-  color: #4C4F5F;
-}
-
-/* 반응형 작업 */
-@media (max-width: 1200px) {
-  .desktop-footer__top, .mobile-footer__top {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding-right: 0;
+  @font-face {
+    font-family: 'Pretendard';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
   }
-
-  .mobile-footer__section {
-    border-bottom: 1px solid #DEDEDE;
-    padding-bottom: 24px;
+  
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
   }
-
-  .mobile-footer__section:last-child {
-    border-bottom: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .desktop-footer__top, .mobile-footer__top {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    padding-right: 0;
-  }
-
-  .mobile-footer__section {
-    /* border-bottom: 1px solid #DEDEDE;
-    padding-bottom: 24px; */
-  }
-
-  .mobile-footer__section:last-child {
-    border-bottom: none;
-  }
-}
-
-
-@media (max-width: 1200px) {
-  .desktop-header__inner {
-    max-width: inherit;
-    padding: 10px 80px;
-  }
-  .mobile-footer {
+  
+  article, aside, details, figcaption, figure,
+  footer, header, hgroup, menu, nav, section {
     display: block;
   }
-  .mobile-footer__inner {
-    padding: 80px 24px;
+  
+  html {
+    box-sizing: border-box;
+    box-sizing: border-box;
   }
-  .mobile-footer__top {
-    padding-bottom: 11px;
-    border-bottom: 1px solid #D9D9D9;
+  
+  *, *:before, *:after {
+    box-sizing: border-box;
   }
-  .mobile-footer__logo {
-    width: 84.88px;
-    height: 27.08px;
-    top: 16px;
-    left: 360px;
-  }
-  .mobile-footer .footer-nav {
-    margin-top: 11px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 0 24px;
-  }
-  .mobile-footer .footer-nav__item {
-    padding: 5px 0;
-  }
-  .mobile-footer .footer-nav__item a {
-    display: block;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 500;
-    color: #3F3F3F;
-  }
-  .mobile-footer .footer-nav.footer-nav--bottom .footer-nav__item a {
-    display: block;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 500;
-    color: #3F3F3F;
-  }
-  .mobile-footer__company-name {
-    margin-top: 35px;
-    line-height: 20px;
-    font-size: 14px;
-    font-weight: 700;
-    color: #000;
-  }
-  .mobile-footer__info {
-    margin-top: 12px;
-    font-size: 12px;
-    font-weight: 300;
-    line-height: 18px;
-    color: #858585;
-  }
-  .mobile-footer__info p + p {
-    margin-top: 16px;
-  }
-  .mobile-header,
-  .desktop-footer {
-    display: none;
-  }
-}
-@media (max-width: 768px) {
-  .desktop-header {
-    display: none;
-  }
-  .mobile-header {
-    display: block;
-    position: fixed;
-    background-color: #fff;
-    left: 0;
-    right: 0;
-  }
-  .mobile-header__top {
-    padding: 0 13px;
-    position: relative;
-  }
-  .mobile-header .gnb-btn {
-    width: 40px;
-    height: 40px;
-    margin: 10px 0;
-    background: url("../images/icon/hamburger-btn.png") no-repeat center;
-    background-size: contain;
-  }
-  .mobile-header .gnb-btn.active {
-    background-image: url("../images/icon/close-btn.png");
-  }
-  .mobile-header__logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 30px;
-    color: #000;
-    margin: 0 auto;
-    display: inline-block;
-  }
-  .mobile-header .mobile-gnb {
-    display: none;
-  }
-  .mobile-header .mobile-gnb.active {
-    display: block;
-    position: absolute;
+  
+  img {
     width: 100%;
+    max-width: 100%;
+    vertical-align: top;
   }
-  .mobile-header .mobile-gnb__menu {
-    background: #fff;
+  
+  ol, ul, li {
+    list-style: none;
   }
-  .mobile-header .mobile-gnb__item a {
-    display: inline-block;
-    padding: 16px 24px;
-    color: #222;
-    font-weight: 500;
+  
+  blockquote, q {
+    quotes: none;
+  }
+  
+  blockquote:before,
+  blockquote:after,
+  q:before, q:after {
+    content: none;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+  }
+  
+  button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: 0;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  a, a * {
+    cursor: pointer;
+  }
+  
+  pre {
+    white-space: pre-wrap;
+  }
+  
+  hr {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    height: 1px;
+    background-color: #ebebeb;
+  }
+  
+  input[type=checkbox],
+  input[type=radio] {
+    opacity: 1;
+    width: 13px;
+    height: 13px;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  sup {
+    vertical-align: super;
+    font-size: 0.5em;
+  }
+  
+  a,
+  a:hover,
+  a:focus {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  input::-webkit-search-cancel-button {
+    display: none;
+  }
+  
+  input:-webkit-autofill {
+    box-shadow: 0 0 0 1000px white inset;
+  }
+  
+  html {
     font-size: 16px;
-    line-height: 24px;
-    width: 100%;
   }
-}
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
+  
+  body, button, input, textarea {
+    font-family: 'pretendard', sans-serif;
+  }
+  
+  body {
+    box-sizing: border-box;
+  }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-html {
-  box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-img {
-  width: 100%;
-  max-width: 100%;
-  vertical-align: top;
-}
-
-ol, ul, li {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before, q:after {
-  content: none;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
-  table-layout: fixed;
-}
-
-textarea {
-  resize: none;
-}
-
-input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border-radius: 0;
-}
-
-button {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: 0;
-  -webkit-appearance: none;
-  outline: none;
-  cursor: pointer;
-}
-
-a, a * {
-  cursor: pointer;
-}
-
-pre {
-  white-space: pre-wrap;
-}
-
-hr {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  height: 1px;
-  background-color: #ebebeb;
-}
-
-input[type=checkbox],
-input[type=radio] {
-  opacity: 1;
-  width: 13px;
-  height: 13px;
-  margin: 0;
-  cursor: pointer;
-}
-
-sup {
-  vertical-align: super;
-  font-size: 0.5em;
-}
-
-a,
-a:hover,
-a:focus {
-  color: inherit;
-  text-decoration: none;
-}
-
-input::-webkit-search-cancel-button {
-  display: none;
-}
-
-input:-webkit-autofill {
-  box-shadow: 0 0 0 1000px white inset;
-}
-
-html {
-  font-size: 16px;
-}
-
-body, button, input, textarea {
-  font-family: 'pretendard', sans-serif;
-}
-
-body {
-  box-sizing: border-box;
-}
+  .blind,
+  .hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+   }
+   
+   /* ==========================================================================
+      2. Desktop Header Styles
+      ========================================================================== */
+   .desktop-header {
+     position: fixed;
+     background-color: #fff;
+     left: 0;
+     right: 0;
+     z-index: 9999999;
+   }
+   
+   /* Header Container */
+   .desktop-header__inner {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 10px 0;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+   }
+   
+   /* Logo */
+   .desktop-header__logo .img {
+     width: 84.88px;
+     height: 27.08px;
+   }
+   
+   /* Navigation */
+   .desktop-header .gnb {
+     display: flex;
+     align-items: center;
+   }
+   
+   .desktop-header .gnb__menu {
+     display: flex;
+     align-items: center;
+   }
+   
+   .desktop-header .gnb__item a {
+     display: block;
+     padding: 8px 24px;
+     font-weight: 500;
+   }
+   
+   /* Header Button Styles */
+   .desktop-header .gnb__item--border-btn a {
+     margin-left: 40px;
+     display: inline-block;
+     border: 1px solid #000;
+     padding: 7px 23px;
+     border-radius: 6px;
+     font-size: 16px;
+     line-height: 24px;
+     font-weight: 500;
+   }
+   
+   .desktop-header-btn {
+     border: 1px solid #000;
+     padding: 7px 23px;
+     border-radius: 6px;
+     font-size: 16px;
+     line-height: 24px;
+     font-weight: 500;
+   }
+   
+   /* ==========================================================================
+      3. Desktop Footer Styles
+      ========================================================================== */
+   .desktop-footer {
+     font-family: 'Pretendard';
+   }
+   
+   .desktop-footer__inner {
+     border-top: 1px solid #DEDEDE;
+     max-width: 1200px;
+     margin: 0 auto;
+     padding-top: 30px;
+     margin-top: 30px;
+   }
+   
+   /* Footer Top Section */
+   .desktop-footer__top {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     padding-bottom: 40px;
+     padding-right: 750px;
+     border-bottom: 1px solid #DEDEDE;
+     gap: 20px;
+   }
+   
+   .desktop-footer__logo {
+     width: 81px;
+     height: 24px;
+     margin-bottom: 40px;
+   }
+   
+   /* Footer Navigation */
+   .desktop-footer__section-title {
+     width: 100px;
+     font-family: 'NanumEB';
+     font-size: 18px;
+     font-weight: 700;
+     line-height: 37px;
+     letter-spacing: -0.03em;
+     text-align: left;
+     margin-bottom: 8px;
+     color: #4C4F5F;
+   }
+   
+   .desktop-footer__nav-list {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+   }
+   
+   .desktop-footer__nav-item {
+     font-family: 'Pretendard';
+     font-size: 16px;
+     font-weight: 500;
+     line-height: 30px;
+     letter-spacing: -0.03em;
+     text-align: left;
+   }
+   
+   .desktop-footer__nav-item a {
+     color: #4C4F5F;
+     text-decoration: none;
+   }
+   
+   /* Footer Bottom Section */
+   .desktop-footer__bottom {
+     margin-top: 24px;
+   }
+   
+   .desktop-footer__company-info {
+     font-family: 'Pretendard';
+     font-size: 16px;
+     font-weight: 500;
+     line-height: 31px;
+     letter-spacing: -0.03em;
+     color: #4C4F5F;
+   }
+   .mobile-header {
+    display: none;
+  }
+   
+   /* ==========================================================================
+      4. Mobile Footer Styles
+      ========================================================================== */
+   .mobile-footer {
+     display: none;
+     font-family: 'Pretendard', sans-serif;
+     padding: 40px 24px;
+   }
+   
+   .mobile-footer__logo {
+     width: 81px;
+     height: 24px;
+     margin-bottom: 32px;
+   }
+   
+   /* Mobile Footer Top Section */
+   .mobile-footer__top {
+     align-items: center;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 10px;
+   }
+   
+   .mobile-footer__section {
+     margin-bottom: 32px;
+     /* Removed duplicate border-bottom */
+   }
+   
+   /* Mobile Footer Navigation */
+   .mobile-footer__section-title {
+     font-family: 'Pretendard';
+     font-size: 18px;
+     font-weight: 700;
+     line-height: 37px;
+     letter-spacing: -0.03em;
+     text-align: left;
+     margin-bottom: 12px;
+   }
+   
+   .mobile-footer__nav-list {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+   }
+   
+   .mobile-footer__nav-item {
+     font-family: 'Pretendard';
+     font-size: 16px;
+     font-weight: 500;
+     line-height: 37px;
+     letter-spacing: -0.03em;
+     text-align: left;
+   }
+   
+   .mobile-footer__nav-item a {
+     color: #4C4F5F;
+     text-decoration: none;
+   }
+   
+   .mobile-footer__company-info {
+     font-family: 'Pretendard';
+     font-size: 12px;
+     font-weight: 500;
+     line-height: 19px;
+     letter-spacing: -0.03em;
+     color: #4C4F5F;
+   }
+   
+   /* ==========================================================================
+      5. Responsive Styles
+      ========================================================================== */
+   
+   /* Large Screens (max-width: 1200px) */
+   @media (max-width: 1200px) {
+     /* Updated mobile footer width */
+     .mobile-footer__inner {
+       width: 348px;
+       height: 103px;
+     }
+   
+     .desktop-header__inner {
+       max-width: inherit;
+       padding: 10px 80px;
+     }
+   
+     /* Show mobile footer, hide desktop */
+     .mobile-footer {
+       display: block;
+     }
+   
+     .desktop-footer {
+       display: none;
+     }
+   
+     /* Mobile Footer Adjustments */
+     .mobile-footer__top {
+       grid-template-columns: repeat(3, 1fr);
+       gap: 20px;
+       padding-right: 0;
+       padding-bottom: 11px;
+       border-bottom: 1px solid #D9D9D9;
+     }
+   }
+   
+   /* Medium Screens (max-width: 768px) */
+   @media (max-width: 768px) {
+     /* Updated mobile footer width for smaller screens */
+     .mobile-footer__inner {
+       width: 348px;
+       height: 103px;
+     }
+   
+     /* Hide desktop header, show mobile header */
+     .desktop-header {
+       display: none;
+     }
+   
+     .mobile-header {
+       display: block;
+       position: fixed;
+       background-color: #fff;
+       left: 0;
+       right: 0;
+     }
+   
+     /* Mobile Header Styles */
+     .mobile-header__top {
+       padding: 0 13px;
+       position: relative;
+     }
+   
+     .mobile-header .gnb-btn {
+       width: 40px;
+       height: 40px;
+       margin: 10px 0;
+       background: url("../images/icon/hamburger-btn.png") no-repeat center;
+       background-size: contain;
+     }
+   
+     .mobile-header .gnb-btn.active {
+       background-image: url("../images/icon/close-btn.png");
+     }
+   
+     .mobile-header__logo {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       font-weight: 700;
+       font-size: 20px;
+       line-height: 30px;
+       color: #000;
+       margin: 0 auto;
+       display: inline-block;
+     }
+   
+     /* Mobile Navigation Menu */
+     .mobile-header .mobile-gnb {
+       display: none;
+     }
+   
+     .mobile-header .mobile-gnb.active {
+       display: block;
+       position: absolute;
+       width: 100%;
+     }
+   
+     .mobile-header .mobile-gnb__menu {
+       background: #fff;
+     }
+   
+     .mobile-header .mobile-gnb__item a {
+       display: inline-block;
+       padding: 16px 24px;
+       color: #222;
+       font-weight: 500;
+       font-size: 16px;
+       line-height: 24px;
+       width: 100%;
+     }
+   }
+   
+   /* Small Screens (max-width: 480px) */
+   @media (max-width: 480px) {
+     /* Updated mobile footer width for smallest screens */
+     .mobile-footer__inner {
+       width: 247px;
+       height: 95px;
+     }
+   }
