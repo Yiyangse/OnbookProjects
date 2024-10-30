@@ -57,8 +57,10 @@
   /* 아이템 호버:: 비디오 재생 */
 .learning-system__item video {
   display: none;  /* 기본 숨김 */
-  width: 100%;
-  height: auto;
+  width: 228px;
+  height: 177px;
+  object-fit: contain;
+   transition: opacity 0.3s ease;
 }
 
 .learning-system__item:hover video {
@@ -155,6 +157,7 @@
   }
 
   @media screen and (max-width: 767px) {
+    
     .learning-system__inner {
       width: 100%;
       padding: 60px 16px;
@@ -172,6 +175,11 @@
       min-height: 320px; /* 최소 높이 설정 */
     }
   
+    .learning-system__item video {
+      width: 160px;
+      height: 124px;
+    }
+    
     /* 모바일에서 이미지 크기 조정 */
     .plat1, .plat2, .plat3, .plat4 {
       width: 160px;

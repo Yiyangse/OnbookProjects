@@ -144,6 +144,7 @@
       <li class="learning-system__item" id="plat1-item" data-video="../aionbook_theme/videos/video01.mp4">
         <div class="plat1">
           <img src="../aionbook_theme/images/home/onboolplat01.png" alt="온북 플랫폼 이미지01">
+          <video src="../aionbook_theme/videos/video01.mp4" loop muted></video>
         </div>
         <div class="learning-system__text">
           <p>무설치</p>
@@ -151,9 +152,10 @@
         </div>
       </li>
       <!-- 02 실습형 -->
-      <li class="learning-system__item" data-video="../aionbook_theme/videos/video02.mov">
+      <li class="learning-system__item" id="plat2-item" data-video="../aionbook_theme/videos/video02.mov">
         <div class="plat2">
           <img src="../aionbook_theme/images/home/onboolplat02.png" alt="온북 플랫폼 이미지02">
+          <video src="../aionbook_theme/videos/video02.mov" loop muted></video>
         </div>
         <div class="learning-system__text">
           <p>실습형</p>
@@ -161,9 +163,10 @@
         </div>
       </li>
       <!-- 03 콘텐츠 탑재 -->
-      <li class="learning-system__item" data-video="../aionbook_theme/videos/video03.mov">
+      <li class="learning-system__item" id="plat3-item" data-video="../aionbook_theme/videos/video03.mp4">
         <div class="plat3">
           <img src="../aionbook_theme/images/home/onboolplat03.png" alt="온북 플랫폼 이미지03">
+          <video src="../aionbook_theme/videos/video03.mp4" loop muted></video>
         </div>
         <div class="learning-system__text">
           <p>콘텐츠 탑재</p>
@@ -171,9 +174,10 @@
         </div>
       </li>
       <!-- 04 LMS 제공 -->
-      <li class="learning-system__item" data-video="../aionbook_theme/videos/video04.mov">
+      <li class="learning-system__item" id="plat4-item" data-video="../aionbook_theme/videos/video04.mov">
         <div class="plat4">
           <img src="../aionbook_theme/images/home/onboolplat04.png" alt="온북 플랫폼 이미지04">
+          <video src="../aionbook_theme/videos/video03.mp4" loop muted></video>
         </div>
         <div class="learning-system__text">
           <p>LMS 제공</p>
@@ -203,32 +207,50 @@
 <!-- 팝업창 스크립트 -->
 <script>
 // 모든 learning-system__item에 대해 클릭 이벤트 추가
-document.querySelectorAll('.learning-system__item').forEach(item => {
-  item.addEventListener('click', function() {
-    var popup = document.getElementById("video-popup");
-    var video = document.getElementById("popup-video");
+document.addEventListener('DOMContentLoaded', function() {
+  // 호버 기능 구현
+  const items = document.querySelectorAll('.learning-system__item');
+  
+  items.forEach(item => {
+    const video = item.querySelector('video');
     
-    // 클릭한 아이템의 data-video 속성에서 비디오 소스 가져오기
-    var videoSource = this.getAttribute('data-video');
-    
-    // 팝업창 열기
-    popup.style.display = "block";
-    video.src = videoSource;  // 비디오 소스 변경
-    video.play();  // 비디오 자동 재생
+    item.addEventListener('mouseenter', () => {
+      if (video) {
+        video.play();
+      }
+    });
+
+    item.addEventListener('mouseleave', () => {
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
+    // 클릭 이벤트 (팝업)
+    item.addEventListener('click', function() {
+      const popup = document.getElementById("video-popup");
+      const popupVideo = document.getElementById("popup-video");
+      const videoSource = this.getAttribute('data-video');
+      
+      popup.style.display = "block";
+      popupVideo.src = videoSource;
+      popupVideo.play();
+    });
   });
+
+  // 팝업 닫기 버튼
+  const closeBtn = document.querySelector(".close-btn");
+  if (closeBtn) {
+    closeBtn.addEventListener("click", function() {
+      const popup = document.getElementById("video-popup");
+      const video = document.getElementById("popup-video");
+      
+      popup.style.display = "none";
+      video.pause();
+      video.currentTime = 0;
+    });
+  }
 });
-
-// 닫기 버튼 클릭 시 팝업창 닫기
-document.querySelector(".close-btn").addEventListener("click", function() {
-  var popup = document.getElementById("video-popup");
-  var video = document.getElementById("popup-video");
-
-  // 팝업창 닫기
-  popup.style.display = "none";
-  video.pause();  // 비디오 정지
-  video.currentTime = 0;  // 비디오 처음으로 돌아가기
-});
-
 </script>
 <!-- 코스시작 카드 섹션 -->
       <section class="course-grid">
@@ -468,7 +490,7 @@ document.querySelector(".close-btn").addEventListener("click", function() {
     </ul>
   </div>
 </div>
-    <div class="desktop-footer__bottom">
+    <div class="mobile-footer__bottom">
       <div class="mobile-footer__company-info">
         더에이아이랩 ㈜, 대표: 최영준<br>
         사업자등록번호: 439-87-00757<br>
