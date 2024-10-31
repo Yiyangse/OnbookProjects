@@ -184,6 +184,8 @@
      left: 0;
      right: 0;
      z-index: 9999999;
+     box-shadow: 0px 4px 32.5px -7px #A3A3A340;
+
    }
    
    /* Header Container */
