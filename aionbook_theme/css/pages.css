@@ -63,36 +63,41 @@
   overflow: hidden; /* vector 이미지가 영역을 벗어나지 않도록 설정 */
 }
 
-/* Vector 이미지 개별 위치 수정 */
-.vector-wrapper .vector01 {
-  width: 100%;
-  height: 100%;
-  max-width: 1920px; /* 최대 너비 제한 */
-  object-fit: cover; /* 이미지 비율 유지하며 채우기 */
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%); /* 중앙 정렬 */
-}
-
+/* Vector 이미지 컨테이너 */
 .vector-wrapper {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  overflow: hidden; /* vector 이미지가 영역을 벗어나지 않도록 설정 */
 }
-.vector02 {
+
+/* Vector01 이미지 */
+.vector01 {
+  position: absolute;
+  /* width: 2276px;
+  height: 550px; */
   width: 100%;
-  height: 100%;
+  left: 20px; /* 지정된 위치에 맞춰 조정 */
+  top: -10px;
   object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  z-index: 5;
 }
+
+/* Vector02 이미지 */
+.vector02 {
+  position: absolute;
+  /* width: 2213.86px;
+  height: 579.26px; */
+  width: 100%;
+  left: 20px; 
+  top: 60px;
+  object-fit: cover;
+  z-index: 5;
+}
+
 /* 메인 제목::AI실습 플랫폼 */
 .main__inner_title {
   width: 172px;
