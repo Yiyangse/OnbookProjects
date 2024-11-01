@@ -169,23 +169,28 @@
 /* 태블릿 및 데스크탑 미디어 쿼리 (max-width 1200px) */
 @media screen and (max-width: 1200px) {
 .inquiry__inner {
-  padding: 20px;
-  max-width: calc(90%);
+  max-width: 720px;
   display: flex;
   flex-direction: column;
   align-items: center; 
 }
+
+.inquiry__form {
+  max-width: 720px;
+}
+
 .inquiry__text{
-  max-width: calc(90%); align-items: center; 
+  max-width: 720px; 
+  align-items: left; 
 }
 .inquiry__input input{
     width: 712px;
     height: 64px;
     justify-content: center;
 }
-
-.inquiry__form {
-  max-width: calc(90%);
+.inquiry__input_lg textarea {
+  max-width: 712px;
+  height: 160px;
 }
 
 .inquiry__row {
@@ -199,26 +204,32 @@
     line-height: 48px;
 }
 .inquiry__btn {
-  max-width:712px;
+  max-width:100%;
+}
+
+}
+
+/* 태블릿 미디어 쿼리 (max-width 768px) */
+@media screen and (max-width: 768px) {
+.inquiry__inner {
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  .inquiry__form {
+    max-width: 720px;
+  }
+  .inquiry__input input{
+    width: 712px;
+    height: 64px;
+    justify-content: center;
 }
 .inquiry__input_lg textarea {
   max-width: 712px;
   height: 160px;
 }
-}
 
-/* 태블릿 미디어 쿼리 (max-width 768px) */
-@media screen and (max-width: 768px) {
-.inquiry__input input,
-.inquiry__input_lg textarea {
-    width: 720px;
-    height: 64px;
-}
-
-.inquiry__inner {
-    padding: 50px 16px;
-    max-width: 100%;
-}
 
 .inquiry__description {
     font-size: 26px;
