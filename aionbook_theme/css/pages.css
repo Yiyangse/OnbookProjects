@@ -77,10 +77,8 @@
 /* Vector01 이미지 */
 .vector01 {
   position: absolute;
-  /* width: 2276px;
-  height: 550px; */
-  width: 100%;
-  left: 20px; /* 지정된 위치에 맞춰 조정 */
+  min-width: 1920px;
+  left: -10%; /* 지정된 위치에 맞춰 조정 */
   top: -10px;
   object-fit: cover;
   z-index: 5;
@@ -89,11 +87,9 @@
 /* Vector02 이미지 */
 .vector02 {
   position: absolute;
-  /* width: 2213.86px;
-  height: 579.26px; */
-  width: 100%;
-  left: 20px; 
-  top: 60px;
+  min-width: 1920px;
+  left: 0; 
+  top: 80px;
   object-fit: cover;
   z-index: 5;
 }
@@ -166,7 +162,6 @@
   color: #FFFFFF; /* 텍스트 색상 */
   padding: 10px 20px;
   border-radius: 14px;
-  opacity: 0.85;
 }
 
 .hero-btn--experience:hover {
@@ -183,7 +178,6 @@
   color: #465FF1; /* 텍스트 색상 */
   padding: 10px 20px;
   border-radius: 14px;
-  opacity: 0.85;
 }
 
 .hero-btn--inquiry:hover {
@@ -259,6 +253,7 @@
   .banner__btn:hover {
     background: #f1f1f1;
   }  
+
   /* 태블릿 및 데스크탑 미디어 쿼리 (max-width 1200px) */
   @media screen and (max-width: 1200px) {
     .banner__inner {
