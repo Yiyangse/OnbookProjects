@@ -353,7 +353,6 @@
    
    /* Mobile Footer Navigation */
    .mobile-footer__section-title {
-
     width: 100px;
     font-family: 'NanumEB';
     font-size: 16px;
@@ -508,8 +507,8 @@
      }
    }
    
-   /* Small Screens (max-width: 480px) */
-   @media (max-width: 480px) {
+/* 모바일 미디어 쿼리 (max-width 375px) */
+@media screen and (max-width: 375px) {
      /* Updated mobile footer width for smallest screens */
      .mobile-footer__inner {
        width: 100%;
@@ -522,4 +521,11 @@
     .desktop-footer {
       display: none;
     }
-   }
+    .mobile-footer__top {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 열을 2개로 변경하여 여백 문제 해결 */
+      padding: 0 10px; /* 양옆 여백 추가 */
+      gap: 5px; /* 간격을 줄여 작은 화면에 적합하게 변경 */
+      justify-items: start; /* 요소를 왼쪽 정렬 */
+    }
+}
