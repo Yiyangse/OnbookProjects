@@ -1,300 +1,277 @@
-  .inquiry {
-    background-color: #E1E5F4;
-  }
-  
-  .inquiry__inner {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 78px 20px;
-  }
-  
-  .inquiry__text {
-    margin-bottom: 40px;
-  }
-  
-  .inquiry__type {
-    /* width: 95px; */
-    font-family: 'Pretendard';
-    display: inline-block;
-    font-size: 28px;
-    line-height: 28px;
-    color: #151515;
-    font-weight: 500;
-    letter-spacing: -0.03em;
-  }
-  
-  .inquiry__description {
-    /* width: 467px;
-    height: 32px; */
-    font-family: 'NanumRoundEB';
-    font-size: 34px;
-    font-weight: 800;
-    color: #151515;
-    letter-spacing: -0.04em;
-    margin-top: 10px;
-    letter-spacing: -0.04em;
-    border: 0.18px solid var(--, #151515)
-  }
-  
-  .inquiry__sub-description {
-    font-family: 'Pretendard';
-    display: inline-block;
-    margin-top: 22px;
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 500;
-    color: #151515;
-    /* margin-bottom: 34px; */
+.inquiry {
+  background-color: #E1E5F4;
+}
 
-  }
-  
-  .inquiry__form {
-    width: 100%;
-  }
-  
-  .inquiry__row {
-    display: flex;
-    /* justify-content: space-between; */
-    gap: 14px;
-    /* margin-bottom: 14px; */
-  }
-  
-  .inquiry__input {
-    flex: 1;
-    position: relative;
-    width: 588px;
-    display: flex;
-    flex-direction: column;
-    font-weight: 600;
-    position: relative;
-    gap: 14px;
-  }
-    
-  
-  .inquiry__input label {
-    font-family: 'Pretendard';
-    letter-spacing: -0.03em;
-    width: 151px; /* 라벨 너비 설정 */
-    height: 100%;
-    /* height: 63px; */
-    position: absolute;
-    font-size: 20px;
-    text-align: center;
-    color: #151515;
-    border-right: 1px solid #E1E5F3; /* 구분선 border */
-    padding-top: 30px;/* 기업기관명 여백 */
-  }
-  .inquiry__input input {
-    width: 590px;
-    margin-top: 14px;/* input사이간격 */
-    height: 64px;
-    outline: none;
-    border: 0.5px solid #E1E5F3;
-    border-radius: 14px;
-    font-size: 16px;
-    padding-left: 150px; /* label과 text겹치지 않게 */
-  }
-  .inquiry__input input::placeholder {
-    color: #CDCDCD;
-    padding-left: 24px;
-    font-family: 'Pretendard';
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 20px;
-    letter-spacing: -0.03em;
-    text-align: left;
-  }
-  
-  .inquiry__input_lg {
-    width: 1200px;
-    display: flex;
-    flex-direction: column;
-    font-weight: 700;
-    position: relative;
-    gap: 14px;
-  }
-  .inquiry__input_lg label {
-    font-family: 'Pretendard';
-    width: 1200px; /* 라벨 너비 설정 */
-    position: absolute;
-    top: 15px;
-    font-size: 20px;
-    color: #151515;
-    letter-spacing: -0.03em;
-    border-bottom: 0.5px solid #E1E5F3;/* 구분선 border */
-  }
-  .inquiry__content{
-    width:78px;
-    height:20px;
-    font-family: 'Pretendard';
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 20px;
-    letter-spacing: -0.03em;
-    text-align: left;
-    margin-top: 14px;
-    margin-left: 41px;
-    margin-bottom: 10px;
-  }
+.inquiry__inner {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 78px 0;
+  display: grid;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 
-  .inquiry__input_lg textarea {
-    width: 100%;
-    margin-top: 14px; /* input사이간격 */
-    height: 160px;
-    outline: none;
-    border: 1px solid #E1E5F3;
-    border-radius: 14px;
-    padding:50px 15px 10px 15px; /* label과 text겹치지 않게 */
-    font-size: 16px;
-  }
+.inquiry__text {
+  width: 100%;
+  align-items: left;
+}
 
-  .inquiry__btn {
-    margin-top: 40px;
-    width: 100%;
-    padding: 10px 0;
-    border-radius: 6px;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 28px;
-    border: none;
-    color: #fff;
-    background-color: #6979DB;
-  }
+.inquiry__type {
+  width: 95px;
+  font-family: 'Pretendard';
+  display: inline-block;
+  font-size: 28px;
+  line-height: 28px;
+  color: #151515;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.inquiry__description {
+  width: 467px;
+  height: 32px;
+  font-family: 'NanumRoundEB';
+  font-size: 34px;
+  font-weight: 800;
+  color: #151515;
+  letter-spacing: -0.04em;
+  margin-top: 10px;
+  letter-spacing: -0.04em;
+  border: 0.18px solid var(--, #151515)
+}
+
+.inquiry__sub-description {
+  font-family: 'Pretendard';
+  display: inline-block;
+  margin-top: 22px;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #151515;
+  margin-bottom: 34px;
+
+}
+
+.inquiry__form {
+  width: 1200px;
+}
+
+.inquiry__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.inquiry__input {
+  width: 588px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  position: relative;
+  gap: 14px;
+}
   
-  .inquiry__btn:hover {
-    background-color: #ABB2D4;
-  }
-  
-  
+
+.inquiry__input label {
+  font-family: 'Pretendard';
+  letter-spacing: -0.03em;
+  width: 151px; /* 라벨 너비 설정 */
+  height: 63px;
+  position: absolute;
+  font-size: 20px;
+  text-align: center;
+  color: #151515;
+  border-right: 1px solid #E1E5F3; /* 구분선 border */
+  padding-top: 30px;/* 기업기관명 여백 */
+}
+.inquiry__input input {
+  width: 590px;
+  margin-top: 14px;/* input사이간격 */
+  height: 64px;
+  outline: none;
+  border: 0.5px solid #E1E5F3;
+  border-radius: 14px;
+  font-size: 16px;
+  padding-left: 150px; /* label과 text겹치지 않게 */
+}
+.inquiry__input input::placeholder {
+  color: #CDCDCD;
+  padding-left: 24px;
+  font-family: 'Pretendard';
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.03em;
+  text-align: left;
+}
+
+.inquiry__input_lg {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  position: relative;
+  gap: 14px;
+}
+.inquiry__input_lg label {
+  font-family: 'Pretendard';
+  width: 1200px; /* 라벨 너비 설정 */
+  position: absolute;
+  top: 15px;
+  font-size: 20px;
+  color: #151515;
+  letter-spacing: -0.03em;
+  border-bottom: 0.5px solid #E1E5F3;/* 구분선 border */
+}
+.inquiry__content{
+  width:78px;
+  height:20px;
+  font-family: 'Pretendard';
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  margin-top: 14px;
+  margin-left: 41px;
+  margin-bottom: 10px;
+}
+
+.inquiry__input_lg textarea {
+  width: 100%;
+  margin-top: 14px; /* input사이간격 */
+  height: 160px;
+  outline: none;
+  border: 1px solid #E1E5F3;
+  border-radius: 14px;
+  padding:50px 15px 10px 15px; /* label과 text겹치지 않게 */
+  font-size: 16px;
+}
+
+.inquiry__btn {
+  margin-top: 40px;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  border: none;
+  color: #fff;
+  background-color: #6979DB;
+}
+
+.inquiry__btn:hover {
+  background-color: #ABB2D4;
+}
+
+
 /* 태블릿 및 데스크탑 미디어 쿼리 (max-width 1200px) */
 @media screen and (max-width: 1200px) {
-  .inquiry__inner {
-    padding: 20px;
-    max-width: calc(90%);
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
+.inquiry__inner {
+  padding: 20px;
+  max-width: calc(90%);
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
 }
-  .inquiry__text{
-    max-width: calc(90%); align-items: center; 
-  }
-  .inquiry__input input{
-      width: 712px;
-      height: 64px;
-      justify-content: center;
-  }
- 
-  .inquiry__form {
-    max-width: calc(90%);
-  }
+.inquiry__text{
+  max-width: calc(90%); align-items: center; 
+}
+.inquiry__input input{
+    width: 712px;
+    height: 64px;
+    justify-content: center;
+}
 
-  .inquiry__row {
-    max-width: 100%;
-    flex-direction: column;
-    gap: 0;
-  }
+.inquiry__form {
+  max-width: calc(90%);
+}
 
-  .inquiry__description {
-      font-size: 30px;
-      line-height: 48px;
-  }
-  .inquiry__btn {
-    max-width:712px;
-  }
-  .inquiry__input_lg textarea {
-    max-width: 712px;
-    height: 160px;
-  }
+.inquiry__row {
+  max-width: 100%;
+  flex-direction: column;
+  gap: 0;
+}
+
+.inquiry__description {
+    font-size: 30px;
+    line-height: 48px;
+}
+.inquiry__btn {
+  max-width:712px;
+}
+.inquiry__input_lg textarea {
+  max-width: 712px;
+  height: 160px;
+}
 }
 
 /* 태블릿 미디어 쿼리 (max-width 768px) */
 @media screen and (max-width: 768px) {
-  .inquiry__inner {
-    padding: 40px 16px;
-  }
+.inquiry__input input,
+.inquiry__input_lg textarea {
+    width: 720px;
+    height: 64px;
+}
 
-  .inquiry__type {
-    font-size: 24px;
-  }
+.inquiry__inner {
+    padding: 50px 16px;
+    max-width: 100%;
+}
 
-  .inquiry__description {
+.inquiry__description {
     font-size: 26px;
     line-height: 40px;
-  }
+}
 
-  .inquiry__sub-description {
+.inquiry__sub-description {
     font-size: 16px;
     line-height: 24px;
-  }
+}
 
-  .inquiry__input label {
-    width: 120px;
+.inquiry__input label {
     font-size: 16px;
-  }
+    width: 100px;
+    margin-top: 20px;
+}
 
-  .inquiry__input input {
-    max-width: 100%;
-    padding-left: 140px;
+.inquiry__btn {
+  max-width: 100%;
     font-size: 16px;
-  }
-
-  .inquiry__input input::placeholder {
-    font-size: 16px;
-  }
-
-  .inquiry__content {
-    font-size: 16px;
-    margin-left: 20px;
-  }
-
-  .inquiry__btn {
-    font-size: 16px;
-    height: 48px;
-  }
+    padding: 8px 0;
+}
 }
 /* 모바일 미디어 쿼리 (max-width 375px) */
 @media screen and (max-width: 375px) {
-  .inquiry__inner {
+.inquiry__input input,
+.inquiry__input_lg textarea {
+    width: 327px;
+    height: 42px;
+}
+
+.inquiry__inner {
     padding: 30px 16px;
-  }
+    max-width: 100%;
+}
 
-  .inquiry__input input {
-    height: 42px;
-    height: 42px;
-  }
+.inquiry__type {
+    font-size: 24px;
+}
 
-  .inquiry__input_lg textarea {
-    height: 42px;
-    height: 113px;
-  }
+.inquiry__description {
+    font-size: 22px;
+    line-height: 32px;
+}
 
-  .inquiry__row {
-    gap: 8px;
-  }
-
-  .inquiry__input label,
-  .inquiry__input_lg label,
-  .inquiry__content {
-    height: 42px;
+.inquiry__sub-description {
     font-size: 14px;
-    font-weight: 600;
     line-height: 20px;
-    letter-spacing: -0.03em;
-    text-align: center;
-  }
+}
 
-  .inquiry__input label {
-    height: 42px;
-  }
-
-  .inquiry__content {
-    margin-left: 15px;
-  }
-
-  .inquiry__btn {
-    height: 42px;
+.inquiry__btn {
+  max-width: 100%;
     font-size: 14px;
-    margin-top: 30px;
-  }
+    padding: 6px 0;
+}
 }
