@@ -143,6 +143,31 @@
   content: '';
 }
 
+@media screen and (max-width: 1200px) {
+  .course-grid__container {
+      width: 100%;
+      padding: 0 20px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+  }
+
+  .card {
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+  }
+
+  .course-grid__title {
+      font-size: 28px;
+      line-height: 48px;
+      margin-bottom: 30px;
+  }
+
+  .course-grid {
+      padding: 100px 20px;
+  }
+}
+
 /* 태블릿 미디어 쿼리 (max-width 768px) */
 @media screen and (max-width: 767px) {
     .course-grid__container {
