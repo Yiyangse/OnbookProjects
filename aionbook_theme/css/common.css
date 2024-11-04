@@ -444,6 +444,7 @@
        background-color: #fff;
        left: 0;
        right: 0;
+       padding-top: 10px;
        z-index: 15; /* maininner보다 높은 값 설정 */
   }
    
@@ -485,7 +486,7 @@
      .mobile-header .mobile-gnb.active {
       display: block; /* 버튼 클릭 시 활성화된 경우에만 표시 */
       position: absolute;
-      top: 60px; /* 필요한 위치 조정 */
+      top: 50px; /* 필요한 위치 조정 */
       width: 100%;
       background-color: #fff;
      }
