@@ -495,6 +495,13 @@
      .mobile-header .mobile-gnb__menu {
        background: #fff;
      }
+     .mobile-header .gnb-btn {
+      width: 40px;
+      height: 40px;
+      margin: 10px 0;
+      background: url("/aionbook_theme/images/home/hamburger-btn.png") no-repeat center;
+      background-size: contain;
+    }
    
      .mobile-header .mobile-gnb__item a {
        display: inline-block;

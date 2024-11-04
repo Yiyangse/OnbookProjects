@@ -1,0 +1,479 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/aionbook_theme/css/common.css">
+    <link rel="stylesheet" href="/assets/aionbook_theme/css/components.css">
+    <link rel="stylesheet" href="/assets/aionbook_theme/css/pages.css">
+    <title>OnBook AI</title>
+        <meta name="description" content="OnBook AI">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="OnBook AI">
+    <meta property="og:description" content="OnBook AI">
+    <meta property="og:image" content="http://onbook.codingx.ai/upload/logo/onbook-logo.svg">
+    <meta property="og:url" content="http://onbook.codingx.ai">
+        <link rel="shortcut icon" type="image/x-icon" href="/assets/aionbook_theme/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head> 
+
+<body>
+
+
+    <div class="desktop-header">
+      <header class="desktop-header__inner">
+        <a href="/" class="desktop-header__logo">
+          OnBook AI
+        </a>
+        <nav class="gnb">
+          <div class="gnb__menu">
+            <div class="gnb__item">
+              <a href="/course_intro" class="gnb__link">학습</a>
+            </div>
+      
+            <!--
+            <div class="gnb__item">
+              <a href="#" class="gnb__link">회원가입</a>
+            </div>
+            -->
+            <div class="gnb__item">
+              <a href="/login" class="gnb__link">로그인</a>
+            </div>
+      
+            <div class="gnb__item gnb__item--border-btn">
+              <a href="javascript:alert('준비중 입니다.');" class="gnb__link">플립러닝</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </div>
+    
+    
+    <div class="mobile-header">
+      <header class="mobile-header__inner">
+        <div class="mobile-header__top">
+          <button class="gnb-btn">
+            <div class="hidden">
+              메뉴버튼
+            </div>
+          </button>
+          <a href="/" class="mobile-header__logo">
+            OnBook AI
+          </a>
+        </div>
+        <div class="mobile-gnb">
+          <div class="mobile-gnb__menu">
+            <div class="mobile-gnb__item">
+              <a href="/course_intro" class="mobile-gnb__link">학습</a>
+            </div>
+      
+            <!--
+            <div class="mobile-gnb__item">
+              <a href="#" class="mobile-gnb__link">회원가입</a>
+            </div>
+            -->
+            <div class="mobile-gnb__item">
+              <a href="/login" class="mobile-gnb__link">로그인</a>
+            </div>
+      
+            <div class="mobile-gnb__item">
+              <a href="javascript:alert('준비중 입니다.');" class="mobile-gnb__link">플립러닝</a>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    
+    
+    <script>
+      let gnbBtn = document.querySelector('.gnb-btn');
+      let mobileGnb = document.querySelector('.mobile-gnb');
+      gnbBtn.addEventListener('click', function() {
+        gnbBtn.classList.toggle('active');
+        mobileGnb.classList.toggle('active');
+      });
+    </script>   
+    <div class="desktop__inner">
+
+
+
+      <section class="main main--center">
+        <div class="main__inner">
+          <div class="main__text">
+            <h2 class="main__title">
+              모든 AI 교육 콘텐츠
+            </h2>
+            <p>진단, 학습, 실전 모두</p>
+            <div class="main__button-wrap">
+              <button type="button" class="hero-btn" onclick="location.href='/#experience';">
+                체험하기
+              </button>
+              <button type="button" class="hero-btn hero-btn--black-bg" onclick="location.href='/#inquiry';">
+                도입문의
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section class="education">
+        <div class="education__inner">
+
+          <ul class="education__menu" style="z-index: 2; position: -webkit-sticky; position: sticky; top: 60px; margin-bottom: 30px; padding-bottom: 3px; background-color: #fff; border-bottom: 1px solid #ededed;">
+            <li class="education__menu-item ">
+              <a href="/course_intro/index">전체</a>
+            </li>
+            <li class="education__menu-item ">
+              <a href="/course_intro?course_category_id=1">단과</a>
+            </li>
+            <li class="education__menu-item ">
+              <a href="/course_intro?course_category_id=2">프로젝트</a>
+            </li>
+            <li class="education__menu-item ">
+              <a href="/course_intro?course_category_id=3">역량진단</a>
+            </li>
+          </ul>
+
+          <div class="education__contents">
+
+                    <!--<div class="education__item" onclick="location.href='/course_intro/course_info/1';">-->
+            <div class="education__item" onclick="location.href='/mylesson/content/player_onbook/1';">
+          
+                
+              <div class="education__text">
+                <span class="education__type">
+                    단과                </span>
+                <h4 class="education__title">
+                    데이터분석 Basic                </h4>
+                <p class="education__description">
+                    <p>데이터분석 Basic은 파이썬 언어와 기초적인 머신러닝 알고리즘을 익히고 실습을 해 볼 수 있는 과정으로 정보고 학생과 교사들에게 추천드립니다.</p>                </p>
+                <span class="education__price">
+                                            30일
+                                        /
+                                                                        <del>200,000</del>원
+                            &nbsp;
+                                                100,000원
+                                    </span>
+              </div>
+              <div class="education__img">
+                <img src="/upload/course/3857377e591e02c4c607b97109762157.png" alt="데이터분석 Basic">
+              </div>
+            </div>
+                    <div class="education__item" onclick="alert('콘텐츠 준비중입니다.');">
+          
+                
+              <div class="education__text">
+                <span class="education__type">
+                    단과                </span>
+                <h4 class="education__title">
+                    데이터분석 Advanced                </h4>
+                <p class="education__description">
+                    <p>데이터분석 Advanced는 빅데이터분석을 위한 파이썬 언어부터, 기초통계, 라이브러리, 주요 머신러닝 알고리즘을 이론과 실습으로 익히고 미니 프로젝를 통해 자기주도 데이터분석이 가능한 과정으로 재직자나 비전공 구직자들에게 추천드립니다.</p>                </p>
+                <span class="education__price">
+                                            60일
+                                        /
+                                                                    120,000원
+                                    </span>
+              </div>
+              <div class="education__img">
+                <img src="/upload/course/0ee5a3bcb3e9f8392cbcfded8f121fc3.png" alt="데이터분석 Advanced">
+              </div>
+            </div>
+                    <div class="education__item" onclick="alert('콘텐츠 준비중입니다.');">
+          
+                
+              <div class="education__text">
+                <span class="education__type">
+                    단과                </span>
+                <h4 class="education__title">
+                    머신러닝                </h4>
+                <p class="education__description">
+                    <p>인공지능이라는 큰 범주 내 기계학습이라 불리는 머신러닝을 배우는 코스입니다.<br />머신러닝 학습에 필요한 선형대수학기초, 통계학기초를 이론과 실습을 통해 먼저 배우고, 기계학습기초에서는 모델, 최적화, 모델훈련, 지도/비지도학습, 예측과 분류에 대해서 실습을 통해 익혀 볼 겁니다. 이 코스는 데이터분석 Advanced를 마치고 들으면 완성도가 높아집니다.</p>                </p>
+                <span class="education__price">
+                                            60일
+                                        /
+                                                                    150,000원
+                                    </span>
+              </div>
+              <div class="education__img">
+                <img src="/upload/course/f947afb8a4ef87d74070b79fa2ae9981.png" alt="머신러닝">
+              </div>
+            </div>
+                    <div class="education__item" onclick="alert('콘텐츠 준비중입니다.');">
+          
+                
+              <div class="education__text">
+                <span class="education__type">
+                    단과                </span>
+                <h4 class="education__title">
+                    딥러닝                </h4>
+                <p class="education__description">
+                    <p>머신러닝 중 요즘 핫한 &nbsp;딥러닝 코스웍입니다. 딥러닝의 기초에서는 그 유명한 XOR문제, 인공신경망구조, 퍼셉트론, 오차역차법에 대해 기본을 배울 겁니다. 이어서 합성곱신경망(CNN)과 순환신경망(RNN), 자연어 처리에서의 딥러닝을 실습을 통해 익혀 볼 겁니다. 이 코스는 머신러닝 코스웍을 마치고 들으면 완성도가 높아집니다.</p>                </p>
+                <span class="education__price">
+                                            60일
+                                        /
+                                                                    200,000원
+                                    </span>
+              </div>
+              <div class="education__img">
+                <img src="/upload/course/f1cdc3caefd7a8cb04465de52870ec5d.png" alt="딥러닝">
+              </div>
+            </div>
+                    <div class="education__item" onclick="alert('콘텐츠 준비중입니다.');">
+          
+                
+              <div class="education__text">
+                <span class="education__type">
+                    프로젝트                </span>
+                <h4 class="education__title">
+                    AI교육 프로젝트                </h4>
+                <p class="education__description">
+                    <p>프로젝트 설명이 들어갑니다.<br />프로젝트 설명이 들어갑니다.<br />프로젝트 설명이 들어갑니다.</p>                </p>
+                <span class="education__price">
+                                            60일
+                                        /
+                                                                    200,000원
+                                    </span>
+              </div>
+              <div class="education__img">
+                <img src="/upload/course/b3540e676a66617f8a808efac37eda10.png" alt="AI교육 프로젝트">
+              </div>
+            </div>
+                    <div class="education__item" onclick="alert('콘텐츠 준비중입니다.');">
+          
+                
+              <div class="education__text">
+                <span class="education__type">
+                    역량진단                </span>
+                <h4 class="education__title">
+                    DT 역량진단                </h4>
+                <p class="education__description">
+                    <p>디지털 리터러시 역량진단의 목적은 기업 재직자들의 디지털 역량을 향상시켜 기업의 &nbsp;Digital Transformation을 달성하기 위함입니다.<br />현업의 문제를 데이터 기반으로 정의하고, 분석을 업무에 적용시켜 insight를 추출하기 위한 문제해결역량을 기르는데 초점을 두고 있습니다.</p>                </p>
+                <span class="education__price">
+                                            30일
+                                        /
+                                                                    100,000원
+                                    </span>
+              </div>
+              <div class="education__img">
+                <img src="/upload/course/d3e86b443502b5555c5b04ab01540dd6.png" alt="DT 역량진단">
+              </div>
+            </div>
+                    <!--<div class="education__item" onclick="location.href='/course_intro/course_info/7';">-->
+            <div class="education__item" onclick="location.href='/mylesson/content/player_onbook/7';">
+          
+                
+              <div class="education__text">
+                <span class="education__type">
+                    단과                </span>
+                <h4 class="education__title">
+                    (임시) AI 101                </h4>
+                <p class="education__description">
+                    <p>AI 101에 관한 콘텐츠입니다&nbsp;</p>                </p>
+                <span class="education__price">
+                                            365일
+                                        /
+                                                                    0원
+                                    </span>
+              </div>
+              <div class="education__img">
+                <img src="/assets/mgbasic_theme/image/noimage/A_no_img_01.jpg" alt="(임시) AI 101">
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+      
+      
+      
+      <section class="banner">
+        <div class="banner__inner">
+          <div class="banner__text">
+            <span>다른 콘텐츠가 필요하신가요?</span>
+            <p>맞춤 콘텐츠 제작으로<br />원하는 교육을 진행해보세요.</p>
+          </div>
+          <button class="banner__btn" onclick="location.href='/#inquiry';">
+            문의하기
+          </button>
+        </div>
+      </section>
+      
+      
+      
+    </div>
+    <div>
+
+      <footer>
+
+        <div class="desktop-footer">
+          <div class="desktop-footer__inner">
+            <div class="desktop-footer__top">
+              <p class="desktop-footer__logo">OnBook AI</p>
+              <ul class="footer-nav">
+                <li class="footer-nav__item">
+                  <a href="https://coding-x.com" target="_blank">코딩엑스AI</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="https://kdc.codingx.ai" target="_blank">K-디지털 기초역량훈련</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="https://www.edupar.net" target="_blank">기업교육</a>
+                </li>
+              </ul>
+            </div>
+            <div class="desktop-footer__bottom">
+              <ul class="footer-nav footer-nav--bottom">
+                <li class="footer-nav__item">
+                  <a href="javascript:popup_member_term('access');">이용약관</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="javascript:popup_member_term('personal');">개인정보처리방침</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#">고객센터</a>
+                </li>
+              </ul>
+              <p class="desktop-footer__company-name">
+                더에이아이랩 주식회사
+              </p>
+              <div class="desktop-footer__info">
+                <p>
+                  대표: 최영준 | 사업자 등록번호: 439-87-00757 | 통신판매신고번호: 제 2020-서울강남-02380<br />
+                  주소: 서울특별시 강남구 선릉로 108길 9 5층 | 이메일: contact@theailab.co | 전화: 02-2039-9355
+                </p>
+                <p>THE AI Lab. All rights reserved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile-footer">
+          <div class="mobile-footer__inner">
+            <div class="mobile-footer__top">
+              <p class="mobile-footer__logo">OnBook AI</p>
+              <ul class="footer-nav">
+                <li class="footer-nav__item">
+                  <a href="#">코딩엑스AI</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#">K-디지털 기초역량훈련</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#">기업교육</a>
+                </li>
+              </ul>
+            </div>
+            <div class="mobile-footer__bottom">
+              <ul class="footer-nav footer-nav--bottom">
+                <li class="footer-nav__item">
+                  <a href="javascript:popup_member_term('access');">이용약관</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="javascript:popup_member_term('personal');">개인정보처리방침</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#">고객센터</a>
+                </li>
+              </ul>
+              <p class="mobile-footer__company-name">
+                더에이아이랩 주식회사
+              </p>
+              <div class="mobile-footer__info">
+                <p>
+                  대표: 최영준<br />
+                  사업자 등록번호: 439-87-00757<br />
+                  통신판매신고번호: 제 2020-서울강남-02380<br />
+                </p>
+                <p>
+                  주소: 서울특별시 강남구 선릉로 108길 9 5층<br />
+                  이메일: contact@theailab.co<br />
+                  전화: 02-2039-9355<br />
+                </p>
+                <p>THE AI Lab. All rights reserved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </footer>
+
+    </div>
+
+
+<script src="/assets/js/jquery.bpopup.min.js"></script>
+
+<style>
+#popup { 
+    background-color:#fff;
+    border-radius:15px;
+    color:#000;
+    display:none; 
+    padding:20px;
+    min-width: 70vw;
+    min-height: 70vh;
+}
+.b-close {
+    border-radius:7px 7px 7px 7px;
+    box-shadow:none;font:bold 151% sans-serif;
+    padding:0 6px 2px;
+    position:absolute;
+    right:-12px;
+    top:-18px;
+    background-color:#2b91af;
+    color:#fff;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;   
+}
+.popupContent {
+    border: 0px solid #000;
+    width: 100%;
+    height: 70vh;
+}
+</style>
+
+<script>
+function popup_member_term(term_type)
+{
+    if (term_type=='personal') {
+        var src = "/member/personal_data";
+    } else {
+        var src = "/member/access_terms";
+    }
+    $("#popup").bPopup({
+            content:'iframe',
+            iframeAttr:'frameborder="0" width="100%" height="100%" scrolling="auto"',
+            contentContainer:'.popupContent',
+            loadUrl: src,
+            modalClose: false,
+            opacity: 0.75,
+            speed: 450,
+            transition: 'slideDown'
+    });
+}
+</script>
+
+<div id="popup">
+    <span class='b-close' onClick="javascript:$('#popup').bPopup().close();"><span>X</span></span>        
+    <div class="popupContent"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
