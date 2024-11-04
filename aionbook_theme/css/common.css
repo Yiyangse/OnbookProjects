@@ -450,7 +450,7 @@
    
      /* Mobile Header Styles */
      .mobile-header__top {
-       padding: 0 13px;
+       padding: 0 24px;
        position: relative;
      }
      .mobile-header .gnb-btn {
@@ -462,7 +462,7 @@
       background-size: contain;
     }
     .mobile-header .gnb-btn.active {
-      background: url("../images/home/hamburger-btn.png") no-repeat center;
+      background: url("../images/home/close-btn.png") no-repeat center;
       background-size: contain;
     }
      .mobile-header__logo {
