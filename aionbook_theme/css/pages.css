@@ -366,8 +366,8 @@
       padding: 10px 24px;
     }   
   }
-  /* 모바일 미디어 쿼리 (max-width 375px) */
-@media screen and (max-width: 375px) {
+  /* 모바일 미디어 쿼리 (max-width 480px) */
+@media screen and (max-width: 480px) {
   .main__inner_title {
     font-size: 24px;
     line-height: 28px;

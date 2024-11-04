@@ -507,8 +507,8 @@
      }
    }
    
-/* 모바일 미디어 쿼리 (max-width 375px) */
-@media screen and (max-width: 375px) {
+/* 모바일 미디어 쿼리 (max-width 480px) */
+@media screen and (max-width: 480px) {
      /* Updated mobile footer width for smallest screens */
      .mobile-footer__inner {
        width: 100%;

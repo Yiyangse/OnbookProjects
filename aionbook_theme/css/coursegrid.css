@@ -185,8 +185,8 @@
       height: auto;
     }
   }
-/* 모바일 미디어 쿼리 (max-width 375px) */
-@media screen and (max-width: 375px) {
+/* 모바일 미디어 쿼리 (max-width 480px) */
+@media screen and (max-width: 480px) {
   .course-grid__container {
     width: 100%;
     grid-template-columns: 1fr;
