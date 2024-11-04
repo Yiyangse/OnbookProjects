@@ -26,9 +26,10 @@
   flex-direction: column;
   align-items: center;
   position: relative; /* 다른 섹션과 겹치지 않도록 상대 위치 지정 */
-  z-index: 10; /* 다른 요소들과 겹치지 않도록 z-index 설정 */
+
   margin-bottom: 58px;/* learning-system 섹션과의 간격 */
   top: 60px; 
+  z-index: 5; /* 다른 요소들과 겹치지 않도록 z-index 설정 */
 }
 /* 메인 내부 */
 .main__inner {
@@ -42,6 +43,7 @@
   gap: 400px;
   margin: 0 auto; /* 중앙 정렬 */
   overflow: hidden; /* 내부 요소 넘침 방지 */
+  z-index: 1; /* mobile header와 겹치지 않도록 z-index 설정 */
 }
 
 .main__inner_title_group{

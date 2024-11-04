@@ -431,43 +431,39 @@
    
    /* Medium Screens (max-width: 768px) */
    @media (max-width: 768px) {
-     /* Updated mobile footer width for smaller screens */
      .mobile-footer__inner {
        width: 348px;
        height: 103px;
      }
-   
-     /* Hide desktop header, show mobile header */
-     .desktop-header {
+    .desktop-header {
        display: none;
-     }
-   
+     }   
      .mobile-header {
        display: block;
        position: fixed;
        background-color: #fff;
        left: 0;
        right: 0;
-     }
+       z-index: 15; /* maininner보다 높은 값 설정 */
+  }
    
      /* Mobile Header Styles */
      .mobile-header__top {
        padding: 0 13px;
        position: relative;
      }
-   
      .mobile-header .gnb-btn {
-       width: 40px;
-       height: 40px;
-       margin: 10px 0;
-       background: url("../images/icon/hamburger-btn.png") no-repeat center;
-       background-size: contain;
-     }
-   
-     .mobile-header .gnb-btn.active {
-       background-image: url("../images/icon/close-btn.png");
-     }
-   
+      width: 20px;
+      height: 16px;
+      margin: 10px 0;
+      display: block;
+      background: url("../images/home/hamburger-btn.png") no-repeat center;
+      background-size: contain;
+    }
+    .mobile-header .gnb-btn.active {
+      background: url("../images/home/hamburger-btn.png") no-repeat center;
+      background-size: contain;
+    }
      .mobile-header__logo {
        position: absolute;
        top: 50%;
@@ -487,21 +483,17 @@
      }
    
      .mobile-header .mobile-gnb.active {
-       display: block;
-       position: absolute;
-       width: 100%;
+      display: block; /* 버튼 클릭 시 활성화된 경우에만 표시 */
+      position: absolute;
+      top: 60px; /* 필요한 위치 조정 */
+      width: 100%;
+      background-color: #fff;
      }
    
      .mobile-header .mobile-gnb__menu {
        background: #fff;
      }
-     .mobile-header .gnb-btn {
-      width: 40px;
-      height: 40px;
-      margin: 10px 0;
-      background: url("/aionbook_theme/images/home/hamburger-btn.png") no-repeat center;
-      background-size: contain;
-    }
+
    
      .mobile-header .mobile-gnb__item a {
        display: inline-block;
