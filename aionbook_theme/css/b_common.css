@@ -1,0 +1,450 @@
+.blind,
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.desktop-header {
+  position: fixed;
+  background-color: #fff;
+  left: 0;
+  right: 0;
+  z-index: 9999999;
+}
+.desktop-header__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.desktop-header__logo {
+  font-weight: 700;
+  font-size: 20px;
+}
+.desktop-header .gnb {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.desktop-header .gnb__menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.desktop-header .gnb__item a {
+  display: block;
+  padding: 8px 24px;
+  font-weight: 500;
+}
+.desktop-header .gnb__item--border-btn a {
+  margin-left: 40px;
+  display: inline-block;
+  border: 1px solid #000;
+  padding: 7px 23px;
+  border-radius: 6px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.desktop-header-btn {
+  border: 1px solid #000;
+  padding: 7px 23px;
+  border-radius: 6px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.mobile-header {
+  display: none;
+}
+
+.desktop-footer__inner {
+  max-width: 1200px;
+  padding: 75px 40px 80px;
+  margin: 0 auto;
+}
+.desktop-footer__top {
+  padding-bottom: 19px;
+  border-bottom: 1px solid #DEDEDE;
+}
+.desktop-footer__logo {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+}
+.desktop-footer .footer-nav {
+  margin-top: 19px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0 24px;
+}
+.desktop-footer .footer-nav__item {
+  padding: 5px 0;
+}
+.desktop-footer .footer-nav__item a {
+  display: block;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+}
+.desktop-footer .footer-nav.footer-nav--bottom .footer-nav__item a {
+  line-height: 14px;
+  font-size: 12px;
+  color: #222;
+}
+.desktop-footer__company-name {
+  margin-top: 27px;
+  line-height: 17px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+}
+.desktop-footer__info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 16px;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 14px;
+  color: #525252;
+}
+
+.mobile-footer {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .desktop-header__inner {
+    max-width: inherit;
+    padding: 10px 80px;
+  }
+  .mobile-footer {
+    display: block;
+  }
+  .mobile-footer__inner {
+    padding: 80px 24px;
+  }
+  .mobile-footer__top {
+    padding-bottom: 11px;
+    border-bottom: 1px solid #D9D9D9;
+  }
+  .mobile-footer__logo {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .mobile-footer .footer-nav {
+    margin-top: 11px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 0 24px;
+  }
+  .mobile-footer .footer-nav__item {
+    padding: 5px 0;
+  }
+  .mobile-footer .footer-nav__item a {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #3F3F3F;
+  }
+  .mobile-footer .footer-nav.footer-nav--bottom .footer-nav__item a {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #3F3F3F;
+  }
+  .mobile-footer__company-name {
+    margin-top: 35px;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+  }
+  .mobile-footer__info {
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+    color: #858585;
+  }
+  .mobile-footer__info p + p {
+    margin-top: 16px;
+  }
+  .mobile-header,
+  .desktop-footer {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .desktop-header {
+    display: none;
+  }
+  .mobile-header {
+    display: block;
+    position: fixed;
+    background-color: #fff;
+    left: 0;
+    right: 0;
+  }
+  .mobile-header__top {
+    padding: 0 13px;
+    position: relative;
+  }
+  .mobile-header .gnb-btn {
+    width: 40px;
+    height: 40px;
+    margin: 10px 0;
+    background: url("../images/icon/hamburger-btn.png") no-repeat center;
+    background-size: contain;
+  }
+  .mobile-header .gnb-btn.active {
+    background-image: url("../images/icon/close-btn.png");
+  }
+  .mobile-header__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000;
+    margin: 0 auto;
+    display: inline-block;
+  }
+  .mobile-header .mobile-gnb {
+    display: none;
+  }
+  .mobile-header .mobile-gnb.active {
+    display: block;
+    position: absolute;
+    width: 100%;
+  }
+  .mobile-header .mobile-gnb__menu {
+    background: #fff;
+  }
+  .mobile-header .mobile-gnb__item a {
+    display: inline-block;
+    padding: 16px 24px;
+    color: #222;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%;
+  }
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before, q:after {
+  content: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+textarea {
+  resize: none;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: 0;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+a, a * {
+  cursor: pointer;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  height: 1px;
+  background-color: #ebebeb;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  opacity: 1;
+  width: 13px;
+  height: 13px;
+  margin: 0;
+  cursor: pointer;
+}
+
+sup {
+  vertical-align: super;
+  font-size: 0.5em;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+input::-webkit-search-cancel-button {
+  display: none;
+}
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px white inset;
+}
+
+html {
+  font-size: 16px;
+}
+
+body, button, input, textarea {
+  font-family: "pretendard", sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "pretendard";
+  font-style: regular;
+  font-weight: 300;
+  src: url(../fonts/Pretendard-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "pretendard";
+  font-style: medium;
+  font-weight: 500;
+  src: url(../fonts/Pretendard-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: "pretendard";
+  font-style: semibold;
+  font-weight: 600;
+  src: url(../fonts/Pretendard-SemiBold.woff) format("woff");
+}
+@font-face {
+  font-family: "pretendard";
+  font-style: bold;
+  font-weight: 700;
+  src: url(../fonts/Pretendard-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: "pretendard";
+  font-style: extrabold;
+  font-weight: 800;
+  src: url(../fonts/Pretendard-ExtraBold.woff) format("woff");
+}
+/*# sourceMappingURL=../maps/common.css.map */

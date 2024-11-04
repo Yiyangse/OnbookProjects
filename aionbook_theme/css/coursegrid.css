@@ -17,7 +17,8 @@
   }
   
   .course-grid__container {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -137,24 +138,28 @@
 /* 잠금화면 png */
 .locked::after {
   background-image: url('../images/home/lock.png');
-  background-size: 64px 64px;
+  background-size: 50px 50px;
   background-repeat: no-repeat;
   background-position: center;
   content: '';
 }
 
-@media screen and (max-width: 1200px) {
+/* Desktop (1200px and below) */
+@media screen and (max-width: 1199px) {
+  .course-grid {
+      padding: 100px 20px;
+  }
+
   .course-grid__container {
-      width: 100%;
-      padding: 0 20px;
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
+      padding: 0 20px;
   }
 
   .card {
       width: 100%;
       height: auto;
-      margin: 0 auto;
+      min-height: 450px;
   }
 
   .course-grid__title {
@@ -162,35 +167,79 @@
       line-height: 48px;
       margin-bottom: 30px;
   }
+}
 
+/* Tablet (768px and below) */
+@media screen and (max-width: 767px) {
   .course-grid {
-      padding: 100px 20px;
+      padding: 80px 16px;
+  }
+
+  .course-grid__container {
+    max-width:100%;
+      grid-template-columns: repeat(2, 349px);
+      gap: 16px;
+  }
+
+  .card {
+      width: 349px;
+      height: 444px;
+  }
+
+  .card-image {
+      height: 170px;
+  }
+
+  .card h2 {
+      font-size: 20px;
+      margin-top: 20px;
+  }
+
+  .card p {
+      font-size: 14px;
+      padding: 6px;
+  }
+
+  .card .button {
+      width: 200px;
+      height: 40px;
+      margin: 38px 0 20px;
+      font-size: 16px;
   }
 }
 
-/* 태블릿 미디어 쿼리 (max-width 768px) */
-@media screen and (max-width: 767px) {
-    .course-grid__container {
-        width: 100%;
-        flex-direction: column;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-    .card {
-        width: 100%;
-      height: auto;
-    }
-    .card-image img {
-        width: 100%;
-      height: auto;
-    }
+/* Mobile (480px and below) */
+@media screen and (max-width: 479px) {
+  .course-grid {
+
+      padding: 60px 16px;
   }
-/* 모바일 미디어 쿼리 (max-width 480px) */
-@media screen and (max-width: 480px) {
+
   .course-grid__container {
-    width: 100%;
-    grid-template-columns: 1fr;
-}}
+    max-width:100%;
+      grid-template-columns: 327px;
+      gap: 16px;
+  }
+
+  .card {
+      width: 327px;
+      height: 280px;
+  }
+
+  .course-grid__title {
+      font-size: 24px;
+      line-height: 36px;
+  }
+
+  .card h2 {
+      font-size: 18px;
+  }
+
+  .card .button {
+      width: 180px;
+      margin: 20px 0 16px;
+  }
+}
 
 @font-face {
   font-family: "NanumEB";
