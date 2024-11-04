@@ -286,14 +286,20 @@
       gap: 20px;
     }
     .main__inner_title_group {
-      padding-left: 0;
+      order: -1; /* 이미지가 텍스트보다 위로 오도록 설정 */
+      padding: 0;
       text-align: center;
+      align-items: center;
     }
+
     .main__inner_title {
+      width: 131px;
+      height: 28px;
+      align-items: center; 
+      margin: 0;
       font-size: 22px;
-      font-weight: 800;
-      line-height: 24.97px;
-      letter-spacing: -0.02em;
+      font-weight: 700;
+      letter-spacing: -0.03em;
     }
     .main__inner_title_bold {
       font-size: 46px;
@@ -319,7 +325,7 @@
       max-width: 200px;
 
     } .book-wrapper {
-      order: -1; /* 이미지가 텍스트보다 위로 오도록 설정 */
+
       width: 100%;
       height: 400px;
       margin-bottom: 0;
@@ -368,6 +374,9 @@
   }
   /* 모바일 미디어 쿼리 (max-width 480px) */
 @media screen and (max-width: 480px) {
+  .book-wrapper {
+    order: -1; /* 이미지가 텍스트보다 위로 오도록 설정 */
+  }
   .main__inner_title {
     font-size: 24px;
     line-height: 28px;
