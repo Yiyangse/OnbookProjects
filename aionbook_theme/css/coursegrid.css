@@ -22,7 +22,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 24px;
     align-content: center;
   }
 
@@ -146,100 +146,118 @@
 
 /* Desktop (1200px and below) */
 @media screen and (max-width: 1199px) {
-  .course-grid {
-      padding: 100px 20px;
+    .course-grid__container {
+      grid-template-columns: repeat(3, 228px);
+      gap: 13px;
+      justify-content: center;
   }
 
-  .course-grid__container {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      padding: 0 20px;
-  }
-
-  .card {
-      width: 100%;
-      height: auto;
-      min-height: 450px;
-  }
-
-  .course-grid__title {
-      font-size: 28px;
+   .course-grid__title {
+      font-size: 26px;
       line-height: 48px;
       margin-bottom: 30px;
   }
+  
+  .card {
+    width: 229px;
+    height: 312px;
 }
+
+.card h2 {
+  font-size: 18px;}
+  .card p {
+    font-size: 16px;
+    width: 228px;
+  height: 37px;}
+
+.card-image {
+  width: 227.8px;
+    height: 128.14px;
+}
+.card .button {
+  width: 160px;
+  height: 30px;
+  margin-top: 30px;
+  padding: 3px;
+  font-size: 16px;
+}}
 
 /* Tablet (768px and below) */
 @media screen and (max-width: 767px) {
   .course-grid {
-      padding: 80px 16px;
+      padding: 0;
   }
 
   .course-grid__container {
     max-width:100%;
       grid-template-columns: repeat(2, 349px);
-      gap: 16px;
+      gap: 22px;
+      padding: 0;
   }
+  .course-grid__title {
+    font-size: 24px;}
 
   .card {
       width: 349px;
       height: 444px;
   }
 
-  .card-image {
-      height: 170px;
-  }
-
-  .card h2 {
-      font-size: 20px;
-      margin-top: 20px;
-  }
-
+.card h2 {
+  margin-top: 46px;
+  font-size: 20px;}
   .card p {
-      font-size: 14px;
-      padding: 6px;
-  }
+    font-size: 16px;
+    width: 349px;
+  height: 40px;}
 
-  .card .button {
-      width: 200px;
-      height: 40px;
-      margin: 38px 0 20px;
-      font-size: 16px;
-  }
+.card-image {
+  width: 349px;
+    height: 196px;
 }
+.card .button {
+  width: 245px;
+  height: 46px;
+  margin-top: 48px;
+  padding: 11px;
+  font-size: 16px;
+}}
 
 /* Mobile (480px and below) */
 @media screen and (max-width: 479px) {
   .course-grid {
-
-      padding: 60px 16px;
+    padding: 0;
   }
 
   .course-grid__container {
     max-width:100%;
       grid-template-columns: 327px;
-      gap: 16px;
+      gap: 20px;
   }
 
   .card {
       width: 327px;
-      height: 280px;
-  }
-
-  .course-grid__title {
-      font-size: 24px;
-      line-height: 36px;
+      height: 394px;
   }
 
   .card h2 {
-      font-size: 18px;
+    margin-top: 24px;
+    font-size: 20px;}
+    .card p {
+      font-size: 16px;
+      width: 327px;
+    height: 40px;}
+  
+  .card-image {
+    width: 327px;
+      height: 184px;
   }
-
   .card .button {
-      width: 180px;
-      margin: 20px 0 16px;
-  }
-}
+    width: 245px;
+    height: 46px;
+    margin-top: 38px;
+    padding: 11px;
+    font-size: 16px;
+  }}
 
 @font-face {
   font-family: "NanumEB";
