@@ -341,15 +341,61 @@ document.addEventListener('DOMContentLoaded', function() {
       <section class="schoolgroup">
         <div class="schoolgroup_inner">
           <h4 class="schoolgroup_title">AI 온북 그룹들</h4>
-          <div class="schoolgroup_list">
+          <div class="row-container">
+          </div>
+          <!-- <div class="schoolgroup_list">
             <div claa="schoolgroup_item">
               <img src="../aionbook_theme/images/home/Schoolgroup01.png"/>
               <img src="../aionbook_theme/images/home/Schoolgroup02.png"/>
               <img src="../aionbook_theme/images/home/Schoolgroup03.png"/>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
+      <script>
+        const schools = [
+            '개포고', '경기과고', '고려부속중', '고양국제고', '관인중', 
+            '금오중', '능동고', '다원중', '도당중', '동두천중앙고',
+            '매탄중', '백마고', '부산대', '분당경영고', '서울부설중',
+            '세류중', '양운고', '용인백현고', '운중중', '울산강남고',
+            '의정부광동고', '인덕과기고', '일산대진고', '장충고', '제물포고',
+            '창덕여고', '충암중', '평내고', '한성과고', '한양부설고', '향동고'
+        ];
+
+        function createSchoolRows() {
+            const rowContainer = document.querySelector('.row-container');
+            const rows = 3;
+            const schoolsPerRow = Math.ceil(schools.length / rows);
+
+            // 3줄로 학교 분배
+            for (let i = 0; i < rows; i++) {
+                const rowSchools = schools.slice(i * schoolsPerRow, (i + 1) * schoolsPerRow);
+                const rowDiv = document.createElement('div');
+                rowDiv.className = 'school-row';
+
+                // 원본 이미지들
+                rowSchools.forEach(school => {
+                    const img = document.createElement('img');
+                    img.src = `../aionbook_theme/images/schoolgroup/${school}.png`;
+                    img.alt = school;
+                    rowDiv.appendChild(img);
+                });
+
+                // 무한 스크롤을 위한 복제 이미지들
+                rowSchools.forEach(school => {
+                    const img = document.createElement('img');
+                    img.src = `../aionbook_theme/images/schoolgroup/${school}.png`;
+                    img.alt = school;
+                    rowDiv.appendChild(img);
+                });
+
+                rowContainer.appendChild(rowDiv);
+            }
+        }
+
+        // 페이지 로드 시 실행
+        document.addEventListener('DOMContentLoaded', createSchoolRows);
+    </script>
 <!-- 가격 정보 -->
       <section class="pricetable" id="pricetable">
         <div class="pricetable_inner">

@@ -1,95 +1,87 @@
-  /*  */
-  /* schoolgroup.css ::AI 온북 그룹들 */
-  /*  */
-.schoolgroup{
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+.schoolgroup {
     width: 100%;
-    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
 }
 
 .schoolgroup_inner {
-    width: 3171px;
-    height: 352px;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
- }
-  
-  .schoolgroup_title {
-    font-family: 'NanumRoundEB';
-    /* margin-top: 10px; */
-    text-align: center;
+}
+
+.schoolgroup_title {
     font-size: 34px;
     font-weight: 800;
     line-height: 60px;
     letter-spacing: -0.04em;
     text-align: center;
-  }
-  .schoolgroup_list {
-    /* margin: 30px 0; */
+    margin-bottom: 30px;
+}
+
+.row-container {
     display: flex;
-    width: 270%;  /* 이미지들이 3배 크기로 복제되어 연속적으로 보이게 함 */
-    animation: slide 10s linear infinite; 
-  }
-  
-  .schoolgroup_item {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+}
+
+.school-row {
     display: flex;
-    gap: 10px;
-  }
-  
-  .schoolgroup_item img {
-    display: flex;
-    height: 250px;
+    gap: 0;
+    animation: slide 30s linear infinite;
+    width: 270%;
+}
+
+.school-row:hover {
+    animation-play-state: paused;
+}
+
+.school-row img {
+    height: 118px;
     object-fit: contain;
-  }
-  @keyframes slide {
+}
+
+/* 각 줄마다 다른 애니메이션 시작 시간 */
+.school-row:nth-child(2) {
+    animation-delay: -10s;
+}
+
+.school-row:nth-child(3) {
+    animation-delay: -20s;
+}
+
+@keyframes slide {
     0% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
     100% {
-      transform: translateX(-10%);  /* 재시작 위치 */
+        transform: translateX(-50%);
     }
-  }
-  
-  /* hover시 애니메이션 일시정지 */
-  .schoolgroup_list:hover {
-    animation-play-state: paused;
-  }
+}
 
-/* 모바일 (최대 767px) */
+/* 모바일 대응 */
 @media screen and (max-width: 767px) {
-    .schoolgroup_inner {
-      width: 100%;
-      height: 250px;
-    }
-    
     .schoolgroup_title {
-      font-size: 24px;
-      line-height: 40px;
+        font-size: 24px;
+        line-height: 40px;
     }
-    
-    .schoolgroup_item img {
-      height: 150px;
+
+    .school-row img {
+        height: 80px;
     }
-  }
-  
-  /* 태블릿 크기 대응 */
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    .schoolgroup_inner {
-      width: 100%;
-      height: 300px;
-    }
-    
+}
+
+/* 태블릿 대응 */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
     .schoolgroup_title {
-      font-size: 28px;
-      line-height: 50px;
+        font-size: 28px;
+        line-height: 50px;
     }
-    
-    .schoolgroup_item img {
-      height: 200px;
+
+    .school-row img {
+        height: 100px;
     }
-  }
+}
