@@ -17,6 +17,33 @@
     <script src="../aionbook_theme/js/script.js" defer></script>
 </head> 
 <body>
+    <section class="wing-ClassList" id="wingBar">
+        <div class="wing-title">
+            <div>
+                <div class="wing-title-bold">데이터분석 Basic</div>
+                <div class="wing-title-text">0/115 레슨</div>
+            </div>
+            <img src="../aionbook_theme/images/class/btn_close.png" alt="접기버튼" onclick="toggleWing()">
+        </div>
+        <div class="wing-list">
+            <div class="wing-list-class">
+                The! 인공지능
+                <img src="../aionbook_theme/images/class/listbtn_close.png" alt="접기버튼">
+            </div>
+            <div class="wing-list-class">
+                The! 인공지능
+                <img src="../aionbook_theme/images/class/listbtn_close.png" alt="접기버튼">
+            </div>
+        </div>
+        <div class="wing-home">홈으로</div>
+    </section>
+    
+    <script>
+    function toggleWing() {
+        const wingBar = document.getElementById('wingBar');
+        wingBar.classList.toggle('collapsed');
+    }
+    </script>
     <section class="basic-class">
         <h1>THE! 인공지능</h1>
         <p>로그인 하시면 서비스를 체험해 볼 수 있어요</p>
