@@ -447,16 +447,14 @@ bottom: 96.82%;
     position: relative;
 }
 
-.wing-list-class-title .span{
+.wing-list-class-title span{
 position: absolute;
 font-family: 'Pretendard';
 font-style: normal;
 font-weight: 800;
 font-size: 20px;
-
 color: #151515;
-
-
+margin-left: 40px;
 }
 
 .wing-list-class-title img {
@@ -467,7 +465,7 @@ color: #151515;
 
 .wing-list-class-menu {
     display: none;
-    padding-left: 40px;
+    padding-left: 20px;
 }
 
 .wing-list-class-menu.active {
