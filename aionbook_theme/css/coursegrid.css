@@ -138,7 +138,7 @@
 /* 잠금화면 png */
 .locked::after {
   background-image: url('../images/home/lock.png');
-  background-size: 50px 50px;
+  background-size: 55px 71px;
   background-repeat: no-repeat;
   background-position: center;
   content: '';

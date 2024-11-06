@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "NanumRoundEB";
+    font-weight: 800;
+    font-style: normal;
+    src: url(../fonts/NanumSquareRoundEB.woff) format("woff");
+  }
 .schoolgroup {
     width: 100%;
     overflow: hidden;
@@ -13,6 +19,7 @@
 }
 
 .schoolgroup_title {
+    font-family: 'NanumRoundEB';
     font-size: 34px;
     font-weight: 800;
     line-height: 60px;

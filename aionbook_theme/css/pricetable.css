@@ -18,6 +18,9 @@
   .pricetable_title {
     font-family: 'NanumRoundEB';
     font-size: 34px;
+    font-weight: 800;
+    line-height: 60px;
+    letter-spacing: -0.04em;
     text-align: center;
     margin-bottom: 50px;
   }

@@ -200,7 +200,7 @@
   right: 90px;
   width: 455px;
   height: 247px;
-  z-index: 15; /* bookbgimg보다 앞에 배치 */
+  z-index: 15; /* bookbgimg보다 앞에 배치 */}
 /* bookbgimg 배경 이미지 */
 .bookbgimg {
   position: absolute;
