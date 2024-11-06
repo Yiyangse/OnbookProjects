@@ -5,6 +5,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
 
 body {
     font-family: 'NanumSquareRound';
@@ -23,6 +29,7 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
+    z-index: -10;
 }
 
 .basic-class h1 {
@@ -39,7 +46,6 @@ body {
 .basic-class p {
     font-size: 30px;
     color: #333;
-    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -49,9 +55,9 @@ body {
     height: 255px;
     align-items: center;
     justify-content: space-around;
-    background: #4D46D5;
+    background: #4958A5;
     color: white;
-    padding: 0;
+    padding-top: 40px;
     border-radius: 10px;
     margin-top: 40px;
     top: 200px;
@@ -82,6 +88,7 @@ body {
 
 .about, .bookmark, .chapter-grid {
     max-width: 1200px;
+    padding-top: 40px;
     margin: 40px auto;
 }
 
@@ -350,59 +357,134 @@ body {
       height: 20px;
     }
   }
-  
+  /*  */
   /* 날개 바 */
-
+  /*  */
   .wing-ClassList {
-    font-family: 'Pretendard';
     position: fixed;
     left: 0;
     top: 0;
-    width: 280px;
+    width: 320px;
     height: 100vh;
     background: white;
     box-shadow: 2px 0 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease-in-out;
+    z-index: 100; /* 상단에 메뉴가 위치하도록 설정 */
 }
 
 .wing-ClassList.collapsed {
-    transform: translateX(-240px);
+    transform: translateX(-280px);
 }
 
 .wing-title {
-    padding: 20px;
-    background: #4B4DDB;
+    padding: 10px 20px;
+    height: 130px;
+    background: #526AE5;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.wing-title .img{
+  width: 40px;
+position: absolute;
+left: 15.62%;
+right: 82.29%;
+top: 1.28%;
+bottom: 96.82%;
+}
+
 .wing-title-bold {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .wing-title-text {
-    font-size: 12px;
-    margin-left: 10px;
+    font-size: 16px;
+    margin-top: 12px;
+}
+
+/* 접기 버튼 스타일링 */
+.btn-close {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 300px;
+    top: 27px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.17);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.btn-close::before {
+    content: '';
+    position: absolute;
+    left: 35.1%;
+    right: 37.6%;
+    top: 26.77%;
+    bottom: 26.77%;
+    background: #151515;
+    width: 24px;
+    height: 24px;
+    margin: auto;
 }
 
 .wing-list {
     padding: 10px 0;
+    overflow-y: auto;
+    max-height: calc(100vh - 140px);
 }
 
-.wing-list-class {
+.wing-list-class-title {
     padding: 15px 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* 세로 방향으로 변경 */
     cursor: pointer;
     border-bottom: 1px solid #eee;
+    position: relative;
 }
 
-.wing-list-class:hover {
-    background: #f5f5f5;
+.wing-list-class-title .span{
+position: absolute;
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 800;
+font-size: 20px;
+
+color: #151515;
+
+
+}
+
+.wing-list-class-title img {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+.wing-list-class-menu {
+    display: none;
+    padding-left: 40px;
+}
+
+.wing-list-class-menu.active {
+    display: block;
+}
+
+.wing-list-class-title.collapsed {
+  grid-template-columns: 1;
+}
+
+.wing-list-class-menu div {
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.wing-list-class-menu div:hover {
+    background: #f0f0f0;
 }
 
 .wing-home {
@@ -414,10 +496,30 @@ body {
     background: #f8f8f8;
     border-top: 1px solid #eee;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 8px;
 }
 
-img[alt="접기버튼"] {
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
+.wing-home img {
+    width: 24px;
+    height: 24px;
+}
+
+/* 접기/펼치기 버튼 토글 */
+.listbtn_close {
+    display: inline-block;
+}
+
+.listbtn_open {
+    display: none;
+}
+
+.wing-list-class-title.collapsed .listbtn_close {
+    display: none;
+}
+
+.wing-list-class-title.collapsed .listbtn_open {
+    display: inline-block;
 }
